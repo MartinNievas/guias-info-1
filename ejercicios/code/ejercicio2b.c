@@ -1,0 +1,1 @@
+open("receive.dat", "r+");

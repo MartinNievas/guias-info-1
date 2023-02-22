@@ -1,0 +1,131 @@
+\section{Sistemas de numeración y representación numérica. Aritmética binaria.}
+\setcounter{subsection}{2}
+
+\subsubsection{Completar los espacios en blanco:}
+\begin{tabular}{ccc}
+  Decimal&Binario&Hexadecimal\\
+  0&00000000&0x00 \\
+  158& &\underspace\\
+  145&\underspace &\underspace \\
+  \underspace&1010 1110&\underspace \\
+  \underspace&0011 1100&\underspace \\
+  \underspace&1111 0001&\underspace \\
+\end{tabular}
+
+\subsubsection{Suma de números (2.4)}
+Realizar las siguientes operaciones, considerando números signados. Expresar el resultado en decimal.
+\vspace{10mm}
+
+\begin{tabular}{lc}
+$0x3D + 0x40 $&=\underspace\\
+$0x3D - 0x20 $&=\underspace\\
+$01110110 - 00101101$&=\underspace\\
+$00011110 + 01101101$&=\underspace\\
+
+\end{tabular}
+
+\subsubsection{Suma de números (2.4)}
+Sin convertir a binario, sumar los siguientes números.
+
+\begin{tabular}{lc}
+$0x605C + 0x5 $&=\underspace\\
+$0x605C - 0x20 $&=\underspace\\
+$0x605C + 32 $&=\underspace\\
+$0x60fA - 0x605C $&=\underspace\\
+\end{tabular}
+
+\subsubsection{Conversiones}
+Realizar las siguientes conversiones:
+\begin{itemize}
+  \item Convierta el binario 110011010010 en octal y en hexadecimal.
+  \item Convierta el número 0xFACE hexadecimal a binaria.
+  \item Convierte octal 3016 a binario.
+  \item Convierta 0xCAFE hexadecimales a octal.
+  \item Convertir binario 1001010 a decimal.
+  \item Convertir octal 513 a decimal.
+  \item Convierta hexadecimal AFD4 a decimal.
+  \item Convierta el decimal 177 a binario, a octal y a hexadecimal.
+  \item Calcule la representación binaria del decimal 417. Luego el complemento de 417 y el complemento de dos de 417.
+  \item ¿Cuál es el resultado cuando un número y su complemento de dos se suman?
+\end{itemize}
+
+% \pagebreak
+\subsubsection{ Operaciones Booleanas (2.8)}
+Completar los espacios, evaluando las operaciones Booleanas:\\
+
+\begin{tabular}{cc}
+  Operación&Resultado\\
+  a&[01101010]\\
+  b&[11000101]\\
+  $\sim$ a&\underspace \\
+  $\sim$ b&\underspace \\
+  a \& b&\underspace\\
+  a $\mid$ b&\underspace\\
+  a \^{} b&\underspace\\
+\end{tabular}
+
+\subsubsection{Operadores binarios (2.14)}
+Realizar las siguientes operaciones binarias, teniendo en cuenta los números anteriormente utilizados.\\
+
+\begin{tabular}{cccc}
+  Expresión&Valor&Expresión&Valor\\
+  a \& b&\underspace &a \&\& b &\underspace\\
+  b $\mid$ b&\underspace& a $\mid\mid$ b &\underspace\\
+  $\sim$ a $\mid$ $\sim$ b&\underspace& !a $\mid\mid$ !b &\underspace \\
+\end{tabular}
+
+
+\subsubsection{Desplazamiento de bits (2.16)}
+Completar con las representaciones correspondientes para cada desplazamiento.\\
+
+\begin{tabular}{cccccccc}
+  \multicolumn{2}{c}{ }& &\multicolumn{2}{c}{Lógico}& &\multicolumn{2}{c}{Lógico}\\
+  \multicolumn{2}{c}{a}& &\multicolumn{2}{c}{a$<<$2}& &\multicolumn{2}{c}{a$>>$3}\\
+  \cline{1-2}\cline{4-5}\cline{7-8}\\
+  Hex&Binario&&Hex&Binario&&Hex&Binario\\
+  0xD4&\underspace&&\underspace &\underspace &&\underspace &\underspace\\
+  0x64&\underspace&&\underspace &\underspace &&\underspace &\underspace\\
+  0xD4&\underspace&&\underspace &\underspace &&\underspace &\underspace\\
+  0x44&\underspace&&\underspace &\underspace &&\underspace &\underspace\\
+\end{tabular}
+
+\subsubsection{Truncado}
+En la siguiente tabla escribir las equivalencias de los números suponiendo que sólo se tienen en cuenta 3 bits\\
+
+
+\begin{tabular}{cccccccc}
+  \multicolumn{2}{c}{Hex} & &\multicolumn{2}{c}{No signado}& &\multicolumn{2}{c}{Complemento a 2}\\
+  Original&Truncado&&Original&Truncado&&Original&Truncado\\
+  \cline{1-2}\cline{4-5}\cline{7-8}\\
+  0x1&1          &&1  &\underspace&&1 & \underspace \\
+  0x3&3          &&3  &\underspace&&3 & \underspace \\
+  0x5&\underspace&&5  &\underspace&&5 & \underspace \\
+  0xC&\underspace&&12 &\underspace&&12& -4\\
+  0xE&6          &&14 &\underspace&&14& -2\\
+\end{tabular}
+
+\subsubsection{Suma}
+Realizar las siguientes sumas utilizando números signados de 4 bits:
+\begin{itemize}
+  \item $ -8-5= $
+  \item $-8+5$
+  \item $2+5$
+  \item $5+5$
+\end{itemize}
+
+% \pagebreak
+\subsubsection{Interpretación}
+Realizar las siguientes sumas e interpretar el resultado como números signados o no signados:\\
+
+\begin{tabular}{ccccc}
+x&y&bin&x+y&x+y\\
+&&&(4 bits)&(5bits)\\
+11000&11000&\underspace&\underspace&\underspace\\
+&&&&\\
+10111&01000&\underspace&\underspace&\underspace\\
+&&&&\\
+00010&00101&\underspace&\underspace&\underspace\\
+&&&&\\
+01100&00100&\underspace&\underspace&\underspace\\
+\end{tabular}
+

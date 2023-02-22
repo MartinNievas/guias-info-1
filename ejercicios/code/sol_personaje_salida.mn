@@ -1,0 +1,26 @@
+----------Cargar los elementos diréctamente----------
+Ingrese su apodo: snow  
+Ingrese su nombre: martin
+Ingrese su apellido: nievas
+Ingrese su edad: 25
+----------Datos----------
+El apodo es: snow
+Rango: 84
+Vida: 150.000000
+Escudo 0.000000
+Sales: 0.000000
+El nombre es: martin
+El apellido es: nievas
+----------Cargar los elementos mediante puntero----------
+Ingrese su apodo: snow
+Ingrese su nombre: martin
+Ingrese su apellido: nievas
+Ingrese su edad: 25
+----------Datos----------
+El apodo es: snow
+Rango: 87
+Vida: 150.000000
+Escudo 0.000000
+Sales: 0.000000
+El nombre es: martin
+El apellido es: nievas

@@ -1,0 +1,127 @@
+% \documentclass[a4paper]{report}
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{fancyhdr}
+\usepackage{comment}
+\usepackage[shortlabels]{enumitem}
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2.2cm, right=2.2cm]%
+{geometry}
+\usepackage{listings}
+%para que pueda poner tildes en el código
+\usepackage{listingsutf8}
+\usepackage{multicol}
+
+\usepackage{graphicx}
+
+\title{\LARGE Informática I}
+  \author{Guía de Trabajos Prácticos\\[10pt]
+    \\\textit{Departamento de Ingeniería Electrónica}
+\\Universidad Tecnológica Nacional, Regional Córdoba
+}
+\date{2020}
+
+% \renewcommand{\@chapapp}{Unidad}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+\makeatletter
+\def\@seccntformat#1{\@ifundefined{#1@cntformat}%
+   {\csname the#1\endcsname\quad}%    default
+   {\csname #1@cntformat\endcsname}}% enable individual control
+\newcommand\section@cntformat{}     % section level
+\makeatother
+
+\newcommand{\underspace}
+{
+  \underline{\hspace{20mm}}
+}
+\usepackage{xcolor}
+
+\lstdefinestyle{customc}{
+    belowcaptionskip=1\baselineskip,
+    breaklines=true,
+    % frame=L,
+    xleftmargin=\parindent,
+    language=C,
+    showstringspaces=false,
+    basicstyle=\large\ttfamily,
+    keywordstyle=\bfseries\color{green!40!black},
+    commentstyle=\itshape\color{purple!40!black},
+    identifierstyle=\color{blue},
+    stringstyle=\color{orange},
+  }
+
+\lstdefinestyle{pseudocodigo}{
+    belowcaptionskip=1\baselineskip,
+    breaklines=true,
+    % frame=L,
+    xleftmargin=\parindent,
+    language=pseudo,
+    showstringspaces=false,
+    basicstyle= \ttfamily,
+    keywordstyle=\bfseries\color{black!40!black},
+    commentstyle=\itshape\color{purple!40!black},
+    % identifierstyle=\color{blue},
+    % stringstyle=\color{orange},
+  }
+
+% Define Language
+\lstdefinelanguage{pseudo}
+{
+  % list of keywords
+  morekeywords={
+    mientras,
+    hacer,
+    para,
+    desde,
+    hasta,
+	si,
+	no,
+	fin,
+	mientras,
+    que,
+    imprimir,
+    leer,
+    for
+  },
+  sensitive=false, % keywords are not case-sensitive
+  morecomment=[l]{//}, % l is for line comment
+  morecomment=[s]{/*}{*/}, % s is for start and end delimiter
+  morestring=[b]" % defines that strings are enclosed in double quotes
+}
+
+
+\begin{document}
+  \include{sueltas/caratula}
+  \include{sueltas/catedra}
+
+  \include{u01/u01}
+
+  \include{u02/u02}
+
+  \include{u03/u03}
+
+  \include{u04/u04}
+
+  \include{u05/u05}
+
+  \include{u06/u06}
+
+  \include{u07/u07}
+
+  \include{u08/u08}
+
+  \include{u09/u09}
+
+  \include{u10/u10}
+
+  \include{u11/u11}
+
+\end{document}

@@ -1,0 +1,13 @@
+Ingrese el elemento a[0]: 1
+Ingrese el elemento a[1]: 323
+Ingrese el elemento a[1]: 23
+Ingrese el elemento a[2]: -12
+Ingrese el elemento a[2]: 32
+Ingrese el elemento a[3]: 4
+Ingrese el elemento a[4]: 9
+Los elementos del arreglo son:
+a[0]: 1
+a[1]: 23
+a[2]: 32
+a[3]: 4
+a[4]: 9

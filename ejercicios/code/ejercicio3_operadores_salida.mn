@@ -1,0 +1,9 @@
+Ingrese el valor de la toleracia: 10
+Ingrese el valor nominal: 100
+Ingrese el valor medido de la resistencia: 102
+El valor se encuentra dentro de la tolerancia
+
+ngrese el valor de la toleracia: 10
+Ingrese el valor nominal: 100
+Ingrese el valor medido de la resistencia: 120
+El valor se encuentra fuera de la tolerancia

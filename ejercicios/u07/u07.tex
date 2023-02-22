@@ -1,0 +1,158 @@
+\section{Funciones en lenguaje C.}
+\setcounter{subsection}{7}
+
+\subsection*{Funciones $1^{era}$ Parte} 
+
+\subsubsection{Ejercicio 1} 
+Completar el siguiente programa:
+
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/ejercicio1_fun_completar_guia.c}
+{\small
+  \lstset{inputencoding=utf8/latin1}
+  \lstinputlisting[backgroundcolor = \color{lightgray}]{code/ejercicio1_completar_salida.mn}
+}
+
+\subsubsection{Ejercicio 2} 
+Completar el siguiente programa:
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/ejercicio2_completar_guia.c}
+Para obtener la siguiente salida:
+{\small
+  \lstset{inputencoding=utf8/latin1}
+  \lstinputlisting[backgroundcolor = \color{lightgray}]{code/ejercicio2_completar_salida.mn}
+}
+
+\subsubsection{Ejercicio 3} 
+Completar el siguiente programa:
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/ejercicio3_completar_guia.c}
+Para obtener la siguiente salida:
+{\small
+  \lstset{inputencoding=utf8/latin1}
+  \lstinputlisting[backgroundcolor = \color{lightgray}]{code/ejercicio3_completar_salida.mn}
+}
+
+\subsubsection{Ejercicio 4} 
+Completar el siguiente programa:
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/ejercicio4_completar_guia.c}
+Para obtener la siguiente salida:
+{\small
+  \lstset{inputencoding=utf8/latin1}
+  \lstinputlisting[backgroundcolor = \color{lightgray}]{code/ejercicio4_completar_salida.mn}
+}
+
+\subsubsection{Ejercicio 5}
+Completar el siguiente programa:
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/ejercicio5_completar_guia.c}
+Para obtener la siguiente salida:
+{\small
+  \lstset{inputencoding=utf8/latin1}
+  \lstinputlisting[backgroundcolor = \color{lightgray}]{code/ejercicio5_completar_salida.mn}
+}
+
+
+\subsubsection{Ejercicio 6} 
+Completar el siguiente programa:
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/ejercicio6_completar_guia.c}
+Para obtener la siguiente salida:
+{\small
+  \lstset{inputencoding=utf8/latin1}
+  \lstinputlisting[backgroundcolor = \color{lightgray}]{code/ejercicio6_completar_salida.mn}
+}
+
+\subsubsection{Ejercicio 7} 
+Completar el siguiente programa:
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/ejercicio7_completar_guia.c}
+Para obtener la siguiente salida:
+{\small
+  \lstset{inputencoding=utf8/latin1}
+  \lstinputlisting[backgroundcolor = \color{lightgray}]{code/ejercicio7_completar_salida.mn}
+}
+
+\subsubsection{Ejercicio 8} 
+Crear los prototipos para las diferentes funciones que resuelvan:
+\begin{itemize}
+  \item Función \textbf{hipotenusa}, toma dos argumentos float de doble precisión, \textbf{lado1} y \textbf{lado2}. Devuelve el resultado en float de doble precisión.
+  \item Función \textbf{menor}, toma tres enteros, \textbf{x}, \textbf{y}, \textbf{z}. Devuelve un entero.
+  \item Función \textbf{intToFloat}, que toma un argumento entero llamado \textbf{numero}, y devuelve el resultado en float.
+\end{itemize}
+
+
+\subsection*{Funciones $2^{da}$ Parte} 
+
+\subsubsection{Ejercicio 1} 
+Implementar la función \texttt{fibonacci} en forma recursiva.
+
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/ejercicio1_fun2_completar_guia.c}
+
+\subsubsection{Ejercicio 2} 
+El rompecabezas de la Torre de Hanoi fue inventado por el matemático francés Edouard Lucas en 1883. Se inspiró en una leyenda acerca de un templo hindú donde el rompecabezas fue presentado a los jóvenes sacerdotes. Al principio de los tiempos, a los sacerdotes se les dieron tres postes y una pila de 64 discos de oro, cada disco un poco más pequeño que el de debajo. 
+
+Su misión era transferir los 64 discos de uno de los tres postes a otro, con dos limitaciones importantes. Sólo podían mover un disco a la vez, y nunca podían colocar un disco más grande encima de uno más pequeño. Los sacerdotes trabajaban muy eficientemente, día y noche, moviendo un disco cada segundo. Cuando terminaran su trabajo, dice la leyenda, el templo se desmenuzaría en polvo y el mundo se desvanecería.
+
+En la Figura  Se puede ver la representación gráfica del juego.
+
+% \begin{figure}[h!]
+% \centering
+% \includegraphics[width=\textwidth]{img/hanoi.eps}
+% \caption{Torres de Hanoi\\ Fuente: Deitel\&Deitel}
+% \label{fig:hanoi}
+% \end{figure}
+Supongamos que los sacerdotes intentan mover los discos de la clavija 1 a la clavija 3. Deseamos desarrollar un algoritmo que imprima la secuencia precisa de transferencias de clavija de disco a disco.
+Si tuviéramos que abordar este problema con métodos convencionales, nos encontraríamos rápidamente anudados en la gestión de los discos. En cambio, si atacamos el problema con la recursión en mente, inmediatamente se vuelve manejable. Mover n discos se puede ver en términos de mover solo n - 1 discos (y, por lo tanto, la recursividad) de la siguiente manera:
+\begin{enumerate}
+  \item Mueva n - 1 discos de la clavija 1 a la clavija 2, utilizando la clavija 3 como área de retención temporal.
+  \item Mueva el último disco (el más grande) de la clavija 1 a la clavija 3.
+  \item Mueva los discos n - 1 de la clavija 2 a la clavija 3, utilizando la clavija 1 como área de retención temporal.
+\end{enumerate}
+El proceso finaliza cuando la última tarea implica mover n = 1 disco, es decir, el caso base. Esto se logra moviendo trivialmente el disco sin la necesidad de un área de retención temporal.
+Escribe un programa para resolver el problema de Towers of Hanoi. Use una función recursiva con cuatro parámetros:
+\begin{enumerate}
+  \item El número de discos a mover
+  \item La clavija en la que se enroscan estos discos inicialmente
+  \item La clavija a la que se debe mover esta pila de discos
+  \item La clavija que se utilizará como área de retención temporal.
+\end{enumerate}
+Su programa debe imprimir las instrucciones precisas que necesitará para mover los discos desde la clavija de inicio a la clavija de destino. Por ejemplo, para mover una pila de tres discos de la clavija 1 a la clavija 3, su programa debe imprimir la siguiente serie de movimientos:
+
+{\scriptsize
+  \lstset{inputencoding=utf8/latin1}
+  \lstinputlisting[backgroundcolor = \color{lightgray}]{code/hanoi_salida.mn}
+}
+
+\pagebreak
+\subsubsection{Ejercicio 3} 
+Modificar el siguiente programa, para que los valores del arreglo sean ingresados con la función \textbf{carga}.
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/ejercicio1_fun2_completar.c}
+Prototipo de la función \textbf{carga}
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/carga.c}
+
+\subsubsection{Ejercicio 4} 
+Modificar el programa anterior para que la impresión del arreglo se realice con la función con prototipo:
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/imprime.c}
+
+\subsubsection{Ejercicio 5} 
+Modificar el programa anterior para que el arreglo ingresado se ordene de mayor a menor con la función con prototipo:
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/ordenar.c}
+
+\subsubsection{Ejercicio 6} 
+Modificar el programa del Ejercicio 4, para que se imprima la cantidad de números primos en el arreglo. Utilizar los prototipos:
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/primos.c}
+
+\subsubsection{Ejercicio 7} 
+Modificar el programa del Ejercicio 4, para que se imprima el mayor y el menor de los números en el arreglo, utilizando los prototipos:
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/mayor.c}
+
+

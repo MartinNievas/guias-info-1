@@ -1,0 +1,21 @@
+#use glob syntax.
+syntax: glob
+
+#latex
+*.aux
+*.log
+*.blg
+*.bbl
+*.dvi
+*.out
+*.nav
+*.snm
+
+#gcc
+*.o
+a.out
+
+#editor textos
+*~
+*.swp
+

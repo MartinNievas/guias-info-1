@@ -1,0 +1,11 @@
+Ingrese el elemeto[0]: 1
+Ingrese el elemeto[1]: -2
+Ingrese el elemeto[2]: -3
+Ingrese el elemeto[3]: 141
+Ingrese el elemeto[4]: -12
+Los elementos del arreglo son:
+a[0]: 1
+a[1]: 2
+a[2]: 3
+a[3]: 141
+a[4]: 12
