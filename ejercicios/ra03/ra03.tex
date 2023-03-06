@@ -1,0 +1,154 @@
+\section{RA3}
+\subsection*{Resultados de aprendizaje}
+Reconocer las ventajas tecnológicas de los sistemas de numeración en bases no decimales, particularmente la binaria, para el procesamiento en la computadora teniendo en cuenta la ``naturaleza binaria'' del hardware.
+
+\subsection*{Contenido según programa}
+Sistemas de numeración y representación numérica.  Aritmética binaria.  Introducción. Los sistemas de numeración y su evolución histórica.  Sistemas de numeración decimal, binario, octal y hexadecimal. Pasajes entre sistemas de números enteros y positivos.  Representación de Números signados: Convenio de signo y magnitud. Convenio de complemento a uno.  Convenio de complemento a dos. Operaciones de adición y de sustracción utilizando el convenio de complemento a dos.  Representación de números fraccionales. Notación punto fijo y punto flotante.  Precisión y truncado.  Errores en notación de punto flotante.  Representación según formato IEEE 754.  Representación de caracteres: Binario Codificado Decimal (BCD), ASCII, Unicode.
+
+\subsection*{Sistemas de numeración y representación numérica. Aritmética binaria.}
+\setcounter{subsection}{2}
+\subsection{Ejercicios:}
+
+\subsubsection{Completar los espacios en blanco:}
+\begin{tabular}{ccc}
+  Decimal&Binario&Hexadecimal\\
+  0&00000000&$\mathrm{0x00}$ \\
+  158& &\underspace\\
+  145&\underspace &\underspace \\
+  \underspace&1010 1110&\underspace \\
+  \underspace&0011 1100&\underspace \\
+  \underspace&1111 0001&\underspace \\
+\end{tabular}
+
+\subsubsection{Suma de números (2.4)}
+Realizar las siguientes operaciones, considerando números signados. Expresar el resultado en decimal.
+\vspace{10mm}
+
+\begin{tabular}{lc}
+  $\mathrm{0x3D} + \mathrm{0x40} $&=\underspace\\
+  $\mathrm{0x3D} - \mathrm{0x20} $&=\underspace\\
+  $\mathrm{01110110} - \mathrm{00101101}$&=\underspace\\
+  $\mathrm{00011110} + \mathrm{01101101}$&=\underspace\\
+
+\end{tabular}
+
+\subsubsection{Suma de números (2.4)}
+Sin convertir a binario, sumar los siguientes números.
+
+\begin{tabular}{lc}
+  $\mathrm{0x605C} + \mathrm{0x5} $&=\underspace\\
+  $\mathrm{0x605C -} + \mathrm{0x20} $&=\underspace\\
+  $\mathrm{0x605C +} + \mathrm{32} $&=\underspace\\
+  $\mathrm{0x60fA -} + \mathrm{0x605C} $&=\underspace\\
+\end{tabular}
+
+\subsubsection{Conversiones}
+Realizar las siguientes conversiones:
+\begin{itemize}
+  \item Convierta el binario 110011010010 en octal y en hexadecimal.
+  \item Convierta el número $\mathrm{0xFACE}$ hexadecimal a binaria.
+  \item Convierte octal $\mathrm{3016}$ a binario.
+  \item Convierta 0xCAFE hexadecimales a octal.
+  \item Convertir binario $\mathrm{1001010}$ a decimal.
+  \item Convertir octal $\mathrm{513}$ a decimal.
+  \item Convierta hexadecimal $\mathrm{0xAFD4}$ a decimal.
+  \item Convierta el decimal $\mathrm{177}$ a binario, a octal y a hexadecimal.
+  \item Calcule la representación binaria del decimal $\mathrm{417}$. Luego el complemento de $\mathrm{417}$ y el complemento de dos de $\mathrm{417}$.
+  \item ¿Cuál es el resultado cuando un número y su complemento de dos se suman?
+\end{itemize}
+
+% \pagebreak
+\subsubsection{ Operaciones Booleanas (2.8)}
+Completar los espacios, evaluando las operaciones Booleanas:\\
+
+\begin{tabular}{cc}
+  Operación&Resultado\\
+  a&[01101010]\\
+  b&[11000101]\\
+  $\sim$ a&\underspace \\
+  $\sim$ b&\underspace \\
+  a \& b&\underspace\\
+  a $\mid$ b&\underspace\\
+  a \^{} b&\underspace\\
+\end{tabular}
+
+\subsubsection{Operadores binarios (2.14)}
+Realizar las siguientes operaciones binarias, teniendo en cuenta los números anteriormente utilizados.\\
+
+\begin{tabular}{cccc}
+  Expresión&Valor&Expresión&Valor\\
+  a \& b&\underspace &a \&\& b &\underspace\\
+  b $\mid$ b&\underspace& a $\mid\mid$ b &\underspace\\
+  $\sim$ a $\mid$ $\sim$ b&\underspace& !a $\mid\mid$ !b &\underspace \\
+\end{tabular}
+
+
+\subsubsection{Desplazamiento de bits (2.16)}
+Completar con las representaciones correspondientes para cada desplazamiento.\\
+
+\begin{tabular}{cccccccc}
+  \multicolumn{2}{c}{ }& &\multicolumn{2}{c}{Lógico}& &\multicolumn{2}{c}{Lógico}\\
+  \multicolumn{2}{c}{a}& &\multicolumn{2}{c}{a$<<$2}& &\multicolumn{2}{c}{a$>>$3}\\
+  \cline{1-2}\cline{4-5}\cline{7-8}\\
+  Hex&Binario&&Hex&Binario&&Hex&Binario\\
+  $\mathrm{0xD4}$&\underspace&&\underspace &\underspace &&\underspace &\underspace\\
+  $\mathrm{0x64}$&\underspace&&\underspace &\underspace &&\underspace &\underspace\\
+  $\mathrm{0xD4}$&\underspace&&\underspace &\underspace &&\underspace &\underspace\\
+  $\mathrm{0x44}$&\underspace&&\underspace &\underspace &&\underspace &\underspace\\
+\end{tabular}
+
+\subsubsection{Truncado}
+En la siguiente tabla escribir las equivalencias de los números suponiendo que sólo se tienen en cuenta 3 bits\\
+
+
+\begin{tabular}{cccccccc}
+  \multicolumn{2}{c}{Hex} & &\multicolumn{2}{c}{No signado}& &\multicolumn{2}{c}{Complemento a 2}\\
+  Original&Truncado&&Original&Truncado&&Original&Truncado\\
+  \cline{1-2}\cline{4-5}\cline{7-8}\\
+  $\mathrm{0x1}$&1          &&1  &\underspace&&1 & \underspace \\
+  $\mathrm{0x3}$&3          &&3  &\underspace&&3 & \underspace \\
+  $\mathrm{0x5}$&\underspace&&5  &\underspace&&5 & \underspace \\
+  $\mathrm{0xC}$&\underspace&&12 &\underspace&&12& -4\\
+  $\mathrm{0xE}$&6          &&14 &\underspace&&14& -2\\
+\end{tabular}
+
+\subsubsection{Suma}
+Realizar las siguientes sumas utilizando números signados de 4 bits:
+\begin{itemize}
+  \item $ -8-5= $
+  \item $-8+5 = $
+  \item $2+5  = $
+  \item $5+5  = $
+\end{itemize}
+
+\subsubsection{Interpretación}
+Realizar las siguientes sumas e interpretar el resultado como números signados o no signados:\\
+
+\begin{tabular}{ccccc}
+x&y&bin&x+y&x+y\\
+&&&(4 bits)&(5bits)\\
+11000&11000&\underspace&\underspace&\underspace\\
+&&&&\\
+10111&01000&\underspace&\underspace&\underspace\\
+&&&&\\
+00010&00101&\underspace&\underspace&\underspace\\
+&&&&\\
+01100&00100&\underspace&\underspace&\underspace\\
+\end{tabular}
+
+\subsubsection{Convertir de decimal a IEEE754}
+Convertir los siguientes números en representación decimal a float IEEE754
+\begin{enumerate}[a)]
+  \item $1.25$
+  \item $-1.25$
+  \item $0.25$
+  \item $63.125$
+\end{enumerate}
+
+\subsubsection{Convertir desde IEEE754 a decimal}
+\begin{enumerate}[a)]
+  \item 01000001110000010000000000000000
+  \item 01000010000000010000000000000000
+  \item 11000001010001100000000000000000
+  \item 11000010101110010000000000000000
+\end{enumerate}

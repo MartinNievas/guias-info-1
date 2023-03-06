@@ -1,0 +1,62 @@
+\section{RA8}
+\subsection*{Resultados de aprendizaje}
+Utilizar punteros para uso general y en particular para pasar argumentos teniendo en cuenta que es una de las características más poderosa del lenguaje C.
+
+\subsection*{Contenido según programa}
+Punteros en lenguaje C.  Concepto de puntero.  Concepto de dirección.  Operadores unarios.  Aritmética de punteros.  Relación entre punteros y arreglos. Inicialización de punteros. Implementación de llamadas a función por referencia. Punteros a puntero. Arreglo de punteros. Ordenamiento de estructuras utilizando arreglo de punteros.  Inicialización de punteros y reserva de espacio en memoria: malloc y free.  Punteros vs. Arreglos multidimensionales.  Argumentos por línea de comandos. Punteros a función.
+
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+\setcounter{subsection}{8}
+\subsection*{Punteros en lenguaje C.}
+
+\subsection*{Paso de parámetros por referencia}
+
+\subsection{Ejercicio}
+Se solicita un programa que cumpla con lo siguiente:
+\begin{itemize}[a)]
+  \item Requisito 1
+    El usuario debe ingresar \textbf{N} valores en un arreglo unidimensional. Los valores ingresados solo pueden ser positivos (incluyendo el cero) menores que 100.
+
+    Se debe realizar la validación en una función que reciba el parámetro por referencia.
+
+  \item Requisito 2
+    Una vez cargados los \textbf{N} valores se debe controlar que no haya números primos. Si existiesen deben ser incrementados en una unidad. Implementar esto en una función,
+    que debe recibir el valor que debe ser chequeado por referencia.
+
+  \item Requisito 3
+    Debe ordenarse el arreglo de mayor a menor utilizando el método de la burbuja. Debe implementarse una función llamada \textit{swap}
+    que reciba por referencia los dos elementos del arreglo que deben intercambiarse para lograr el ordenamiento.
+
+  \item Requisito 4
+    Debe imprimirse el arreglo antes y después del ordenamiento.
+
+
+    El siguiente programa de ejemplo puede servir de ayuda:
+    \pagebreak
+
+    \lstset{inputencoding=utf8/latin1}
+    \lstinputlisting[style=customc]{code/ejercicio_demo.c}
+\end{itemize}
+
+\subsection{Ejercicio}
+Se solicita un programa que cumpla con lo siguiente:
+\begin{itemize}[a)]
+  \item Requisito 1
+    Inicializar un arreglo unidimensional de tamaño\textbf{N} con valores pseudoaleatorios entre el 0 y el 30000
+
+  \item Requisito 2
+    Ordenar el arreglo mediante la función \texttt{ordena\_burbuja} la cual recibe una variable entera llamada \texttt{dir} la cual indica el modo de ordenamiento: ``0'' de mayor a menor y ``1'' de menor a mayor.
+
+  \item Requisito 3
+    Debe ordenarse el arreglo utilizando el método de la burbuja. Debe implementarse una función llamada \textit{swap} que reciba por referencia los dos elementos del arreglo que deben intercambiarse para lograr el ordenamiento.
+
+  \item Requisito 4
+    Debe imprimirse el arreglo antes y después del ordenamiento. Llamar a la función ordenando al arreglo de menor a mayor, y de menor a mayor.
+
+    El siguiente programa de ejemplo puede servir de ayuda:
+    \pagebreak
+
+    \lstset{inputencoding=utf8/latin1}
+    \lstinputlisting[style=customc]{code/ejercicio_demo2.c}
+\end{itemize}
