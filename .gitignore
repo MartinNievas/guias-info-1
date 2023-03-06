@@ -10,7 +10,7 @@ syntax: glob
 *.out
 *.nav
 *.snm
-*.pdf
+ejercicios/guia.pdf
 
 #gcc
 *.o
