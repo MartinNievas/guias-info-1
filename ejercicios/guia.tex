@@ -20,13 +20,19 @@
 \usepackage{multicol}
 
 \usepackage{graphicx}
+\pagestyle{fancy}
+
+\fancyhead{} % clear all header fields
+\fancyhead[R]{\textbf{RA\thesection}}
+\fancyhead[L]{Informática I - guía de trabajos prácticos}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[C]{\thepage}
 
 \title{\LARGE Informática I}
   \author{Guía de Trabajos Prácticos\\[10pt]
     \\\textit{Departamento de Ingeniería Electrónica}
 \\Universidad Tecnológica Nacional, Regional Córdoba
 }
-\date{2020}
 
 % \renewcommand{\@chapapp}{Unidad}
 \renewcommand{\thesubsection}{\arabic{subsection}}
