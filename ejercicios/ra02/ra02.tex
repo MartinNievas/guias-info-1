@@ -19,3 +19,21 @@ Herramientas de desarrollo: El Compilador. El enlazador (Linker). Su relación c
   \item ¿Quien es el encargado de colocar un programa en memoria para que pueda ser ejecutado?
   \item ¿Cual es la unidad mínima de información en una computadora?
 \end{enumerate}
+
+\subsubsection{Ordenar de forma correcta}
+Se desea compilar el programa \texttt{saludo.c} utilizando la línea de comandos (terminal) mediante el programa gcc.
+Dada la siguiente lista de pasos, ordene los mismo para producir el archivo ejecutable \texttt{saludo.out}.
+Tenga en cuenta que alguno de los comandos pueden ser incorrectos.
+Recuerde: \textbf{pre}-procesador, \textbf{com}pilador, \textbf{en}lazador.
+
+\begin{enumerate}
+  \item \texttt{gcc -c programa.i}
+  \item \texttt{gcc saludo.o -o saludo.c}
+  \item \texttt{gcc saludo.c -c saludo}
+  \item \texttt{gcc saludo.i -o saludo.out}
+  \item \texttt{gcc -E programa.c > programa.i}
+  \item \texttt{gcc -c programa.i}
+  \item \texttt{gcc -E programa.c > programa.out}
+  \item \texttt{gcc programa.o -o saludo.out}
+\end{enumerate}
+
