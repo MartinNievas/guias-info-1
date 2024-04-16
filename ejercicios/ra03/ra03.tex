@@ -21,14 +21,18 @@ Sistemas de numeración y representación numérica.  Aritmética binaria.  Intr
 \end{tabular}
 
 \subsubsection{Suma de números (2.4)}
-Realizar las siguientes operaciones, considerando números signados. Expresar el resultado en decimal.
+Realizar las siguientes operaciones, considerando números signados de 8 bits. Expresar el resultado en decimal.
 \vspace{10mm}
 
 \begin{tabular}{lc}
   $\mathrm{0x3D} + \mathrm{0x40} $&=\underspace\\
   $\mathrm{0x3D} - \mathrm{0x20} $&=\underspace\\
+  $\mathrm{0x4A} - \mathrm{0x03} $&=\underspace\\
+  $\mathrm{0x44} - \mathrm{0x10} $&=\underspace\\
   $\mathrm{01110110} - \mathrm{00101101}$&=\underspace\\
   $\mathrm{00011110} + \mathrm{01101101}$&=\underspace\\
+  $\mathrm{01011110} - \mathrm{01111111}$&=\underspace\\
+  $\mathrm{01111110} + \mathrm{01101000}$&=\underspace\\
 
 \end{tabular}
 
@@ -56,6 +60,96 @@ Realizar las siguientes conversiones:
   \item Calcule la representación binaria del decimal $\mathrm{417}$. Luego el complemento de $\mathrm{417}$ y el complemento de dos de $\mathrm{417}$.
   \item ¿Cuál es el resultado cuando un número y su complemento de dos se suman?
 \end{itemize}
+
+\subsubsection{Conversión decimal binario}
+Convertir a binario los siguientes números decimales. Utilizar 10 bits en total.
+\begin{itemize}
+  \item $13.44$
+  \item $23.25$
+  \item $51.1$
+  \item $4.34$
+  \item $9.675$
+  \item $17.14$
+  \item $15.128$
+\end{itemize}
+
+\subsubsection{Conversión binario decimal fraccionario}
+Convertir a decimal los siguientes números binarios.
+\begin{itemize}
+  \item $\mathrm{1110.10}$
+  \item $\mathrm{1010.1011}$
+  \item $\mathrm{110010.111}$
+  \item $\mathrm{1000010.011}$
+  \item $\mathrm{101010.101}$
+  \item $\mathrm{101111.111}$
+  \item $\mathrm{101011.0001}$
+\end{itemize}
+
+\subsubsection{Truncado}
+En la siguiente tabla escribir las equivalencias de los números suponiendo que sólo se tienen en cuenta 3 bits\\
+
+\begin{tabular}{cccccccc}
+  \multicolumn{2}{c}{Hex} & &\multicolumn{2}{c}{No signado}& &\multicolumn{2}{c}{Complemento a 2}\\
+  Original&Truncado&&Original&Truncado&&Original&Truncado\\
+  \cline{1-2}\cline{4-5}\cline{7-8}\\
+  $\mathrm{0x1}$&1          &&1  &\underspace&&1 & \underspace \\
+  $\mathrm{0x3}$&3          &&3  &\underspace&&3 & \underspace \\
+  $\mathrm{0x5}$&\underspace&&5  &\underspace&&5 & \underspace \\
+  $\mathrm{0xC}$&\underspace&&12 &\underspace&&12& -4\\
+  $\mathrm{0xE}$&6          &&14 &\underspace&&14& -2\\
+\end{tabular}
+
+\subsubsection{Suma}
+Realizar las siguientes sumas utilizando números signados de 4 bits:
+\begin{itemize}
+  \item $ -8-5= $
+  \item $-8+5 = $
+  \item $2+5  = $
+  \item $5+5  = $
+\end{itemize}
+
+\subsubsection{Interpretación}
+Realizar las siguientes sumas e interpretar el resultado como números signados o no signados:\\
+
+\begin{tabular}{ccccc}
+x&y&bin&x+y&x+y\\
+&&&(4 bits)&(5bits)\\
+11000&11000&\underspace&\underspace&\underspace\\
+&&&&\\
+10111&01000&\underspace&\underspace&\underspace\\
+&&&&\\
+00010&00101&\underspace&\underspace&\underspace\\
+&&&&\\
+01100&00100&\underspace&\underspace&\underspace\\
+&&&&\\
+01110&01100&\underspace&\underspace&\underspace\\
+&&&&\\
+01101&00110&\underspace&\underspace&\underspace\\
+\end{tabular}
+
+\subsubsection{Convertir de decimal a IEEE754}
+Convertir los siguientes números en representación decimal a float IEEE754
+\begin{enumerate}[a)]
+  \item $1.25$
+  \item $7.125$
+  \item $127.575$
+  \item $-1.25$
+  \item $-1.675$
+  \item $-0.25$
+  \item $-0.01$
+  \item $63.125$
+  \item $-0.0123$
+\end{enumerate}
+
+\subsubsection{Convertir desde IEEE754 a decimal}
+\begin{enumerate}[a)]
+  \item 01000001110000010000000000000000
+  \item 01000010000000010000000000000000
+  \item 11000001010001100000000000000000
+  \item 11000010101110010000000000000000
+  \item 01000010100111000100000000000000
+  \item 01000010100111001100000000000000
+\end{enumerate}
 
 % \pagebreak
 \subsubsection{ Operaciones Booleanas (2.8)}
@@ -97,58 +191,3 @@ Completar con las representaciones correspondientes para cada desplazamiento.\\
   $\mathrm{0x44}$&\underspace&&\underspace &\underspace &&\underspace &\underspace\\
 \end{tabular}
 
-\subsubsection{Truncado}
-En la siguiente tabla escribir las equivalencias de los números suponiendo que sólo se tienen en cuenta 3 bits\\
-
-
-\begin{tabular}{cccccccc}
-  \multicolumn{2}{c}{Hex} & &\multicolumn{2}{c}{No signado}& &\multicolumn{2}{c}{Complemento a 2}\\
-  Original&Truncado&&Original&Truncado&&Original&Truncado\\
-  \cline{1-2}\cline{4-5}\cline{7-8}\\
-  $\mathrm{0x1}$&1          &&1  &\underspace&&1 & \underspace \\
-  $\mathrm{0x3}$&3          &&3  &\underspace&&3 & \underspace \\
-  $\mathrm{0x5}$&\underspace&&5  &\underspace&&5 & \underspace \\
-  $\mathrm{0xC}$&\underspace&&12 &\underspace&&12& -4\\
-  $\mathrm{0xE}$&6          &&14 &\underspace&&14& -2\\
-\end{tabular}
-
-\subsubsection{Suma}
-Realizar las siguientes sumas utilizando números signados de 4 bits:
-\begin{itemize}
-  \item $ -8-5= $
-  \item $-8+5 = $
-  \item $2+5  = $
-  \item $5+5  = $
-\end{itemize}
-
-\subsubsection{Interpretación}
-Realizar las siguientes sumas e interpretar el resultado como números signados o no signados:\\
-
-\begin{tabular}{ccccc}
-x&y&bin&x+y&x+y\\
-&&&(4 bits)&(5bits)\\
-11000&11000&\underspace&\underspace&\underspace\\
-&&&&\\
-10111&01000&\underspace&\underspace&\underspace\\
-&&&&\\
-00010&00101&\underspace&\underspace&\underspace\\
-&&&&\\
-01100&00100&\underspace&\underspace&\underspace\\
-\end{tabular}
-
-\subsubsection{Convertir de decimal a IEEE754}
-Convertir los siguientes números en representación decimal a float IEEE754
-\begin{enumerate}[a)]
-  \item $1.25$
-  \item $-1.25$
-  \item $0.25$
-  \item $63.125$
-\end{enumerate}
-
-\subsubsection{Convertir desde IEEE754 a decimal}
-\begin{enumerate}[a)]
-  \item 01000001110000010000000000000000
-  \item 01000010000000010000000000000000
-  \item 11000001010001100000000000000000
-  \item 11000010101110010000000000000000
-\end{enumerate}
