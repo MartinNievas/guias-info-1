@@ -111,3 +111,50 @@ Para cada uno de los siguientes items, escriba una declaración que realice la t
 \end{itemize}
 
 
+\subsubsection{Ejercicio}
+Se solicita un programa que cumpla con lo siguiente:
+\begin{itemize}[a)]
+  \item Requisito 1:
+    Solicitar al usuario ingresar un número \texttt{tam} entero positivo menor que N. Este número será utilizado como tamaño del arreglo dinámico
+  \item Requisito 2:
+    Reservar espacio en memoria para un arreglo dinámico de \texttt{tam} elementos. Se debe reservar el espacio mediante \texttt{malloc} en la función \texttt{main}.
+
+  \item Requisito 3:
+    El programa debe inicializar un arreglo unidimensional con \texttt{tam} valores generados de manera pseudoaleatoria entre -100 y 100.
+
+  \item Requisito 4:
+    Se debe contar la cantidad de números negativos y positivos en el arreglo. Implementar dos funciones separadas para cada tarea, las cuales recibirán el puntero al arreglo y su tamaño. La función devuelve la cantidad de elementos correspondientes.
+
+  \item Requisito 5:
+    Reservar espacio en memoria para dos arreglos \texttt{positivos} y \texttt{negativos}, con la cantidad de elementos correspondiete calculada en el punto anterior.
+
+  \item Requisito 6
+    Copiar los números positivos y negativos en los arreglos definidos previamente. Implementar funciones para cada tarea, que recibirán el puntero al arreglo original, el puntero a los arreglos de destino y sus respectivos tamaños máximos.
+
+    El siguiente programa de ejemplo puede servir de ayuda:
+
+    \lstset{inputencoding=utf8/latin1}
+    \lstinputlisting[style=customc]{code/ejercicio_demo5.c}
+\end{itemize}
+
+
+\subsubsection{Ejercicio}
+Se solicita un programa que cumpla con lo siguiente:
+\begin{itemize}[a)]
+  \item Requisito 1:
+    Presentar al usuario un menú con 4 opciones: \texttt{suma}, \texttt{resta}, \texttt{división}, \texttt{multiplicación} con números del 1 al 4 respectivamente. Solicitar al usuario una operación válida utilizando la función correspondiente.
+
+  \item Requisito 2:
+    Solicitar al usuario dos números con los cuales operar.
+
+  \item Requisito 3:
+    En base al número de operación ingresado, llamar a la función correspondiente. El arreglo \texttt{operaciones} contiene las direcciones de las funciones correspondientes. Hacer el llamado a la función \texttt{operar} que recibe el puntero a la función correspondiente y devuelve el resultado al programa principal.
+
+  \item Requisito 4:
+    Imprimir el resultado de la operación desde el programa principal.
+
+    El siguiente programa de ejemplo puede servir de ayuda:
+
+    \lstset{inputencoding=utf8/latin1}
+    \lstinputlisting[style=customc]{code/ejercicio_demo6.c}
+\end{itemize}
