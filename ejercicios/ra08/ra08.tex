@@ -11,8 +11,7 @@ Punteros en lenguaje C.  Concepto de puntero.  Concepto de dirección.  Operador
 \subsection*{Punteros en lenguaje C.}
 
 \subsection*{Paso de parámetros por referencia}
-
-\subsection{Ejercicio}
+\subsubsection{Ejercicio}
 Se solicita un programa que cumpla con lo siguiente:
 \begin{itemize}[a)]
   \item Requisito 1
@@ -24,39 +23,91 @@ Se solicita un programa que cumpla con lo siguiente:
     Una vez cargados los \textbf{N} valores se debe controlar que no haya números primos. Si existiesen deben ser incrementados en una unidad. Implementar esto en una función,
     que debe recibir el valor que debe ser chequeado por referencia.
 
-  \item Requisito 3
-    Debe ordenarse el arreglo de mayor a menor utilizando el método de la burbuja. Debe implementarse una función llamada \textit{swap}
-    que reciba por referencia los dos elementos del arreglo que deben intercambiarse para lograr el ordenamiento.
-
-  \item Requisito 4
-    Debe imprimirse el arreglo antes y después del ordenamiento.
-
-
     El siguiente programa de ejemplo puede servir de ayuda:
-    \pagebreak
 
     \lstset{inputencoding=utf8/latin1}
     \lstinputlisting[style=customc]{code/ejercicio_demo.c}
 \end{itemize}
 
-\subsection{Ejercicio}
+\subsubsection{Ejercicio}
 Se solicita un programa que cumpla con lo siguiente:
 \begin{itemize}[a)]
-  \item Requisito 1
-    Inicializar un arreglo unidimensional de tamaño\textbf{N} con valores pseudoaleatorios entre el 0 y el 30000
-
-  \item Requisito 2
-    Ordenar el arreglo mediante la función \texttt{ordena\_burbuja} la cual recibe una variable entera llamada \texttt{dir} la cual indica el modo de ordenamiento: ``0'' de mayor a menor y ``1'' de menor a mayor.
-
-  \item Requisito 3
-    Debe ordenarse el arreglo utilizando el método de la burbuja. Debe implementarse una función llamada \textit{swap} que reciba por referencia los dos elementos del arreglo que deben intercambiarse para lograr el ordenamiento.
-
-  \item Requisito 4
-    Debe imprimirse el arreglo antes y después del ordenamiento. Llamar a la función ordenando al arreglo de menor a mayor, y de menor a mayor.
-
+  \item Requisito 1:
+    El usuario debe ingresar \textbf{N} valores en un arreglo unidimensional. Los valores ingresados pueden ser positivos, negativos pero no cero.
+  \item Requisito 2:
+    Una vez cargado el arreglo, los números impares deben ser convertidos en el número par inmediatamente superior. Este proceso debe implementarse en una función que reciba el valor por referencia.
+  \item Requisito 3:
+    Los números negativos del arreglo deben ser copiados en un nuevo arreglo. Este proceso debe implementarse en una función separada, la cual debe retornar la cantidad de elementos copiados.
     El siguiente programa de ejemplo puede servir de ayuda:
-    \pagebreak
 
     \lstset{inputencoding=utf8/latin1}
-    \lstinputlisting[style=customc]{code/ejercicio_demo2.c}
+    \lstinputlisting[style=customc]{code/ejercicio_demo3.c}
 \end{itemize}
+
+\subsubsection{Ejercicio}
+Se solicita un programa que cumpla con lo siguiente:
+\begin{itemize}[a)]
+  \item Requisito 1:
+    El programa debe inicializar un arreglo unidimensional con N valores generados de manera pseudoaleatoria entre -300 y 500.
+
+  \item Requisito 2:
+    Se debe contar la cantidad de números negativos y positivos en el arreglo. Implementar dos funciones separadas para cada tarea, las cuales recibirán el puntero al arreglo y su tamaño. La función devuelve la cantidad de elementos correspondientes.
+
+  \item Requisito 3:
+    Copiar los números positivos y negativos en dos nuevos arreglos predefinidos. Implementar funciones para cada tarea, que recibirán el puntero al arreglo original, el puntero a los arreglos de destino y sus respectivos tamaños máximos.
+
+    El siguiente programa de ejemplo puede servir de ayuda:
+
+    \lstset{inputencoding=utf8/latin1}
+    \lstinputlisting[style=customc]{code/ejercicio_demo4.c}
+\end{itemize}
+
+%\subsubsection{Ejercicio}
+%Se solicita un programa que cumpla con lo siguiente:
+%\begin{itemize}[a)]
+%  \item Requisito 1
+%    Inicializar un arreglo unidimensional de tamaño\textbf{N} con valores pseudoaleatorios entre el -100 y el 100
+%
+%  \item Requisito 2
+%    Ordenar el arreglo mediante la función \texttt{ordena\_burbuja} la cual recibe una variable entera llamada \texttt{dir} la cual indica el modo de ordenamiento: ``0'' de mayor a menor y ``1'' de menor a mayor.
+%
+%  \item Requisito 3
+%    Debe ordenarse el arreglo utilizando el método de la burbuja. Debe implementarse una función llamada \textit{swap} que reciba por referencia los dos elementos del arreglo que deben intercambiarse para lograr el ordenamiento.
+%
+%  \item Requisito 4
+%    Debe imprimirse el arreglo antes y después del ordenamiento. Llamar a la función ordenando al arreglo de menor a mayor, y de menor a mayor.
+%
+%    El siguiente programa de ejemplo puede servir de ayuda:
+%
+%    \lstset{inputencoding=utf8/latin1}
+%    \lstinputlisting[style=customc]{code/ejercicio_demo2.c}
+%\end{itemize}
+
+
+\subsubsection{Completar}
+Responda cada uno de los siguientes:
+\begin{itemize}[a)]
+\item Una variable de tipo puntero contiene como su valor la \underspace otra variable.
+\item Los tres valores que se pueden usar para inicializar un puntero son \underspace, \underspace y \underspace.
+\item El único entero que se puede asignar a un puntero es el \underspace.
+\end{itemize}
+
+Indique si lo siguiente es verdadero o falso. En ambos casos, explique por qué.
+\begin{itemize}[a)]
+\item Un puntero que se declara nulo puede desreferenciarse.
+\item Los punteros de diferentes tipos no pueden asignarse entre sí sin una operación de (cast).
+\end{itemize}
+
+
+Para cada uno de los siguientes items, escriba una declaración que realice la tarea indicada. Suponga que las variables de punto flotante \texttt{num1} y \texttt{num2} están inicializadas en 7.3.
+\begin{itemize}[a)]
+\item Defina la variable \texttt{fPtr} para ser un puntero a un objeto de tipo flotante.
+\item Asigne la dirección del número \texttt{num1} al puntero \texttt{fPtr}.
+\item Imprima el valor del objeto apuntado por \texttt{fPtr}.
+\item Asigne el valor de la variable apuntada por \texttt{fPtr }a la variable \texttt{num2}.
+\item Imprima el valor del \texttt{num2}.
+\item Imprima la dirección del \texttt{num1}. Use el especificador de conversión \%p.
+\item Imprima la dirección almacenada en \texttt{fPtr}. Use el especificador de conversión \%p. ¿El valor impreso es igual que la dirección del \texttt{num1}?
+\end{itemize}
+
+
