@@ -447,6 +447,244 @@ Realizar un programa que calcule la potencia $m$ de número $n$, donde $m$ y $n$
 
 
 \subsection*{\underline{Ejercicios de cierre}}
+
+\subsubsection{Carrera de números}
+Se va a simular una carrera entre tres números enteros positivos, llamados A, B y C. Cada uno de estos números avanza en la carrera según una regla distinta:
+
+\begin{itemize}
+  \item A avanza sumando 3 en cada paso.
+  \item B avanza multiplicándose por 2 en cada paso.
+  \item C avanza sumando una secuencia creciente de números impares (1, luego 3, luego 5, etc.).
+\end{itemize}
+
+La carrera termina cuando uno de los tres llega o supera una meta N (un número ingresado por el usuario).
+
+Tu programa debe:
+
+\begin{enumerate}
+  \item Pedir al usuario el valor de la meta N (mayor a 0).
+  \item Simular la carrera paso a paso, mostrando en cada ronda los valores actuales de A, B y C.
+  \item Indicar al final quién ganó (puede haber más de un ganador si empatan).
+\end{enumerate}
+
+\subsubsection{Juego conjetura de Collatz}
+Cada jugador elige un número inicial x, y genera una secuencia de Collatz con él.
+La regla es:
+
+\begin{itemize}
+  \item Si x es par → el siguiente es x / 2
+  \item Si x es impar → el siguiente es 3 * x + 1
+\end{itemize}
+
+La secuencia continúa hasta que se llega a 1.
+
+Tu programa debe:
+
+\begin{enumerate}
+  \item Pedir la cantidad de jugadores.
+  \item Para cada jugador, pedir su número inicial.
+  \item Mostrar la secuencia generada por cada jugador.
+  \item Al final, declarar como ganador al jugador cuya secuencia haya tenido más pasos.
+\end{enumerate}
+
+Ejemplo:
+
+{\small
+  \lstset{inputencoding=utf8/latin1}
+  \lstinputlisting[backgroundcolor = \color{lightgray}]{code/collatz_salida.mn}
+}
+
+\subsubsection{Números espías}
+El Número Espía
+
+Un número espía es aquel que oculta un mensaje secreto: si sumás sus dígitos y también los multiplicás, y ambos resultados son iguales, ¡tenés un número espía!
+
+Ejemplo:
+
+\begin{itemize}
+  \item 1124 → suma = 1+1+2+4 = 8, producto = 1×1×2×4 = 8 → ¡es espía!
+  \item 123 → suma = 6, producto = 6 → espía
+  \item 132 → suma = 6, producto = 6 → espía
+  \item 124 → suma = 7, producto = 8 → no espía
+\end{itemize}
+
+Tu programa debe:
+\begin{itemize}
+  \item Pedir un número entero N (cantidad de números a analizar).
+  \item Leer N números enteros positivos.
+  \item Para cada número, indicar si es espía o no.
+  \item Al final, mostrar cuántos números espía se encontraron.
+\end{itemize}
+
+Ejemplo:
+
+{\small
+  \lstset{inputencoding=utf8/latin1}
+  \lstinputlisting[backgroundcolor = \color{lightgray}]{code/numero_espia.mn}
+}
+
+\subsubsection{Cazadores de Divisores}
+
+Cada jugador elige un número entero positivo. El programa debe:
+
+\begin{itemize}
+  \item Calcular cuántos divisores tiene ese número (distintos de 1 y del mismo número).
+  \item Mostrar todos los divisores encontrados (usando %).
+  \item Gana el jugador que haya elegido el número con más divisores propios.
+\end{itemize}
+
+Reglas:
+
+\begin{itemize}
+  \item No se consideran divisores a 1 ni al propio número.
+  \item Si hay empate, gana el que haya participado primero.
+\end{itemize}
+
+\subsubsection{Encajando cuadrados en un triángulo equilátero}
+
+Dado un triángulo equilátero de lado L, queremos saber cuántos cuadrados de lado a pueden encajar completamente dentro del triángulo.
+
+Las condiciones son:
+
+\begin{enumerate}
+  \item Los cuadrados están alineados con la base del triángulo (no rotados).
+  \item Se colocan en filas horizontales desde la base hacia el vértice superior.
+  \item En cada fila, los cuadrados se ubican uno al lado del otro, y deben estar completamente dentro del triángulo.
+  \item Cada fila se coloca justo encima de la anterior, de modo que se forma una pirámide de cuadrados.
+\end{enumerate}
+
+Entrada:
+
+\begin{itemize}
+  \item L: lado del triángulo equilátero
+  \item a: lado del cuadrado
+\end{itemize}
+
+Ambos son números positivos con a menor a L.
+
+Salida:
+
+\begin{itemize}
+  \item Cantidad total de cuadrados que entran dentro del triángulo.
+\end{itemize}
+
+{\small
+  \lstset{inputencoding=utf8/latin1}
+  \lstinputlisting[backgroundcolor = \color{lightgray}]{code/cuadrado_triangulo.mn}
+}
+
+\subsubsection{Contando moléculas}
+
+En un vaso de soda hay una mezcla de tres tipos de moléculas:
+\begin{itemize}
+    \item Agua destilada (H$_2$O)
+    \item Dióxido de carbono (CO$_2$)
+    \item Glucosa (C$_6$H$_{12}$O$_6$)
+\end{itemize}
+
+Se cuenta la cantidad de átomos de carbono (C), hidrógeno (H) y oxígeno (O) en la muestra.
+
+Tu tarea es determinar \textbf{cuántas moléculas de cada tipo hay en la muestra}, dado el número total de átomos de C, H y O.
+
+Formato de entrada:\\
+
+Una sola línea con tres enteros separados por espacios:
+\[
+c \quad h \quad o
+\]
+donde:
+\begin{itemize}
+    \item $c$ es la cantidad de átomos de carbono
+    \item $h$ es la cantidad de átomos de hidrógeno
+    \item $o$ es la cantidad de átomos de oxígeno
+\end{itemize}
+
+Restricciones:\\
+
+\begin{itemize}
+    \item Los valores de $c$, $h$ y $o$ son enteros no negativos.
+    \item La mezcla solo puede contener moléculas de agua, dióxido de carbono y glucosa.
+    \item Si no es posible obtener esos números de átomos usando solo moléculas completas de estos tres tipos, se debe reportar error.
+\end{itemize}
+
+\section*{Formato de salida}
+
+\begin{itemize}
+    \item Si la combinación de átomos es \textbf{válida}, imprimir una línea con tres enteros separados por espacios:
+    \[
+    \text{agua} \quad \text{co2} \quad \text{glucosa}
+    \]
+    donde cada número indica la cantidad de moléculas de ese tipo.
+    \item Si la combinación es \textbf{inválida} (no se puede formar solo con esas moléculas), imprimir:
+    \[
+    \texttt{Error}
+    \]
+\end{itemize}
+
+Información de las moléculas:\\
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Molécula & Fórmula química & C & H & O \\
+\hline
+Agua & H$_2$O & 0 & 2 & 1 \\
+Dióxido de carbono & CO$_2$ & 1 & 0 & 2 \\
+Glucosa & C$_6$H$_{12}$O$_6$ & 6 & 12 & 6 \\
+\hline
+\end{tabular}
+
+\textbf{Ejemplo 1}\\
+\textbf{Entrada}
+\begin{verbatim}
+10 0 20
+\end{verbatim}
+
+\textbf{Salida}
+\begin{verbatim}
+0 10 0
+\end{verbatim}
+Explicación: Solo se pueden formar 10 moléculas de CO2 (cada una con 1 C y 2 O), no hay hidrógeno para agua ni glucosa.
+
+
+\textbf{Ejemplo 2}\\
+\textbf{Entrada}
+\begin{verbatim}
+0 24 12
+\end{verbatim}
+
+\textbf{Salida}
+\begin{verbatim}
+12 0 0
+\end{verbatim}
+Solo se puede formar agua (H2O), ya que no hay carbono. 12 moléculas, cada una con 2 H y 1 O.
+
+
+\textbf{Ejemplo 3}\\
+\textbf{Entrada}
+\begin{verbatim}
+16 24 22
+\end{verbatim}
+
+\textbf{Salida}
+\begin{verbatim}
+2 6 2
+\end{verbatim}
+Combinación válida formando 2 aguas, 6 CO2 y 2 glucosas (combinación que cumple con los átomos).
+
+\textbf{Ejemplo 4}\\
+\textbf{Entrada}
+\begin{verbatim}
+1 1 1
+\end{verbatim}
+
+\textbf{Salida}
+\begin{verbatim}
+Error
+\end{verbatim}
+No es posible formar ninguna combinación entera de moléculas con solo 1 C, 1 H y 1 O.
+
+
+
 \subsubsection{Cálculo límites de frecuencia cardíaca}
 
 Según la American Heart Association (AHA), la fórmula para calcular su frecuencia cardíaca máxima en ritmos por minuto es 220 menos su edad en años.

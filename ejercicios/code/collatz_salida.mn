@@ -1,0 +1,9 @@
+Ingrese sus números
+
+Jugador 1: 6
+Jugador 2: 7
+
+Secuencia: 6 → 3 → 10 → 5 → 16 → 8 → 4 → 2 → 1 (9 pasos)
+Secuencia: 7 → 22 → 11 → 34 → 17 → 52 → 26 → 13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1 (17 pasos)
+
+Ganador: Jugador 2 con 17 pasos
