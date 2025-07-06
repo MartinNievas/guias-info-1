@@ -89,6 +89,92 @@ Crear los prototipos para las diferentes funciones que resuelvan:
   \item Función \textbf{intToFloat}, que toma un argumento entero llamado \textbf{numero}, y devuelve el resultado en float.
 \end{itemize}
 
+\subsubsection{Calculadora con operaciones básicas}
+Implementar una función para cada operación matemática básica. Cada función debe recibir dos números reales y devolver el resultado correspondiente. La función dividir debe verificar que el divisor no sea cero. Si lo es, retornar 0 e imprimir un mensaje de error desde la función.
+
+Prototipos:
+
+\begin{lstlisting}[style=customc, basicstyle=\ttfamily]
+float sumar(float a, float b);
+float restar(float a, float b);
+float multiplicar(float a, float b);
+float dividir(float a, float b);
+\end{lstlisting}
+
+
+\subsubsection{Verificar si un número es múltiplo de otro}
+La función debe devolver 1 si a es múltiplo de b, y 0 en caso contrario. Considerar el caso en el que b sea 0 e imprimir un mensaje de error en ese caso.
+\begin{lstlisting}[style=customc, basicstyle=\ttfamily]
+int esMultiplo(int a, int b);
+\end{lstlisting}
+
+\subsubsection{Clasificar un carácter}
+La función debe indicar si el carácter recibido es una letra mayúscula, letra minúscula, dígito numérico (0-9) o otro símbolo. Utilizar condicionales y switch cuando sea posible.
+\begin{lstlisting}[style=customc, basicstyle=\ttfamily]
+void clasificarCaracter(char c);
+\end{lstlisting}
+
+\subsubsection{Contador de cifras}
+La función debe contar cuántas cifras tiene un número entero positivo. Por ejemplo, si recibe 1234 debe devolver 4. Si recibe 0 debe devolver 1. No debe usar strings ni arreglos.
+\begin{lstlisting}[style=customc, basicstyle=\ttfamily]
+int contarCifras(int n);
+\end{lstlisting}
+
+\subsubsection{Contador de dígitos pares en un número}
+La función debe contar cuántos dígitos pares tiene un número entero positivo. No se pueden usar arreglos. Por ejemplo, si el número es 248, debe devolver 3.
+\begin{lstlisting}[style=customc, basicstyle=\ttfamily]
+int contarPares(int n);
+\end{lstlisting}
+
+\subsubsection{Conversor de días a semanas y días}
+La función debe calcular cuántas semanas y días hay en una cantidad total de días. Debe imprimir por pantalla los resultados: semanas y dias.
+\begin{lstlisting}[style=customc, basicstyle=\ttfamily]
+void convertirDias(int totalDias);
+\end{lstlisting}
+
+\subsubsection{Determinar si un año es bisiesto}
+La función debe devolver 1 si el año es bisiesto y 0 si no lo es. Un año es bisiesto si es múltiplo de 4 y (no es múltiplo de 100 o sí es múltiplo de 400).
+\begin{lstlisting}[style=customc, basicstyle=\ttfamily]
+int esBisiesto(int anio);
+\end{lstlisting}
+
+
+\subsubsection{Cajero Automático Simplificado}
+Simular el retiro de dinero de un cajero automático.
+
+Primero, el usuario debe ingresar un PIN. Si no es el correcto (por ejemplo, 1234), el sistema debe mostrar un mensaje de error y no continuar.
+
+Si el PIN es correcto, el usuario ingresa un monto a retirar. El sistema debe calcular cuántos billetes de una denominación específica (por ejemplo, billetes de 100) se entregarán.
+
+Mostrar cuántos billetes se entregan y cuál es el saldo restante (que no se puede entregar porque no alcanza para un billete entero).
+\begin{lstlisting}[style=customc, basicstyle=\ttfamily]
+int verificarPin(int pinIngresado);
+int calcularBilletes(int monto, int denominacion);
+\end{lstlisting}
+
+
+\subsubsection{Validar Horario}
+Crear una función que reciba tres enteros: horas, minutos y segundos. Verificar que:
+Las horas estén entre 0 y 23.
+Los minutos y segundos estén entre 0 y 59.
+Si los valores son válidos, devolver 1. Si no, devolver 0 y mostrar un mensaje de error indicando cuál campo es incorrecto.
+\begin{lstlisting}[style=customc, basicstyle=\ttfamily]
+int validarHora(int horas, int minutos, int segundos); 
+\end{lstlisting}
+
+\subsubsection{Convertir Minutos Totales a Horas y Minutos}
+Dada una cantidad total de minutos, calcular cuántas horas completas hay y cuántos minutos sobran. Los resultados deben devolverse a través de parámetros por referencia.
+\begin{lstlisting}[style=customc, basicstyle=\ttfamily]
+void convertirTiempo(int minutosTotales, int* horas, int* minutos);
+\end{lstlisting}
+
+\subsubsection{}
+\begin{lstlisting}[style=customc, basicstyle=\ttfamily]
+\end{lstlisting}
+
+\subsubsection{}
+\begin{lstlisting}[style=customc, basicstyle=\ttfamily]
+\end{lstlisting}
 
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
@@ -135,35 +221,6 @@ Su programa debe imprimir las instrucciones precisas que necesitará para mover 
   \lstinputlisting[backgroundcolor = \color{lightgray}]{code/hanoi_salida.mn}
 }
 
-\subsubsection{Ejercicio}
-Modificar el siguiente programa, para que los valores del arreglo sean ingresados con la función \textbf{carga}.
-\lstset{inputencoding=utf8/latin1}
-\lstinputlisting[style=customc]{code/ejercicio1_fun2_completar.c}
-Prototipo de la función \textbf{carga}
-\lstset{inputencoding=utf8/latin1}
-\lstinputlisting[style=customc]{code/carga.c}
-
-\subsubsection{Ejercicio}
-Modificar el programa anterior para que la impresión del arreglo se realice con la función con prototipo:
-\lstset{inputencoding=utf8/latin1}
-\lstinputlisting[style=customc]{code/imprime.c}
-
-\subsubsection{Ejercicio}
-Modificar el programa anterior para que el arreglo ingresado se ordene de mayor a menor con la función con prototipo:
-\lstset{inputencoding=utf8/latin1}
-\lstinputlisting[style=customc]{code/ordenar.c}
-
-\subsubsection{Ejercicio}
-Modificar el programa del Ejercicio 4, para que se imprima la cantidad de números primos en el arreglo. Utilizar los prototipos:
-\lstset{inputencoding=utf8/latin1}
-\lstinputlisting[style=customc]{code/primos.c}
-
-\subsubsection{Ejercicio}
-Modificar el programa del Ejercicio 4, para que se imprima el mayor y el menor de los números en el arreglo, utilizando los prototipos:
-\lstset{inputencoding=utf8/latin1}
-\lstinputlisting[style=customc]{code/mayor.c}
-
-
 \subsection*{\underline{Ejercicios de cierre}}
 \subsubsection{Juego del ahorcado}
 Escriba un programa que implemente el juego del ahorcado.
@@ -176,16 +233,3 @@ El siguiente código puede servir de ayuda.
 
 \lstset{inputencoding=utf8/latin1}
 \lstinputlisting[style=customc]{code/ahorcado.c}
-
-\subsubsection{Eliminar repetidos}
-Escriba un programa en C para eliminar todos los elementos duplicados de un arreglo de tamaño \texttt{N}.
-Los elementos serán ingresados por el usuario, al finalizar se debe mostrar por pantalla los elementos del arreglo.
-Se debe modificar el contenido del arreglo original y se pueden cambiar de posición los elementos de como fueron ingresados.
-
-\lstset{inputencoding=utf8/latin1}
-\lstinputlisting[style=customc]{code/repetidos.c}
-
-{\small
-  \lstset{inputencoding=utf8/latin1}
-  \lstinputlisting[backgroundcolor = \color{lightgray}]{code/repetidos_salida.mn}
-}
