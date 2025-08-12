@@ -66,95 +66,56 @@ $$\overrightarrow{a}\cdot \overrightarrow{b} = a_1\cdot b_1 + a_2\cdot b_2 +\dot
   \item Si hay menos elementos en la lista de inicialización de un arreglo que el tamaño del arreglo, los elementos restantes son inicializados con basura.
 \end{itemize}
 
+\subsubsection{Cargar y mostrar temperaturas}
+Pedir al usuario las temperaturas de los últimos 7 días y mostrarlas en orden inverso.
+\subsubsection{Promedio y valor máximo}
+Leer las notas de 5 estudiantes y calcular:
+\begin{itemize}
+    \item Promedio.
+    \item Nota máxima y posición en el arreglo.
+\end{itemize}
+\subsubsection{Desplazamiento de elementos}
+Ingresar 5 números y generar un nuevo arreglo desplazando todos los elementos una posición a la derecha (el último pasa al primero).
+
+\subsubsection{Eliminar repetidos}
+Ingresar 10 números enteros en un arreglo \textit{numeros}
+Validar que los números sean positivos.
+Generar un nuevo arreglo \textit{sin\_repetir} sin valores repetidos, manteniendo el orden de aparición.
+El arreglo \textit{sin\_repetir} debe tener el mismo tamaño que el arreglo original.
+\subsubsection{Rotación circular múltiple}
+Ingresar un arreglo de 6 elementos y rotarlo k posiciones hacia la izquierda (k lo ingresa el usuario).
+Validar que el número k sea positivo y menor que 6.
+Cuando un elemento sale del arreglo, se debe ingresar de nuevo al final del arreglo.
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 \subsection*{Arreglos Bidimensionales}
 
-\subsubsection{Ejercicio}
+\subsubsection{Matriz identidad}
+Crear una matriz de 4x4 y llenarla con 1 en la diagonal y 0 en el resto.
+
+\subsubsection{Suma de matrices}
+Ingresar dos matrices 3x3 y mostrar la matriz suma.
+
+\subsubsection{Ingreso de arreglo bidimensional}
 Escribir un programa quje solicite al usuario ingresar un arreglo de dos dimensiones de \textit{NxM}. \textit{N} y \textit{M} son directivas de preprocesador. Al finalizar, el programa debe imprimir la matriz.
 
-\subsubsection{Ejercicio}
+\subsubsection{Ingreso y validación}
 Escribir un programa que solicite ingresar al usuario los elementos de un arreglo bidimensional de \textbf{n} filas por  \textbf{m} columnas. Los valores de \textbf{n} y \textbf{m} son ingresados por el usuario, los mismos deben ser menores que N y M (directivas de preprocesador) y mayores que 0. Imprimir el arreglo al finalizar.
 
-\subsubsection{Ejercicio}
+\subsubsection{Copiar transpuesto}
 Escribir un programa quje solicite al usuario ingresar un arreglo de dos dimensiones de \textit{NxM}. \textit{N} y \textit{M} son directivas de preprocesador. Luego se deben copiar los elementos del arreglo se deben copiar a otro arreglo, de tal manera de obtener la matriz transpuesta.
 Al finalizar, el programa debe imprimir las dos matrices.
 
-\subsubsection{Ejercicio}
+\subsubsection{Producto de matrices}
 Modificar el programa anterior para obtener el producto de una matriz por su transpuesta. El producto entre las matrices $A*B$ es una mtriz C donde:
 
 $$C_{ij}=\sum_{k=1}^{m}{A_{ik}B_{kj}} $$
 
-%--------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------
-\subsection*{Ordenamiento}
-\subsubsection{Ejercicio}
-Realizar un programa que solicite al usuario ingresar 10 números enteros y los almacene en un arreglo. Luego, se debe ordenar el arreglo de menor a mayor utilizando el método \texttt{Insertion Sort}
-
-\subsubsection{Ejercicio}
-Modificar el programa anterior para ordenar el arreglo de mayor a menor.
-
-\subsubsection{Ejercicio}
-Realizar un programa que solicite al usuario ingresar 10 números enteros y los almacene en un arreglo. Luego, se debe ordenar el arreglo de menor a mayor utilizando el método \texttt{burbuja}
-
-\subsubsection{Ejercicio}
-Modificar el programa anterior para ordenar el arreglo de mayor a menor.
-
-\subsubsection{Ejercicio}
-Realizar un programa que solicite al usuario ingresar 10 números enteros y los almacene en un arreglo. Luego, se debe ordenar el arreglo de menor a mayor utilizando el método \texttt{burbuja mejorada}
-
-\subsubsection{Ejercicio}
-Comparar la cantidad de permutaciones realizadas entre los algoritmos \texttt{burbuja} y \texttt{burbuja mejorada}
+\subsubsection{Sudoku Mini}
+Leer una matriz 4x4 que representa un tablero de Sudoku reducido. Verificar que no haya números repetidos en cada fila y cada columna.
 
 \subsubsection{Ejercicio}
 Realizar un programa que solicite al usuario ingresar 10 números decimales y los almacene en un arreglo. Luego, se debe determinar: el promedio, la media, la varianza.
 
 \subsubsection{Ejercicio}
 Realizar un programa que solicite al usuario ingresar 30 calificaciones en un arreglo \texttt{notas}. Luego, contabilizar las notas en un arreglo de 10 elementos llamado \texttt{notas\_acum}. Finalmente imprimir la cantidad de notas en forma de histograma utilizando ``\#''.
-
-\subsubsection{Ejercicio}
-Realizar un programa que solicite al usuario ingresar 30 calificaciones en un arreglo \texttt{notas}. Luego, llamar a la función \texttt{promedio} que recibe el arreglo y devuelve el promedio de sus elementos. Se debe implementar la función \texttt{promedio} para que reciba como argumentos el arreglo y un entero correspondiente al tamaño del mismo.
-
-\subsubsection{Ejercicio}
-Realizar un programa que solicite al usuario ingresar 30 calificaciones en un arreglo \texttt{notas}. Luego, llamar a la función \texttt{max} y \texttt{min} que recibe el arreglo y devuelve el mayor y menor de sus elementos respectivamente. Se deben implementar ambas funciones para que reciban como argumentos: el arreglo y un entero correspondiente al tamaño del mismo.
-
-\subsubsection{Ejercicio}
-Modificar el siguiente programa, para que los valores del arreglo sean ingresados con la función \textbf{carga}.
-\lstset{inputencoding=utf8/latin1}
-\lstinputlisting[style=customc]{code/ejercicio1_fun2_completar.c}
-Prototipo de la función \textbf{carga}
-\lstset{inputencoding=utf8/latin1}
-\lstinputlisting[style=customc]{code/carga.c}
-
-\subsubsection{Ejercicio}
-Modificar el programa anterior para que la impresión del arreglo se realice con la función con prototipo:
-\lstset{inputencoding=utf8/latin1}
-\lstinputlisting[style=customc]{code/imprime.c}
-
-\subsubsection{Ejercicio}
-Modificar el programa anterior para que el arreglo ingresado se ordene de mayor a menor con la función con prototipo:
-\lstset{inputencoding=utf8/latin1}
-\lstinputlisting[style=customc]{code/ordenar.c}
-
-\subsubsection{Ejercicio}
-Modificar el programa del Ejercicio 4, para que se imprima la cantidad de números primos en el arreglo. Utilizar los prototipos:
-\lstset{inputencoding=utf8/latin1}
-\lstinputlisting[style=customc]{code/primos.c}
-
-\subsubsection{Ejercicio}
-Modificar el programa del Ejercicio 4, para que se imprima el mayor y el menor de los números en el arreglo, utilizando los prototipos:
-\lstset{inputencoding=utf8/latin1}
-\lstinputlisting[style=customc]{code/mayor.c}
-
-\subsubsection{Eliminar repetidos}
-Escriba un programa en C para eliminar todos los elementos duplicados de un arreglo de tamaño \texttt{N}.
-Los elementos serán ingresados por el usuario, al finalizar se debe mostrar por pantalla los elementos del arreglo.
-Se debe modificar el contenido del arreglo original y se pueden cambiar de posición los elementos de como fueron ingresados.
-
-\lstset{inputencoding=utf8/latin1}
-\lstinputlisting[style=customc]{code/repetidos.c}
-
-{\small
-  \lstset{inputencoding=utf8/latin1}
-  \lstinputlisting[backgroundcolor = \color{lightgray}]{code/repetidos_salida.mn}
-}

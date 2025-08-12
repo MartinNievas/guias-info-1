@@ -163,12 +163,22 @@ int validarHora(int horas, int minutos, int segundos);
 \end{lstlisting}
 
 \subsubsection{Convertir Minutos Totales a Horas y Minutos}
-Dada una cantidad total de minutos, calcular cuántas horas completas hay y cuántos minutos sobran. Los resultados deben devolverse a través de parámetros por referencia.
+Dada una cantidad total de minutos, calcular cuántas horas completas hay y cuántos minutos sobran.
+El valor de minutos debe ser mayor o igual a 0. Si es negativo, mostrar un mensaje de error y pedir de nuevo el valor.
+Los resultados deben devolverse a través de parámetros por referencia.
 \begin{lstlisting}[style=customc, basicstyle=\ttfamily]
 void convertirTiempo(int minutosTotales, int* horas, int* minutos);
 \end{lstlisting}
 
-\subsubsection{}
+\subsubsection{Calculadora de Plazos}
+Desarrollar un programa para calcular la cantidad de cuotas que tiene que pagar un cliente al comprar un producto en diferentes plazos. El programa debe:
+\begin{itemize}
+  \item Pedir al usuario el precio del producto (no puede ser negativo).
+  \item Preguntar cuántas cuotas quiere realizar (no puede ser menor a 2 ni mayor a 12).
+  \item Pedir la tasa de interés anual (no puede ser negativa).
+  \item Calcular el monto de la primera cuota.
+\end{itemize}
+
 \begin{lstlisting}[style=customc, basicstyle=\ttfamily]
 \end{lstlisting}
 
