@@ -11,6 +11,38 @@ Punteros en lenguaje C.  Concepto de puntero.  Concepto de dirección.  Operador
 \subsection*{Punteros en lenguaje C.}
 
 \subsection*{Paso de parámetros por referencia}
+
+\subsubsection{Ejercicio}
+Realizar un programa que solicite al usuario ingresar un número entero positivo a través de la función declarada como \textbf{void ingresar\_positivo(int *)}. Esta función recibe como argumento un puntero a entero y debe validar que el número ingresado sea positivo. En caso de no serlo, solicitar nuevamente el ingreso del número. Finalmente, imprimir el número ingresado en el programa principal. 
+
+\subsubsection{Ejercicio}
+Realizar un programa que solicite ingresar dos números reales en el main. Luego, llamar a la función \textbf{void suma\_y\_producto(float *a, float *b, float *suma, float *producto)} que recibe como argumentos punteros a los dos números ingresados y dos punteros a variables donde se almacenará la suma y el producto de ambos números respectivamente. Finalmente, imprimir los resultados en el programa principal.
+
+\subsubsection{Ejercicio}
+Realizar un programa que solicite al usuario ingresar dos números enteros a través de la función \textbf{void ingresar\_en\_rango(int *, int min, int max)}. Esta función recibe como argumentos un puntero a entero y dos enteros que representan el rango válido de ingreso. La función debe validar que el número ingresado esté dentro del rango. En caso de no ser así, solicitar nuevamente el ingreso del número. Finalmente, imprimir los números ingresados en el programa principal.
+
+\subsubsection{Ejercicio}
+Realizar un programa que solicite al usuario ingresar \textit{N} números enteros en un arreglo \texttt{vec}. \texttt{N} es una constante de preprocesador. La carga de los número se debe realizar a través de la función \textbf{void cargar\_arreglo(int *vec, int n)}. Esta función recibe como argumentos un puntero a entero y un entero que representa el tamaño del arreglo. Finalmente, imprimir los números ingresados en el programa principal. Dentro de la función no se puede utilizar la constante \texttt{N}.
+
+\subsubsection{Ejercicio}
+Realizar un programa que solicite al usuario ingresar 30 calificaciones en un arreglo \texttt{notas}. Luego, llamar a la función \texttt{promedio} que recibe el arreglo y devuelve el promedio de sus elementos. Se debe implementar la función \texttt{promedio} para que reciba como argumentos el arreglo y un entero correspondiente al tamaño del mismo.
+
+\subsubsection{Ejercicio}
+Realizar un programa que solicite al usuario ingresar 30 calificaciones en un arreglo \texttt{notas}. Luego, llamar a la función \texttt{max} y \texttt{min} que recibe el arreglo y devuelve el mayor y menor de sus elementos respectivamente. Se deben implementar ambas funciones para que reciban como argumentos: el arreglo y un entero correspondiente al tamaño del mismo.
+
+\subsubsection{Ejercicio}
+Modificar el siguiente programa, para que los valores del arreglo sean ingresados con la función \textbf{carga}.
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/ejercicio1_fun2_completar.c}
+Prototipo de la función \textbf{carga}
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/carga.c}
+
+\subsubsection{Ejercicio}
+Modificar el programa anterior para que la impresión del arreglo se realice con la función con prototipo:
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/imprime.c}
+
 \subsubsection{Ejercicio}
 Se solicita un programa que cumpla con lo siguiente:
 \begin{itemize}[a)]
@@ -159,29 +191,10 @@ Se solicita un programa que cumpla con lo siguiente:
     \lstinputlisting[style=customc]{code/ejercicio_demo6.c}
 \end{itemize}
 
-\subsubsection{Ejercicio}
-Realizar un programa que solicite al usuario ingresar 30 calificaciones en un arreglo \texttt{notas}. Luego, llamar a la función \texttt{promedio} que recibe el arreglo y devuelve el promedio de sus elementos. Se debe implementar la función \texttt{promedio} para que reciba como argumentos el arreglo y un entero correspondiente al tamaño del mismo.
-
-\subsubsection{Ejercicio}
-Realizar un programa que solicite al usuario ingresar 30 calificaciones en un arreglo \texttt{notas}. Luego, llamar a la función \texttt{max} y \texttt{min} que recibe el arreglo y devuelve el mayor y menor de sus elementos respectivamente. Se deben implementar ambas funciones para que reciban como argumentos: el arreglo y un entero correspondiente al tamaño del mismo.
-
-\subsubsection{Ejercicio}
-Modificar el siguiente programa, para que los valores del arreglo sean ingresados con la función \textbf{carga}.
-\lstset{inputencoding=utf8/latin1}
-\lstinputlisting[style=customc]{code/ejercicio1_fun2_completar.c}
-Prototipo de la función \textbf{carga}
-\lstset{inputencoding=utf8/latin1}
-\lstinputlisting[style=customc]{code/carga.c}
-
-\subsubsection{Ejercicio}
-Modificar el programa anterior para que la impresión del arreglo se realice con la función con prototipo:
-\lstset{inputencoding=utf8/latin1}
-\lstinputlisting[style=customc]{code/imprime.c}
-
-\subsubsection{Ejercicio}
-Modificar el programa anterior para que el arreglo ingresado se ordene de mayor a menor con la función con prototipo:
-\lstset{inputencoding=utf8/latin1}
-\lstinputlisting[style=customc]{code/ordenar.c}
+% \subsubsection{Ejercicio}
+% Modificar el programa anterior para que el arreglo ingresado se ordene de mayor a menor con la función con prototipo:
+% \lstset{inputencoding=utf8/latin1}
+% \lstinputlisting[style=customc]{code/ordenar.c}
 
 \subsubsection{Ejercicio}
 Modificar el programa del Ejercicio 4, para que se imprima la cantidad de números primos en el arreglo. Utilizar los prototipos:
