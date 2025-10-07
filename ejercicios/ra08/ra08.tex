@@ -13,16 +13,16 @@ Punteros en lenguaje C.  Concepto de puntero.  Concepto de dirección.  Operador
 \subsection*{Paso de parámetros por referencia}
 
 \subsubsection{Ejercicio}
-Realizar un programa que solicite al usuario ingresar un número entero positivo a través de la función declarada como \textbf{void ingresar\_positivo(int *)}. Esta función recibe como argumento un puntero a entero y debe validar que el número ingresado sea positivo. En caso de no serlo, solicitar nuevamente el ingreso del número. Finalmente, imprimir el número ingresado en el programa principal. 
+Realizar un programa que solicite al usuario ingresar un número entero positivo a través de la función declarada como \textbf{void ingresar\_positivo(int *)}. Esta función recibe como argumento un puntero a entero y debe validar que el número ingresado sea positivo. En caso de no serlo, solicitar nuevamente el ingreso del número. Finalmente, imprimir el número ingresado en la función principal. 
 
 \subsubsection{Ejercicio}
-Realizar un programa que solicite ingresar dos números reales en el main. Luego, llamar a la función \textbf{void suma\_y\_producto(float *a, float *b, float *suma, float *producto)} que recibe como argumentos punteros a los dos números ingresados y dos punteros a variables donde se almacenará la suma y el producto de ambos números respectivamente. Finalmente, imprimir los resultados en el programa principal.
+Realizar un programa que solicite ingresar dos números reales en el main. Luego, llamar a la función \textbf{void suma\_y\_producto(float *a, float *b, float *suma, float *producto)} que recibe como argumentos punteros a los dos números ingresados y dos punteros a variables donde se almacenará la suma y el producto de ambos números respectivamente. Finalmente, imprimir los resultados en la función principal.
 
 \subsubsection{Ejercicio}
-Realizar un programa que solicite al usuario ingresar dos números enteros a través de la función \textbf{void ingresar\_en\_rango(int *, int min, int max)}. Esta función recibe como argumentos un puntero a entero y dos enteros que representan el rango válido de ingreso. La función debe validar que el número ingresado esté dentro del rango. En caso de no ser así, solicitar nuevamente el ingreso del número. Finalmente, imprimir los números ingresados en el programa principal.
+Realizar un programa que solicite al usuario ingresar dos números enteros a través de la función \textbf{void ingresar\_en\_rango(int *, int min, int max)}. Esta función recibe como argumentos un puntero a entero y dos enteros que representan el rango válido de ingreso. La función debe validar que el número ingresado esté dentro del rango. En caso de no ser así, solicitar nuevamente el ingreso del número. Finalmente, imprimir el número ingresado en la función principal.
 
 \subsubsection{Ejercicio}
-Realizar un programa que solicite al usuario ingresar \textit{N} números enteros en un arreglo \texttt{vec}. \texttt{N} es una constante de preprocesador. La carga de los número se debe realizar a través de la función \textbf{void cargar\_arreglo(int *vec, int n)}. Esta función recibe como argumentos un puntero a entero y un entero que representa el tamaño del arreglo. Finalmente, imprimir los números ingresados en el programa principal. Dentro de la función no se puede utilizar la constante \texttt{N}.
+Realizar un programa que solicite al usuario ingresar \textit{N} números enteros en un arreglo \texttt{vec}. \texttt{N} es una constante de preprocesador. La carga de los número se debe realizar a través de la función \textbf{void cargar\_arreglo(int *vec, int n)}. Esta función recibe como argumentos un puntero a entero y un entero que representa el tamaño del arreglo. Finalmente, imprimir los números ingresados en la función principal. Dentro de la función no se puede utilizar la constante \texttt{N}.
 
 \subsubsection{Ejercicio}
 Realizar un programa que solicite al usuario ingresar 30 calificaciones en un arreglo \texttt{notas}. Luego, llamar a la función \texttt{promedio} que recibe el arreglo y devuelve el promedio de sus elementos. Se debe implementar la función \texttt{promedio} para que reciba como argumentos el arreglo y un entero correspondiente al tamaño del mismo.
@@ -183,7 +183,7 @@ Se solicita un programa que cumpla con lo siguiente:
     En base al número de operación ingresado, llamar a la función correspondiente. El arreglo \texttt{operaciones} contiene las direcciones de las funciones correspondientes. Hacer el llamado a la función \texttt{operar} que recibe el puntero a la función correspondiente y devuelve el resultado al programa principal.
 
   \item Requisito 4:
-    Imprimir el resultado de la operación desde el programa principal.
+    Imprimir el resultado de la operación desde la función principal.
 
     El siguiente programa de ejemplo puede servir de ayuda:
 
@@ -218,3 +218,24 @@ Se debe modificar el contenido del arreglo original y se pueden cambiar de posic
   \lstset{inputencoding=utf8/latin1}
   \lstinputlisting[backgroundcolor = \color{lightgray}]{code/repetidos_salida.mn}
 }
+
+\subsubsection{Ejercicio}
+Realizar un programa que solicite al usuario ingresar un número entero y lo almacene en una variable llamada \textbf{num}. Luego, llamar a la función \textbf{void incrementar(int *p)} que recibe un puntero a entero y le suma uno al valor apuntado. Imprimir el resultado en la función principal.
+
+\subsubsection{Ejercicio}
+Realizar un programa que solicite al usuario ingresar dos enteros. Luego, llamar a la función \textbf{void intercambiar(int *a, int *b)} que recibe dos punteros a enteros e intercambia sus valores. Finalmente, imprimir los valores en la función principal.
+
+\subsubsection{Ejercicio}
+Realizar un programa que solicite al usuario ingresar el radio de un círculo. Luego, llamar a la función \textbf{void calcular\_area\_perimetro(float *radio, float *area, float *perimetro)} que recibe un puntero al radio y dos punteros donde se almacenarán el área y el perímetro del círculo respectivamente. Imprimir los resultados en la función principal.
+
+\subsubsection{Ejercicio}
+Definir una constante de preprocesador \texttt{N = 5}. Realizar un programa que solicite al usuario ingresar \texttt{N} enteros en un arreglo. Implementar la función \textbf{void mostrar\_inverso(int *vec, int n)} que recibe un puntero al arreglo y su tamaño, e imprime los elementos en orden inverso.
+
+\subsubsection{Ejercicio}
+Realizar un programa que solicite al usuario ingresar \texttt{N} números enteros en un arreglo. Luego, implementar la función \textbf{int eliminar_numero(int *vec, int n, int valor)} que recibe el arreglo, su tamaño y un valor a eliminar del arreglo. La función debe recorrer el arreglo y convertir a cero todas las ocurrencias del valor ingresado (diferente de cero). Imprimir el arreglo antes y después del llamado a la función.
+
+\subsubsection{Ejercicio}
+Realizar un programa que solicite al usuario ingresar una cadena de caracteres. Luego, implementar la función \textbf{int contar\_vocales(char *cadena)} que recibe un puntero a \texttt{char} y devuelve la cantidad de vocales en la cadena.
+
+\subsubsection{Ejercicio}
+Realizar un programa que solicite al usuario ingresar un número entero positivo \texttt{N}. Luego, reservar memoria dinámica para un arreglo de \texttt{N} enteros y cargarlo a través de la función \textbf{void cargar\_dinamico(int *vec, int n)}. Finalmente, imprimir los elementos cargados y liberar la memoria reservada.

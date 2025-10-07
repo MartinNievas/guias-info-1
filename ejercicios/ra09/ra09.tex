@@ -49,6 +49,74 @@ El programa debe cumplir:
     \end{itemize}
 \end{itemize}
 
+\subsubsection{Ejercicio}
+Definir una estructura llamada inventario para almacenar los datos de un artículo en un depósito.
+Cada elemento debe contener los siguientes campos:
+
+\begin{itemize}
+  \item nombre: cadena de 30 caracteres.
+  \item numero\_parte: número entero identificador.
+  \item precio: número flotante.
+  \item stock: número entero que indique la cantidad disponible.
+\end{itemize}
+
+En la función main():
+
+\begin{enumerate}
+  \item Declarar una variable de tipo inventario.
+  \item Inicializar sus campos con valores predefinidos.
+  \item Mostrar por pantalla la información completa del artículo.
+\end{enumerate}
+
+\subsubsection{Ejercicio}
+Definir una estructura llamada alumno que contenga:
+
+legajo (entero)
+dni (entero)
+notas[3] (arreglo de tres flotantes)
+promedio (flotante)
+estado (cadena de 10 caracteres)
+
+El programa debe permitir ingresar los datos de 3 alumnos, cumpliendo:
+
+\begin{enumerate}
+  \item Validar que el legajo y el DNI sean positivos.
+  \item Calcular el promedio de las tres notas ingresadas.
+  \item Determinar el estado académico según el promedio:
+    \begin{itemize}
+      \item Promocionado: promedio ≥ 8
+      \item Regular: 6 ≤ promedio < 8
+      \item Libre: promedio < 6
+    \end{itemize}
+\end{enumerate}
+
+Mostrar los resultados de todos los alumnos.
+
+\subsubsection{Ejercicio}
+Implementar una función \texttt{imprimir\_inventario} para imprimir una estructura que tenga como miembros:
+
+\begin{itemize}
+  \item nombre (cadena de 30 caracteres)
+  \item numero\_parte (entero)
+  \item precio (flotante)
+  \item stock (entero)
+\end{itemize}
+
+La función llamada \texttt{imprimir\_inventario} tiene que recibir como parámetro una variable de tipo inventario como parámetro y muestre su contenido por pantalla.
+
+El programa principal main debe:
+
+\begin{itemize}
+  \item Declarar e inicializar una variable de tipo inventario.
+  \item 
+Llamar a la función \texttt{imprimir\_inventario} pasándole la estructura como argumento.
+\end{itemize}
+
+Ejemplo de código:
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/ejercicio10_estructuras.c}
+
+
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 \subsection*{Uniones y Enumeraciones}
