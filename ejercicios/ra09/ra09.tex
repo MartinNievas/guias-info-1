@@ -71,11 +71,13 @@ En la función main():
 \subsubsection{Ejercicio}
 Definir una estructura llamada alumno que contenga:
 
-legajo (entero)
-dni (entero)
-notas[3] (arreglo de tres flotantes)
-promedio (flotante)
-estado (cadena de 10 caracteres)
+\begin{itemize}
+  \item legajo (entero)
+  \item dni (entero)
+  \item notas[3] (arreglo de tres flotantes)
+  \item promedio (flotante)
+  \item estado (cadena de 10 caracteres)
+\end{itemize}
 
 El programa debe permitir ingresar los datos de 3 alumnos, cumpliendo:
 
@@ -116,6 +118,218 @@ Ejemplo de código:
 \lstset{inputencoding=utf8/latin1}
 \lstinputlisting[style=customc]{code/ejercicio10_estructuras.c}
 
+\subsubsection{Registro de libros}
+
+Definir una estructura llamada \texttt{libro} que contenga los siguientes miembros:
+
+\begin{itemize}
+\item título (cadena de 50 caracteres)
+\item autor (cadena de 40 caracteres)
+\item año (entero)
+\item precio (flotante)
+\end{itemize}
+
+El programa debe:
+
+\begin{enumerate}
+\item Permitir ingresar los datos de 3 libros.
+\item Validar que el año sea mayor a 0 y el precio positivo.
+\item Imprimir la información de cada libro en formato tabular.
+\end{enumerate}
+
+\subsubsection{Información de vehículos}
+
+Definir una estructura llamada \texttt{vehiculo} con los siguientes campos:
+
+\begin{itemize}
+\item marca (cadena de 20 caracteres)
+\item modelo (cadena de 20 caracteres)
+\item año (entero)
+\item kilometraje (entero)
+\end{itemize}
+
+El programa debe:
+
+\begin{enumerate}
+\item Pedir al usuario los datos de 5 vehículos.
+\item Validar que el año y el kilometraje sean valores positivos.
+\item Mostrar por pantalla todos los vehículos ingresados.
+\item Indicar cuál tiene el mayor kilometraje.
+\end{enumerate}
+
+\subsubsection{Temperaturas diarias}
+
+Definir una estructura llamada \texttt{registro_temperatura} con los miembros:
+
+\begin{itemize}
+\item día (entero)
+\item mes (entero)
+\item temperatura_max (flotante)
+\item temperatura_min (flotante)
+\end{itemize}
+
+El programa debe:
+
+\begin{enumerate}
+\item Cargar las temperaturas de una semana (7 días).
+\item Calcular la temperatura promedio semanal.
+\item Determinar qué día tuvo la mayor temperatura máxima.
+\item Mostrar los resultados.
+\end{enumerate}
+
+\subsubsection{Alumno con domicilio}
+
+Definir dos estructuras:
+
+\begin{itemize}
+\item \texttt{domicilio} con los miembros:
+\begin{itemize}
+\item calle (cadena de 30 caracteres)
+\item numero (entero)
+\item ciudad (cadena de 30 caracteres)
+\end{itemize}
+
+\item \texttt{alumno} con los miembros:
+\begin{itemize}
+\item nombre (cadena de 30 caracteres)
+\item legajo (entero)
+\item domicilio (estructura de tipo \texttt{domicilio})
+\end{itemize}
+\end{itemize}
+
+El programa debe:
+
+\begin{enumerate}
+\item Permitir ingresar los datos de 1 alumno, incluyendo su domicilio completo.
+\item Validar que el número de legajo y el número de domicilio sean positivos.
+\item Imprimir todos los datos cargados, mostrando el domicilio en formato:
+\texttt{calle número, ciudad}.
+\end{enumerate}
+
+\subsubsection{Producto con proveedor}
+
+Definir las siguientes estructuras:
+
+\begin{itemize}
+\item \texttt{proveedor}:
+\begin{itemize}
+\item nombre (cadena de 30 caracteres)
+\item cuit (entero)
+\end{itemize}
+\item \texttt{producto}:
+\begin{itemize}
+\item nombre (cadena de 30 caracteres)
+\item precio (flotante)
+\item proveedor (estructura de tipo \texttt{proveedor})
+\end{itemize}
+\end{itemize}
+
+El programa debe:
+
+\begin{enumerate}
+\item Cargar los datos de 3 productos y sus proveedores.
+\item Validar que el precio sea mayor a 0.
+\item Mostrar por pantalla todos los productos junto al nombre de su proveedor.
+\end{enumerate}
+
+\subsubsection{Producto con funciones}
+Definir una estructura \texttt{producto} con:
+
+\begin{itemize}
+\item nombre (cadena de 30 caracteres se deben aceptar espacios)
+\item precio (flotante)
+\item cantidad (entero)
+\end{itemize}
+
+Implementar las siguientes funciones:
+
+\begin{itemize}
+\item \texttt{struct producto cargar_producto(void);}
+
+Solicita al usuario los datos de un producto.
+
+\item \texttt{void imprimir_producto(struct producto p);}
+Muestra por pantalla los datos del producto.
+\end{itemize}
+
+El programa principal debe declarar un producto, cargarlo y mostrarlo utilizando las funciones.
+
+\subsubsection{Productos con funciones y punteros}
+
+Definir una estructura \texttt{producto} con:
+
+\begin{itemize}
+\item nombre (cadena de 30 caracteres)
+\item precio (flotante)
+\item cantidad (entero)
+\end{itemize}
+
+Implementar las siguientes funciones:
+
+\begin{itemize}
+\item \texttt{void cargar_producto(struct producto *p);}
+Solicita al usuario los datos de un producto.
+\item \texttt{void imprimir_producto(struct producto p);}
+Muestra por pantalla los datos del producto.
+\end{itemize}
+
+El programa principal debe declarar un producto, cargarlo y mostrarlo utilizando las funciones.
+
+\subsubsection{Arreglo de productos}
+Definir una estructura \texttt{producto} con:
+
+\begin{itemize}
+\item nombre (cadena de 30 caracteres se deben aceptar espacios)
+\item precio (flotante)
+\item cantidad (entero)
+\end{itemize}
+
+Implementar las siguientes funciones:
+
+\begin{itemize}
+\item \texttt{void cargar_productos(struct producto *p, int tam);}
+
+Solicita al usuario los datos de un producto.
+
+\item \texttt{void imprimir_producto(struct producto *p, int tam);}
+Muestra por pantalla los datos del producto.
+\end{itemize}
+
+El programa principal debe declarar un arreglo de 3 productos, cargarlos y mostrarlos utilizando las funciones.
+El tamaño del arreglo es una constante definida con \texttt{\#define}.
+
+\subsubsection{Alumno con funciones y cálculo de estado}
+
+Definir:
+
+\begin{itemize}
+\item \texttt{alumno}:
+\begin{itemize}
+\item nombre (cadena de 30 caracteres)
+\item legajo (entero)
+\item notas[3] (arreglo de 3 flotantes)
+\item promedio (flotante)
+\item estado (cadena de 10 caracteres)
+\end{itemize}
+\end{itemize}
+
+Implementar:
+
+\begin{itemize}
+\item \texttt{void cargar_alumno(struct alumno *a);}
+\item \texttt{void calcular_promedio(struct alumno *a);}
+\item \texttt{void determinar_estado(struct alumno *a);}
+→ “Promocionado” si promedio ≥ 8, “Regular” si ≥ 6, “Libre” si < 6.
+\item \texttt{void imprimir_alumno(struct alumno a);}
+\end{itemize}
+
+En el \texttt{main()}:
+
+\begin{enumerate}
+\item Cargar 3 alumnos.
+\item Calcular su promedio y estado.
+\item Imprimir toda la información.
+\end{enumerate}
 
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
