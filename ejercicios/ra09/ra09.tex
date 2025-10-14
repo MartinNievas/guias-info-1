@@ -331,6 +331,38 @@ En el \texttt{main()}:
 \item Imprimir toda la información.
 \end{enumerate}
 
+\subsubsection{Producto con actualización de stock}
+
+Definir la estructura:
+
+\begin{itemize}
+\item \texttt{producto}:
+\begin{itemize}
+\item nombre (cadena de 30 caracteres)
+\item precio (flotante)
+\item stock (entero)
+\end{itemize}
+\end{itemize}
+
+Implementar:
+
+\begin{itemize}
+\item \texttt{void cargar_producto(struct producto *p);}
+\item \texttt{void imprimir_producto(struct producto p);}
+\item \texttt{void actualizar_stock(struct producto *p, int cantidad);}
+→ Suma la cantidad al stock (puede ser negativa).
+\end{itemize}
+
+En el \texttt{main()}:
+
+\begin{enumerate}
+\item Cargar un producto.
+\item Imprimir sus datos.
+\item Solicitar al usuario una cantidad a sumar/restar al stock.
+\item Llamar a \texttt{actualizar_stock}.
+\item Imprimir nuevamente los datos actualizados.
+\end{enumerate}
+
 %--------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 \subsection*{Uniones y Enumeraciones}
