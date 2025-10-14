@@ -159,13 +159,13 @@ El programa debe:
 
 \subsubsection{Temperaturas diarias}
 
-Definir una estructura llamada \texttt{registro_temperatura} con los miembros:
+Definir una estructura llamada \texttt{registro\_temperatura} con los miembros:
 
 \begin{itemize}
 \item día (entero)
 \item mes (entero)
-\item temperatura_max (flotante)
-\item temperatura_min (flotante)
+\item temperatura\_max (flotante)
+\item temperatura\_min (flotante)
 \end{itemize}
 
 El programa debe:
@@ -244,11 +244,11 @@ Definir una estructura \texttt{producto} con:
 Implementar las siguientes funciones:
 
 \begin{itemize}
-\item \texttt{struct producto cargar_producto(void);}
+\item \texttt{struct producto cargar\_producto(void);}
 
 Solicita al usuario los datos de un producto.
 
-\item \texttt{void imprimir_producto(struct producto p);}
+\item \texttt{void imprimir\_producto(struct producto p);}
 Muestra por pantalla los datos del producto.
 \end{itemize}
 
@@ -267,9 +267,9 @@ Definir una estructura \texttt{producto} con:
 Implementar las siguientes funciones:
 
 \begin{itemize}
-\item \texttt{void cargar_producto(struct producto *p);}
+\item \texttt{void cargar\_producto(struct producto *p);}
 Solicita al usuario los datos de un producto.
-\item \texttt{void imprimir_producto(struct producto p);}
+\item \texttt{void imprimir\_producto(struct producto p);}
 Muestra por pantalla los datos del producto.
 \end{itemize}
 
@@ -287,11 +287,11 @@ Definir una estructura \texttt{producto} con:
 Implementar las siguientes funciones:
 
 \begin{itemize}
-\item \texttt{void cargar_productos(struct producto *p, int tam);}
+\item \texttt{void cargar\_productos(struct producto *p, int tam);}
 
 Solicita al usuario los datos de un producto.
 
-\item \texttt{void imprimir_producto(struct producto *p, int tam);}
+\item \texttt{void imprimir\_producto(struct producto *p, int tam);}
 Muestra por pantalla los datos del producto.
 \end{itemize}
 
@@ -316,11 +316,15 @@ Definir:
 Implementar:
 
 \begin{itemize}
-\item \texttt{void cargar_alumno(struct alumno *a);}
-\item \texttt{void calcular_promedio(struct alumno *a);}
-\item \texttt{void determinar_estado(struct alumno *a);}
-→ “Promocionado” si promedio ≥ 8, “Regular” si ≥ 6, “Libre” si < 6.
-\item \texttt{void imprimir_alumno(struct alumno a);}
+\item \texttt{void cargar\_alumno(struct alumno *a);}
+\item \texttt{void calcular\_promedio(struct alumno *a);}
+\item \texttt{void determinar\_estado(struct alumno *a);}
+  \begin{itemize}
+    \item Promocionado si promedio es mayor igual a 8
+    \item Regular si promedio es mayor igual a 6
+    \item Libre si promedio es menor a 6.
+  \end{itemize}
+\item \texttt{void imprimir\_alumno(struct alumno a);}
 \end{itemize}
 
 En el \texttt{main()}:
@@ -347,10 +351,10 @@ Definir la estructura:
 Implementar:
 
 \begin{itemize}
-\item \texttt{void cargar_producto(struct producto *p);}
-\item \texttt{void imprimir_producto(struct producto p);}
-\item \texttt{void actualizar_stock(struct producto *p, int cantidad);}
-→ Suma la cantidad al stock (puede ser negativa).
+\item \texttt{void cargar\_producto(struct producto *p);}
+\item \texttt{void imprimir\_producto(struct producto p);}
+\item \texttt{void actualizar\_stock(struct producto *p, int cantidad);}
+Suma la cantidad al stock (puede ser negativa).
 \end{itemize}
 
 En el \texttt{main()}:
@@ -359,7 +363,7 @@ En el \texttt{main()}:
 \item Cargar un producto.
 \item Imprimir sus datos.
 \item Solicitar al usuario una cantidad a sumar/restar al stock.
-\item Llamar a \texttt{actualizar_stock}.
+\item Llamar a \texttt{actualizar\_stock}.
 \item Imprimir nuevamente los datos actualizados.
 \end{enumerate}
 
