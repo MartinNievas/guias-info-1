@@ -388,6 +388,7 @@ En los siguientes fragmentos de programa, determinar si son correctos o no. En c
   \lstset{inputencoding=utf8/latin1}
   \lstinputlisting[style=customc]{code/teo4.c}
 \end{enumerate}
+
 \subsubsection{Ejercicio}
 Indique si cada uno de los siguientes es verdadero o falso. Si es falso, explique por qué.
 \begin{enumerate}[a)]
@@ -484,5 +485,256 @@ Encuentre el error en cada uno de los siguientes segmentos del programa y expliq
     \lstinputlisting[style=customc]{code/ejercicio2e.c}
 \end{enumerate}
 
+\subsubsection{Procesamiento de Datos de Sensores (Union y Enum)}
+Se está diseñando un sistema para recibir paquetes de datos de diferentes sensores. Un paquete de datos puede contener una temperatura (un float), una presión (un int en kPa) o un código de estado (un long). Para ahorrar memoria, dado que un paquete solo contiene un tipo de dato a la vez, usaremos una union. Un enum se usará para identificar qué tipo de dato está activo en la unión.
+Considere las siguientes definiciones de tipos que debe utilizar(\texttt{code/ra09_uniones_0.c}):
+\lstinputlisting[style=customc]{code/ra09_uniones_0.c}
 
+Escriba un programa en C que realice las siguientes acciones:
+\begin{enumerate}
+    \item \textbf{Declaración de Variables:}
+    \begin{itemize}
+        \item Declare una variable \texttt{lecturaActual} de tipo \texttt{SensorLectura}.
+        \item Declare un puntero \texttt{pLectura} de tipo \texttt{SensorLectura*} e inicialícelo para que apunte a \texttt{lecturaActual}.
+    \end{itemize}
 
+    \item \textbf{Inicialización (Acceso Directo):}
+    \begin{itemize}
+        \item Asigne el timestamp actual a \texttt{lecturaActual.timestamp}. Puede usar la función \texttt{time(NULL)} de \texttt{<time.h>}.
+    \end{itemize}
+
+    \item \textbf{Selección de Tipo (Acceso Directo):}
+    \begin{itemize}
+        \item Genere un número aleatorio entre 0 y 2 (inclusive). Pista: \texttt{rand() \% 3}.
+        \item Use este número para asignar el tipo en \texttt{lecturaActual.tipo} (ej. si el aleatorio es 0, asigne \texttt{TIPO\_TEMPERATURA}).
+    \end{itemize}
+
+    \item \textbf{Ingreso de Datos (Acceso Indirecto con Puntero):}
+    \begin{itemize}
+        \item Utilice una estructura \texttt{switch} basada en el tipo (accedido mediante \texttt{pLectura->tipo}).
+        \item \textbf{Caso \texttt{TIPO\_TEMPERATURA}:} Solicite al usuario ingresar una temperatura (\texttt{float}) y guárdela usando el puntero (ej. \texttt{pLectura->valor.temperatura}).
+        \item \textbf{Caso \texttt{TIPO\_PRESION}:} Solicite al usuario ingresar una presión (\texttt{int}) y guárdela usando el puntero (ej. \texttt{pLectura->valor.presion\_kpa}).
+        \item \textbf{Caso \texttt{TIPO\_ESTADO}:} Solicite al usuario ingresar un código de estado (\texttt{long}) y guárdelo usando el puntero (ej. \texttt{pLectura->valor.codigo\_error}).
+    \end{itemize}
+
+    \item \textbf{Función de Impresión:}
+    \begin{itemize}
+        \item Escriba una función \texttt{void imprimirLectura(SensorLectura* p)} que reciba un puntero a la estructura.
+        \item Dentro de esta función, imprima el timestamp.
+        \item Use otro \texttt{switch} (basado en \texttt{p->tipo}) para imprimir el valor correcto de la unión, junto con sus unidades o descripción (ej. ``Temperatura: 25.5 °C'', ``Presión: 101 kPa'', ``Código de Estado: -1'').
+    \end{itemize}
+
+    \item \textbf{Llamada:}
+    \begin{itemize}
+        \item Desde \texttt{main()}, llame a \texttt{imprimirLectura(pLectura)} para mostrar los datos cargados.
+    \end{itemize}
+\end{enumerate}
+
+\subsubsection*{Inspector de Memoria (Union y Enum)}
+A veces es útil inspeccionar la representación en bytes de un tipo de dato más grande (como un unsigned int). Una union es perfecta para esto, ya que nos permite acceder a la misma ubicación de memoria interpretada de dos maneras diferentes: como un solo entero o como un array de bytes.
+Considere las siguientes definiciones de tipos (\texttt{code/ra09_uniones_ej1.c}):
+
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/ra09_uniones_ej1.c}
+
+Escriba un programa en C que realice las siguientes acciones:
+
+\begin{enumerate}
+    \item \textbf{Función de Chequeo de Endianness:}
+    \begin{itemize}
+        \item Escriba una función llamada \texttt{Endianness chequearSistema(void)} que no reciba parámetros y devuelva un valor \texttt{Endianness}.
+        \item Dentro de esta función, declare una variable local \texttt{InspectorBytes insp}.
+        \item Asigne \texttt{insp.valorInt = 1;}.
+        \item Inspeccione el primer byte: \texttt{insp.bytes[0]}.
+        \item Si \texttt{insp.bytes[0] == 1}, el sistema es Little Endian (retorne \texttt{LITTLE\_ENDIAN}).
+        \item Si \texttt{insp.bytes[0] == 0} (y \texttt{insp.bytes[3] == 1}), el sistema sería Big Endian (retorne \texttt{BIG\_ENDIAN}).
+        \item Si no, retorne \texttt{ORDEN\_DESCONOCIDO}.
+    \end{itemize}
+
+    \item \textbf{Función main:}
+    \begin{itemize}
+        \item Declare una variable \texttt{inspector} de tipo \texttt{InspectorBytes}.
+        \item Declare una variable \texttt{endianSistema} de tipo \texttt{Endianness}.
+    \end{itemize}
+
+    \item \textbf{Determinar Endianness:}
+    \begin{itemize}
+        \item Llame a \texttt{chequearSistema()} y almacene el resultado en \texttt{endianSistema}.
+        \item Imprima un mensaje indicando el Endianness del sistema (ej. ``El sistema es: LITTLE\_ENDIAN'').
+    \end{itemize}
+
+    \item \textbf{Inspección de Datos (Usuario):}
+    \begin{itemize}
+        \item Solicite al usuario que ingrese un número entero sin signo (\texttt{unsigned int}).
+        \item Almacene este valor en \texttt{inspector.valorInt}.
+    \end{itemize}
+
+    \item \textbf{Impresión de Bytes:}
+    \begin{itemize}
+        \item Imprima un mensaje: ``El valor [numero\_ingresado] se representa en memoria como:''
+        \item Use un bucle \texttt{for} para iterar 4 veces (de 0 a 3).
+        \item En cada iteración, imprima el índice del byte y su valor en hexadecimal (ej. ``Byte 0: 0x...'').
+        \item Pista: use \texttt{printf("Byte \%d: 0x\%02X\textbackslash n", i, inspector.bytes[i]);}.
+    \end{itemize}
+
+    \item \textbf{Análisis:}
+    \begin{itemize}
+        \item Si ingresaron el número 256 en un sistema Little Endian, ¿qué byte esperan que tenga el valor 0x01?
+        \item Respuesta:
+    \end{itemize}
+\end{enumerate}
+
+\subsubsection{Decodificador de trama de IoT}
+
+\textbf{Contexto:}
+
+Estás trabajando en un sistema de domótica (IoT) que recibe mensajes de diferentes sensores. Para ser ultra-eficientes, todos los mensajes se empaquetan en exactamente 4 bytes (32 bits). El tipo de mensaje y sus datos están codificados dentro de esos 32 bits.
+
+\begin{itemize}
+    \item Los primeros 2 bits (los menos significativos) definen el tipo de mensaje.
+    \item El resto de los bits (30) se interpretan de forma diferente según el tipo.
+\end{itemize}
+
+\textbf{Definiciones:}
+
+\begin{enumerate}
+    \item \textbf{Tipo de Mensaje (Enum):}
+    \begin{itemize}
+        \item \texttt{00} (binario) = \texttt{REPORTE\_TEMP} (Reporte de Temperatura)
+        \item \texttt{01} (binario) = \texttt{REPORTE\_ESTADO} (Reporte de Estado de un Actuador)
+        \item \texttt{10} (binario) = \texttt{ALERTA} (Mensaje de Alerta)
+        \item \texttt{11} (binario) = \texttt{RESERVADO}
+    \end{itemize}
+
+    \item \textbf{Estructura de Datos (Campos de Bits):}
+    \begin{itemize}
+        \item \textbf{Si es \texttt{REPORTE\_TEMP}:}
+        \begin{itemize}
+            \item \texttt{tipo} (2 bits)
+            \item \texttt{id\_sensor} (8 bits): Identificador del sensor (0-255).
+            \item \texttt{temperatura} (10 bits): Un valor de 0 a 1023. Para obtener la T° real, se debe restar 100 y dividir por 10. (Ej. 500 = (500-100)/10 = 40.0°C).
+            \item \texttt{humedad} (7 bits): Un valor de 0 a 127. Representa el \% (0-100).
+            \item \texttt{\_relleno} (5 bits): No se usan.
+        \end{itemize}
+
+        \item \textbf{Si es \texttt{REPORTE\_ESTADO}:}
+        \begin{itemize}
+            \item \texttt{tipo} (2 bits)
+            \item \texttt{id\_actuador} (8 bits): Identificador del actuador (0-255).
+            \item \texttt{estado} (1 bit): 0=APAGADO, 1=ENCENDIDO.
+            \item \texttt{potencia\_actual} (5 bits): Nivel de potencia (0-31).
+            \item \texttt{\_relleno} (16 bits): No se usan.
+        \end{itemize}
+
+        \item \textbf{Si es \texttt{ALERTA}:}
+        \begin{itemize}
+            \item \texttt{tipo} (2 bits)
+            \item \texttt{codigo\_error} (16 bits): Un código de error específico.
+            \item \texttt{timestamp\_relativo} (14 bits): Segundos desde el último reinicio.
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}
+
+\textbf{Tarea a Realizar:}
+
+Escriba un programa en C que cumpla con lo siguiente:
+
+\begin{enumerate}
+    \item Defina la enumeración \texttt{TipoMensaje} (\texttt{REPORTE\_TEMP}, \texttt{REPORTE\_ESTADO}, \texttt{ALERTA}, \texttt{RESERVADO}).
+
+    \item Defina tres (3) \texttt{struct} separadas usando campos de bits (bit-fields) que representen la estructura de \texttt{REPORTE\_TEMP}, \texttt{REPORTE\_ESTADO} y \texttt{ALERTA}.
+
+    \item Defina una \texttt{union} llamada \texttt{TramaIoT} que contenga:
+    \begin{itemize}
+        \item Un \texttt{uint32\_t raw\_data;} (para acceder a los 32 bits crudos).
+        \item Las tres (3) estructuras de campos de bits definidas en el paso 2.
+        \item Una estructura genérica (ej. \texttt{struct \{ unsigned int tipo : 2; \}}) que solo sirva para leer los primeros 2 bits y determinar el tipo.
+    \end{itemize}
+
+    \item Implemente una función \texttt{void procesarTrama(TramaIoT trama)}.
+
+    \item Dentro de \texttt{procesarTrama}, la función debe:
+    \begin{itemize}
+        \item Leer los 2 bits de tipo (usando la estructura genérica).
+        \item Usar un \texttt{switch} basado en el \texttt{(TipoMensaje)} extraído.
+        \item \textbf{Caso \texttt{REPORTE\_TEMP}:} Imprimir el ID del sensor, la temperatura (calculada en °C) y la humedad.
+        \item \textbf{Caso \texttt{REPORTE\_ESTADO}:} Imprimir el ID del actuador, su estado (``ENCENDIDO'' o ``APAGADO'') y su nivel de potencia.
+        \item \textbf{Caso \texttt{ALERTA}:} Imprimir el código de error y el timestamp.
+    \end{itemize}
+
+    \item En \texttt{main()}:
+    \begin{itemize}
+        \item Declare una variable \texttt{TramaIoT miTrama;}.
+        \item Simule la recepción de un paquete asignando un valor hexadecimal a \texttt{miTrama.raw\_data}. Use \texttt{0x1A4C8401}.
+        \item Llame a \texttt{procesarTrama(miTrama)}.
+        \item Simule un segundo paquete. Use \texttt{0x00A2000A}.
+        \item Llame a \texttt{procesarTrama(miTrama)}.
+    \end{itemize}
+\end{enumerate}
+
+Código de ejemplo inicial(\texttt{code/ra09_campo_bits_ej0.c}):
+\lstinputlisting[style=customc]{code/ra09_campo_bits_ej0.c}
+
+\subsubsection{Identificador de Producto (Campos Mutuamente Excluyentes)}
+
+\textbf{Contexto:}
+
+En un sistema de inventario, un producto puede ser identificado de dos maneras, pero nunca ambas al mismo tiempo:
+
+\begin{itemize}
+    \item Por un SKU (un número entero largo, ej. 841029401).
+    \item Por un Lote (un código de cadena de caracteres, ej. ``LOTE-A45'').
+\end{itemize}
+
+Usar una \texttt{union} ahorra memoria, ya que solo necesitamos espacio para una de las dos opciones.
+
+\lstinputlisting[style=customc]{code/ra09_uniones_struct_ej0.c}
+
+\textbf{Tarea a Realizar:}
+
+Escriba un programa en C que realice las siguientes acciones:
+
+\begin{enumerate}
+    \item \textbf{Declaración de Variables:}
+    \begin{itemize}
+        \item Declare dos variables de tipo \texttt{Producto}: \texttt{productoA} y \texttt{productoB}.
+        \item Declare un puntero \texttt{pProducto} de tipo \texttt{Producto*}.
+    \end{itemize}
+
+    \item \textbf{Carga de Producto A (SKU):}
+    \begin{itemize}
+        \item Asigne \texttt{pProducto} para que apunte a \texttt{productoA} (\texttt{pProducto = \&productoA;}).
+        \item Usando el puntero \texttt{pProducto}, asigne:
+        \begin{itemize}
+            \item Nombre: ``Leche''
+            \item Tipo: \texttt{ARG\_SKU}
+            \item ID (SKU): 841003401 (accediendo a \texttt{pProducto->id.sku})
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Carga de Producto B (Lote):}
+    \begin{itemize}
+        \item Asigne \texttt{pProducto} para que apunte a \texttt{productoB} (\texttt{pProducto = \&productoB;}).
+        \item Usando el puntero \texttt{pProducto}, asigne:
+        \begin{itemize}
+            \item Nombre: ``Galletas''
+            \item Tipo: \texttt{ARG\_LOTE}
+            \item ID (Lote): ``LOTE-B91'' (usando \texttt{strcpy} para \texttt{pProducto->id.lote})
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Función de Impresión:}
+    \begin{itemize}
+        \item Escriba una función \texttt{void imprimirProducto(Producto prod)} que reciba la estructura por valor.
+        \item Dentro de la función, imprima el \texttt{prod.nombre}.
+        \item Use una estructura \texttt{if/else} o \texttt{switch} basada en \texttt{prod.tipo}.
+        \item Si el tipo es \texttt{ARG\_SKU}, imprima ``SKU: [valor]'' (usando \texttt{prod.id.sku}).
+        \item Si el tipo es \texttt{ARG\_LOTE}, imprima ``Lote: [valor]'' (usando \texttt{prod.id.lote}).
+    \end{itemize}
+
+    \item \textbf{Llamada Final:}
+    \begin{itemize}
+        \item En \texttt{main()}, llame a \texttt{imprimirProducto(productoA)}.
+        \item En \texttt{main()}, llame a \texttt{imprimirProducto(productoB)}.
+    \end{itemize}
+\end{enumerate}
