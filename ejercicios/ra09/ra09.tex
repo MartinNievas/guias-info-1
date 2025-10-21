@@ -738,3 +738,59 @@ Escriba un programa en C que realice las siguientes acciones:
         \item En \texttt{main()}, llame a \texttt{imprimirProducto(productoB)}.
     \end{itemize}
 \end{enumerate}
+
+\subsubsection{Empaquetado y Desempaquetado de Datos (Máscaras)}
+
+\textbf{Contexto:}
+
+Necesitas almacenar una fecha (Día, Mes, Año) en un solo entero de 16 bits (\texttt{uint16\_t}) para ahorrar espacio. Se usará el siguiente formato:
+
+\begin{itemize}
+    \item Bits 0-4 (5 bits): Día (Valores 1-31)
+    \item Bits 5-8 (4 bits): Mes (Valores 1-12)
+    \item Bits 9-15 (7 bits): Año (Valores 0-127, representando 2000-2127)
+\end{itemize}
+
+Formato de bits: \texttt{AAAAAAAMMMMDDDDD}
+
+\textbf{Tarea a Realizar:}
+
+Escriba un programa en C que use máscaras de bits y desplazamientos para manejar esta estructura de datos.
+
+\begin{enumerate}
+    \item \textbf{Función de Empaquetado:}
+    
+    Escriba una función \texttt{uint16\_t packDate(int day, int month, int year)} que:
+    \begin{itemize}
+        \item Reste 2000 al año.
+        \item Use desplazamientos (\texttt{<<}) y el operador OR (\texttt{|}) para empaquetar los tres valores en un \texttt{uint16\_t} según el formato.
+        \item Devuelva el entero de 16 bits.
+    \end{itemize}
+
+    \item \textbf{Funciones de Desempaquetado:}
+    
+    Escriba tres funciones que reciban el \texttt{uint16\_t} empaquetado:
+    \begin{itemize}
+        \item \texttt{int getDay(uint16\_t packedDate)}: Debe usar una máscara (\texttt{\&}) para aislar los 5 bits del día.
+        \item \texttt{int getMonth(uint16\_t packedDate)}: Debe desplazar (\texttt{>>}) los bits y luego usar una máscara (\texttt{\&}) para aislar los 4 bits del mes.
+        \item \texttt{int getYear(uint16\_t packedDate)}: Debe desplazar (\texttt{>>}) los bits y sumar 2000 al resultado.
+    \end{itemize}
+
+    \item \textbf{Programa Principal (\texttt{main}):}
+    \begin{itemize}
+        \item Solicite al usuario un día (1-31), mes (1-12) y año (2000-2127).
+        \item Llame a \texttt{packDate} para obtener el valor empaquetado.
+        \item Imprima el valor empaquetado en hexadecimal.
+        \item Llame a las tres funciones \texttt{get...} usando el valor empaquetado.
+        \item Imprima la fecha desempaquetada para verificar que los valores coinciden con la entrada.
+    \end{itemize}
+\end{enumerate}
+
+\textbf{Ejemplo de Prueba:}
+
+\begin{itemize}
+    \item Entrada: Día=21, Mes=10, Año=2025
+    \item Empaquetado: (Año 25 = 0011001), (Mes 10 = 1010), (Día 21 = 10101)
+    \item Binario (16 bits): \texttt{0011001 1010 10101} $\rightarrow$ \texttt{0x3355}
+    \item Desempaquetado: Debe devolver 21, 10, 2025.
+\end{itemize}
