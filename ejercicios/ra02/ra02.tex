@@ -36,3 +36,70 @@ Recuerde: \textbf{pre}-procesador, \textbf{com}pilador, \textbf{en}lazador.
   \item \texttt{gcc programa.o -o saludo.out}
 \end{enumerate}
 
+
+\subsubsection{Responda las siguientes preguntas}
+\begin{enumerate}[a)]
+  \item ¿Qué diferencia existe entre un programa fuente y un programa objeto?
+  \item ¿Qué tipo de archivo genera el preprocesador y qué extensiones suele utilizar?
+  \item ¿Qué tareas realiza el compilador durante el proceso de traducción?
+  \item ¿Por qué es necesario el enlazador para generar un archivo ejecutable?
+  \item ¿Qué relación existe entre el sistema operativo y la ejecución de un programa compilado?
+  \item ¿Qué componente del sistema operativo asigna memoria y controla la ejecución del programa?
+  \item ¿Cuál es la diferencia entre código máquina y lenguaje ensamblador?
+\end{enumerate}
+
+\subsubsection{Clasifique}
+Indique a qué fase del proceso de construcción de un programa pertenece cada descripción:
+\begin{enumerate}[a)]
+  \item Reemplaza las directivas \texttt{\#include} y macros. \hfill \rule{4cm}{0.1pt}
+  \item Traduce el código fuente a lenguaje máquina. \hfill \rule{4cm}{0.1pt}
+  \item Combina módulos y bibliotecas en un ejecutable. \hfill \rule{4cm}{0.1pt}
+  \item Genera un archivo intermedio con código ensamblador. \hfill \rule{4cm}{0.1pt}
+\end{enumerate}
+
+\subsubsection{Verdadero o falso}
+Justifique cada respuesta.
+\begin{enumerate}[a)]
+  \item El preprocesador genera directamente el archivo ejecutable. \\
+        \vspace{0.5cm}
+  \item El compilador transforma código C en código máquina. \\
+        \vspace{0.5cm}
+  \item El enlazador sólo se utiliza cuando un programa tiene más de un archivo. \\
+        \vspace{0.5cm}
+  \item Un archivo \texttt{.o} puede ejecutarse directamente en el sistema operativo. \\
+        \vspace{0.5cm}
+\end{enumerate}
+
+\subsubsection{Completar}
+\begin{enumerate}[a)]
+  \item El archivo ejecutable es producido por el \rule{5cm}{0.1pt}.
+  \item La fase encargada de expandir macros y directivas \texttt{\#include} es el \rule{1cm}{0.1pt}.
+  \item El archivo fuente en C suele tener extensión \rule{5cm}{0.1pt}.
+\end{enumerate}
+
+\subsubsection{Aplicar}
+Dado el siguiente código simple:
+
+\begin{verbatim}
+#include <stdio.h>
+int main() {
+    printf("Hola\n");
+    return 0;
+}
+\end{verbatim}
+
+Responda:
+\begin{enumerate}[a)]
+  \item ¿Qué archivo genera cada etapa del proceso (preprocesar, compilar, ensamblar, enlazar)?
+  \item Indique qué comando de \texttt{gcc} utilizaría para obtener sólo el archivo preprocesado.
+  \item Indique qué comando de \texttt{gcc} utilizaría para generar únicamente el archivo objeto.
+\end{enumerate}
+
+\subsubsection{Ordene las fases del proceso de construcción de un programa}
+Indique con números del 1 al 4 el orden correcto:
+\begin{enumerate}[a)]
+  \item \rule{1cm}{0.1pt} Enlazado  
+  \item \rule{1cm}{0.1pt} Preprocesado  
+  \item \rule{1cm}{0.1pt} Ensamblado  
+  \item \rule{1cm}{0.1pt} Compilación  
+\end{enumerate}
