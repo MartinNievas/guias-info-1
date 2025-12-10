@@ -37,6 +37,20 @@
 \\Universidad Tecnológica Nacional, Regional Córdoba
 }
 
+
+% Comando para crear página previa centrada y sección
+\newcommand{\RAsection}[1]{%
+    \clearpage
+    \thispagestyle{empty}
+    \vspace*{\fill}
+    \begin{center}
+        {\Huge \bfseries #1}
+    \end{center}
+    \vspace*{\fill}
+    \clearpage
+    \section{#1}
+}
+
 % \renewcommand{\@chapapp}{Unidad}
 \renewcommand{\thesubsection}{\arabic{subsection}}
 

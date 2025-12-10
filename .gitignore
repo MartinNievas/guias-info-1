@@ -11,6 +11,9 @@ syntax: glob
 *.nav
 *.snm
 ejercicios/guia.pdf
+ejercicios/guia.fdb_latexmk
+ejercicios/guia.fls
+ejercicios/guia.tex.latexmain
 
 #gcc
 *.o

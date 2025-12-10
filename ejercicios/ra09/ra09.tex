@@ -1,4 +1,4 @@
-\section{RA9}
+\RAsection{RA9}
 \subsection*{Resultados de aprendizaje}
 Crear y utilizar estructuras, uniones, enumeraciones y campos de bit para formar en conjunción con los punteros estructuras dinámicas de datos, reducir los requerimientos de memoria de un programa, lograr que sean más auto documentables los mismos y hacer uso del hardware a bajo nivel teniendo en cuenta que estas características son valiosas para los programadores que escriben software de sistemas, como por ejemplo sistemas operativos, device drivers, software de redes, etc.
 
@@ -444,6 +444,7 @@ A continuación se muestra un ejemplo de salida del programa:
 \lstinputlisting[backgroundcolor = \color{lightgray}]{code/ejercicio1_campo_completo_salida.mn}
 }
 
+\setcounter{subsection}{10}
 \subsection*{Manejo de archivos en C.}
 
 \subsubsection{Completar los espacios en blanco}
@@ -487,7 +488,7 @@ Encuentre el error en cada uno de los siguientes segmentos del programa y expliq
 
 \subsubsection{Procesamiento de Datos de Sensores (Union y Enum)}
 Se está diseñando un sistema para recibir paquetes de datos de diferentes sensores. Un paquete de datos puede contener una temperatura (un float), una presión (un int en kPa) o un código de estado (un long). Para ahorrar memoria, dado que un paquete solo contiene un tipo de dato a la vez, usaremos una union. Un enum se usará para identificar qué tipo de dato está activo en la unión.
-Considere las siguientes definiciones de tipos que debe utilizar(\texttt{code/ra09_uniones_0.c}):
+Considere las siguientes definiciones de tipos que debe utilizar(\texttt{code/ra09\_uniones\_0.c}):
 \lstinputlisting[style=customc]{code/ra09_uniones_0.c}
 
 Escriba un programa en C que realice las siguientes acciones:
@@ -532,7 +533,7 @@ Escriba un programa en C que realice las siguientes acciones:
 
 \subsubsection*{Inspector de Memoria (Union y Enum)}
 A veces es útil inspeccionar la representación en bytes de un tipo de dato más grande (como un unsigned int). Una union es perfecta para esto, ya que nos permite acceder a la misma ubicación de memoria interpretada de dos maneras diferentes: como un solo entero o como un array de bytes.
-Considere las siguientes definiciones de tipos (\texttt{code/ra09_uniones_ej1.c}):
+Considere las siguientes definiciones de tipos (\texttt{code/ra09\_uniones\_ej1.c}):
 
 \lstset{inputencoding=utf8/latin1}
 \lstinputlisting[style=customc]{code/ra09_uniones_ej1.c}
@@ -672,7 +673,7 @@ Escriba un programa en C que cumpla con lo siguiente:
     \end{itemize}
 \end{enumerate}
 
-Código de ejemplo inicial(\texttt{code/ra09_campo_bits_ej0.c}):
+Código de ejemplo inicial(\texttt{code/ra09\_campo\_bits\_ej0.c}):
 \lstinputlisting[style=customc]{code/ra09_campo_bits_ej0.c}
 
 \subsubsection{Identificador de Producto (Campos Mutuamente Excluyentes)}
@@ -763,7 +764,7 @@ Escriba un programa en C que use máscaras de bits y desplazamientos para maneja
     Escriba una función \texttt{uint16\_t packDate(int day, int month, int year)} que:
     \begin{itemize}
         \item Reste 2000 al año.
-        \item Use desplazamientos (\texttt{<<}) y el operador OR (\texttt{|}) para empaquetar los tres valores en un \texttt{uint16\_t} según el formato.
+        \item Use desplazamientos (\texttt{\<\<}) y el operador OR (\texttt{|}) para empaquetar los tres valores en un \texttt{uint16\_t} según el formato.
         \item Devuelva el entero de 16 bits.
     \end{itemize}
 
@@ -772,8 +773,8 @@ Escriba un programa en C que use máscaras de bits y desplazamientos para maneja
     Escriba tres funciones que reciban el \texttt{uint16\_t} empaquetado:
     \begin{itemize}
         \item \texttt{int getDay(uint16\_t packedDate)}: Debe usar una máscara (\texttt{\&}) para aislar los 5 bits del día.
-        \item \texttt{int getMonth(uint16\_t packedDate)}: Debe desplazar (\texttt{>>}) los bits y luego usar una máscara (\texttt{\&}) para aislar los 4 bits del mes.
-        \item \texttt{int getYear(uint16\_t packedDate)}: Debe desplazar (\texttt{>>}) los bits y sumar 2000 al resultado.
+        \item \texttt{int getMonth(uint16\_t packedDate)}: Debe desplazar (\texttt{\>\>}) los bits y luego usar una máscara (\texttt{\&}) para aislar los 4 bits del mes.
+        \item \texttt{int getYear(uint16\_t packedDate)}: Debe desplazar (\texttt{\>\>}) los bits y sumar 2000 al resultado.
     \end{itemize}
 
     \item \textbf{Programa Principal (\texttt{main}):}
