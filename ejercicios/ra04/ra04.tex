@@ -18,6 +18,26 @@ Introducción al lenguaje C.  Elementos del lenguaje C.  Introducción a la sint
   \item La función \underspace de la biblioteca estándar permite ingresar información desde el teclado.
 \end{enumerate}
 
+\subsubsection{Completar los espacios en blanco}
+\begin{enumerate}
+  \item El archivo de cabecera que permite usar \texttt{printf} y \texttt{scanf} es \underspace.
+  \item La instrucción que finaliza la ejecución de la función \texttt{main} es \underspace.
+  \item Para definir una constante simbólica se utiliza la directiva del preprocesador \underspace.
+  \item El operador aritmético que tiene mayor precedencia que la suma y la resta es \underspace.
+  \item Para convertir explícitamente un valor flotante a entero se utiliza el mecanismo llamado \underspace.
+\end{enumerate}
+
+\subsubsection{Verdadero o falso}
+Justifique cada respuesta.
+\begin{itemize}
+  \item La declaración \texttt{float x;} crea una variable para almacenar números enteros.
+  \item El operador lógico \texttt{\&\&} devuelve 1 sólo si ambas condiciones son verdaderas.
+  \item La expresión \texttt{3 + 4 * 2} se evalúa de izquierda a derecha sin considerar precedencia.
+  \item La instrucción \texttt{getchar()} permite leer un único carácter del teclado.
+  \item La expresión \texttt{(int)3.9} produce el valor 4.
+  \item El operador \texttt{==} se utiliza para asignar valores a una variable.
+\end{itemize}
+
 \subsubsection{Programas}
 Escribir un programa en C que resuelva los siguientes problemas (uno por cada enunciado)
 \begin{itemize}
@@ -26,13 +46,26 @@ Escribir un programa en C que resuelva los siguientes problemas (uno por cada en
     solicitud, en la cual al final debe incluir dos puntos y dejarse un espacio.
   \item Solicitar al usuario ingresar un número entero y almacenarlo en una variable llamada ``num''.
   \item Imprimir en pantalla el mensaje ``Buen día''.
+  \item Declarar una variable de tipo \texttt{float} llamada \texttt{precio} y otra de tipo \texttt{int} llamada \texttt{cantidad}.
+  \item Mostrar en pantalla el mensaje: \texttt{Ingrese un caracter: } sin salto de línea final.
+  \item Leer un carácter del teclado y almacenarlo en la variable \texttt{letra}.
+  \item Declarar tres variables enteras y asignarles los valores 10, 20 y 30 respectivamente.
 \end{itemize}
+
 
 \subsubsection{Ejercicio}
 Realizar, para cada enunciado, un programa en C.
 \begin{itemize}
-  \item Asignar la suma de las variables \textbf{a} y \textbf{b} en \textbf{c}.
+    \item Asignar la suma de las variables \textbf{a} y \textbf{b} en \textbf{c}.
   \item Leer 3 números enteros desde el teclado, y almacenarlos en las variables \textbf{p}, \textbf{q} y \textbf{r}.
+\end{itemize}
+
+\subsubsection{Ejercicios de operadores}
+Realizar un programa en C para cada enunciado:
+\begin{itemize}
+      \item Dado un número entero \( n \), calcular su cuadrado.
+      \item Ingresar dos números y mostrar su suma, resta, multiplicación y división.
+      \item Leer un número entero e imprimir su antecesor y su sucesor.
 \end{itemize}
 
 \subsubsection{Verdadero o falso}
@@ -48,21 +81,45 @@ Indicar si las siguientes afirmaciones son verdaderas o falsas. Si son falsas, i
 \end{itemize}
 
 % \subsubsection{Selección}
-\subsubsection{Ejercicio 3}
+\subsubsection{Ejercicio}
 Escribir un algoritmo para calcular la distancia recorrida (m) por un móvil que se desplaza con velocidad constante (m/s) durante un tiempo (s).
 La velocidad y el tiempo serán ingresadas por el usuario.
 
-\subsubsection{Ejercicio 4}
+\subsubsection{Ejercicio}
 Escribir un algoritmo para obtener el promedio simple de un estudiante a partir de las tres notas parciales.
 Las notas serán introducidas una a una por el usuario.
 
-\subsubsection{Ejercicio 5}
-En un local se hace un descuento del $\mathrm{\%20}$ cuando la compra supera los \$ 1000. Escribir un algoritmo que calcule el precio a pagar por el cliente
-teniendo como dato el valor de la compra.
+\subsubsection{Ejercicio}
+Dado un número real ingresado por el usuario, convertirlo a entero utilizando \textit{cast} y mostrar ambos valores.
 
-\subsubsection{Ejercicio 6}
-Escribir un algoritmo que determine si un número $n$ tiene tres cifras. El usuario debe ingresar el número $n$.
+\subsubsection{Ejercicio}
+Leer dos números enteros e intercambiar sus valores. Mostrar los valores antes y después del intercambio.
 
-\subsubsection{Ejercicio 7}
-Escribir un algoritmo que solicite ingresar dos números $n1$ y $n2$. Si el primero es mayor que el segundo mostrar la suma de ambos, por otro lado si el segundo es mayor al primero, mostrar el producto entre los números. En caso de que sean iguales imprimir ``Los números son iguales''.
+\subsubsection{Ejercicio}
+Leer un carácter y mostrar su valor ASCII (utilizar cast a \texttt{int}).
+
+\subsubsection{Ejercicio}
+Escribir un programa que lea el radio de un círculo y calcule su área y su perímetro.  
+Usar \(\pi = 3.14159\).
+
+\subsubsection{Ejercicio}
+Dado un número de tres cifras, imprimir la suma de sus dígitos. El usuario ingresa el número.
+
+\subsubsection{Ejercicio}
+Leer dos números enteros y determinar cuál es el mayor. Si son iguales, imprimir un mensaje adecuado.
+
+\subsubsection{Ejercicio: expresión condicional}
+Ingresar un número entero y usar el operador condicional (\texttt{?:}) para imprimir si es par o impar.
+
+\subsubsection{Ejercicio}
+Ingresar un número entero y determinar si es múltiplo de 3 y de 5 simultáneamente.
+
+\subsubsection{Ejercicio}
+Ingresar un número real y mostrar su valor truncado, redondeado hacia arriba y redondeado hacia abajo (usar cast y funciones del encabezado \texttt{math.h}).
+
+\subsubsection{Ejercicio}
+Ingresar dos números reales y calcular su promedio.
+
+\subsubsection{Ejercicio}
+Ingresar un número de segundos y convertirlo en horas, minutos y segundos.
 
