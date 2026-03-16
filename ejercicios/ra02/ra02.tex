@@ -8,33 +8,29 @@ Herramientas de desarrollo: El Compilador. El enlazador (Linker). Su relación c
 \setcounter{subsection}{1}
 \subsection{Ejercicios:}
 
-\subsubsection{Responda las siguientes preguntas}
-\begin{enumerate}[a)]
-  \item Los programas en C normalmente son escritos en un:
-  \item ¿Que programa es el encargado de combinar la salida del compilador, con las funciones de bibliotecas para producir el archivo ejecutable?
-  \item ¿Cual es el programa que carga en memoria el programa ejecutable, desde el disco?
-  \item ¿Como se llama el programa encargado de convertir los programas escritos en lenguajes de alto nivel, al lenguaje 
-    de máquina?
-  \item ¿Quien es el encargado de colocar un programa en memoria para que pueda ser ejecutado?
-  \item ¿Cual es la unidad mínima de información en una computadora?
-\end{enumerate}
+\begin{ejercicioClase}
+    \subsubsection{Responda las siguientes preguntas}
+    \begin{enumerate}[a)]
+      \item Los programas en C normalmente son escritos en un:
+      \item ¿Que programa es el encargado de combinar la salida del compilador, con las funciones de bibliotecas para producir el archivo ejecutable?
+      \item ¿Cual es el programa que carga en memoria el programa ejecutable, desde el disco?
+      \item ¿Como se llama el programa encargado de convertir los programas escritos en lenguajes de alto nivel, al lenguaje 
+        de máquina?
+      \item ¿Quien es el encargado de colocar un programa en memoria para que pueda ser ejecutado?
+      \item ¿Cual es la unidad mínima de información en una computadora?
+    \end{enumerate}
 
-\subsubsection{Ordenar de forma correcta}
-Se desea compilar el programa \texttt{saludo.c} utilizando la línea de comandos (terminal) mediante el programa gcc.
-Dada la siguiente lista de pasos, ordene los mismo para producir el archivo ejecutable \texttt{saludo.out}.
-Tenga en cuenta que alguno de los comandos pueden ser incorrectos.
-Recuerde: \textbf{pre}-procesador, \textbf{com}pilador, \textbf{en}lazador.
 
-\begin{enumerate}
-  \item \texttt{gcc -c programa.i}
-  \item \texttt{gcc saludo.o -o saludo.c}
-  \item \texttt{gcc saludo.c -c saludo}
-  \item \texttt{gcc saludo.i -o saludo.out}
-  \item \texttt{gcc -E saludo.c > programa.i}
-  \item \texttt{gcc -c programa.i}
-  \item \texttt{gcc -E programa.c > programa.out}
-  \item \texttt{gcc programa.o -o saludo.out}
-\end{enumerate}
+    \subsubsection{Memoria}
+    Responda:
+    \begin{enumerate}[a)]
+      \item ¿Qué es la memoria principal de una computadora?
+      \item ¿Qué diferencia existe entre memoria RAM y almacenamiento en disco?
+      \item ¿Por qué el programa debe cargarse en memoria antes de ejecutarse?
+      \item Mencione dos tipos de memoria que conozca.
+    \end{enumerate}
+
+\end{ejercicioClase}
 
 
 \subsubsection{Responda las siguientes preguntas}
@@ -82,7 +78,8 @@ Dado el siguiente código simple:
 
 \begin{verbatim}
 #include <stdio.h>
-int main() {
+
+int main(void) {
     printf("Hola\n");
     return 0;
 }
@@ -102,4 +99,70 @@ Indique con números del 1 al 4 el orden correcto:
   \item \rule{1cm}{0.1pt} Preprocesado  
   \item \rule{1cm}{0.1pt} Ensamblado  
   \item \rule{1cm}{0.1pt} Compilación  
+\end{enumerate}
+
+\subsubsection{Ordenar de forma correcta}
+Se desea compilar el programa \texttt{saludo.c} utilizando la línea de comandos (terminal) mediante el programa gcc.
+Dada la siguiente lista de pasos, ordene los mismo para producir el archivo ejecutable \texttt{saludo.out}.
+Tenga en cuenta que alguno de los comandos pueden ser incorrectos.
+Recuerde: \textbf{pre}-procesador, \textbf{com}pilador, \textbf{en}lazador.
+
+\begin{enumerate}
+  \item \texttt{gcc -c programa.i}
+  \item \texttt{gcc saludo.o -o saludo.c}
+  \item \texttt{gcc saludo.c -c saludo}
+  \item \texttt{gcc saludo.i -o saludo.out}
+  \item \texttt{gcc -E saludo.c > programa.i}
+  \item \texttt{gcc -c programa.i}
+  \item \texttt{gcc -E programa.c > programa.out}
+  \item \texttt{gcc programa.o -o saludo.out}
+\end{enumerate}
+
+
+\subsubsection{Unidad Central de Procesamiento}
+Responda:
+\begin{enumerate}[a)]
+  \item ¿Qué significa la sigla CPU?
+  \item ¿Cuáles son las principales partes que componen la CPU?
+  \item ¿Qué función cumple la Unidad Aritmética y Lógica (ALU)?
+  \item ¿Qué función cumple la Unidad de Control?
+\end{enumerate}
+
+\subsubsection{Contador de Programa}
+Responda:
+\begin{enumerate}[a)]
+  \item ¿Qué es el contador de programa (Program Counter)?
+  \item ¿Qué información almacena?
+  \item ¿Qué sucede con su valor después de ejecutar una instrucción?
+\end{enumerate}
+
+\subsubsection{Buses}
+Responda las siguientes preguntas:
+\begin{enumerate}[a)]
+  \item ¿Qué es un bus en una computadora?
+  \item ¿Qué tipos de buses existen en una arquitectura básica?
+  \item ¿Qué información transporta el bus de datos?
+  \item ¿Qué función cumple el bus de direcciones?
+\end{enumerate}
+
+\subsubsection{Dispositivos de entrada y salida}
+Clasifique los siguientes dispositivos como \textbf{Entrada (E)}, \textbf{Salida (S)} o \textbf{Entrada/Salida (E/S)}:
+
+\begin{enumerate}[a)]
+  \item Teclado \hfill \rule{2cm}{0.1pt}
+  \item Monitor \hfill \rule{2cm}{0.1pt}
+  \item Disco rígido \hfill \rule{2cm}{0.1pt}
+  \item Impresora \hfill \rule{2cm}{0.1pt}
+  \item Mouse \hfill \rule{2cm}{0.1pt}
+\end{enumerate}
+
+\subsubsection{Análisis}
+Lea la siguiente situación y responda:
+
+Un estudiante escribe un programa en C, lo compila y luego lo ejecuta desde la terminal.
+
+\begin{enumerate}[a)]
+  \item ¿En qué momento interviene el compilador?
+  \item ¿Qué componente del sistema operativo carga el programa en memoria?
+  \item ¿Qué componente del hardware ejecuta las instrucciones del programa?
 \end{enumerate}

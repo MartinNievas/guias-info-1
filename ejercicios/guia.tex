@@ -1,4 +1,5 @@
 % \documentclass[a4paper]{report}
+\pdfminorversion=7
 \documentclass[10pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
@@ -24,6 +25,35 @@
 
 \usepackage{graphicx}
 \pagestyle{fancy}
+
+\usepackage[most]{tcolorbox}
+
+% Estilo para ejercicios de CLASE (Color azul/celeste)
+\newtcolorbox{ejercicioClase}{
+    enhanced,
+    breakable,
+    colback=blue!5!white,
+    colframe=blue!75!black,
+    title=\textbf{ACTIVIDAD EN CLASE}, % Puedes cambiar la imagen por un icono
+    fonttitle=\sffamily\bfseries,
+    attach boxed title to top left={yshift=-2mm, xshift=5mm},
+    boxed title style={colback=blue!75!black},
+    sharp corners=northwest,
+    drop shadow
+}
+
+% Estilo para ejercicios de TAREA (Gris/Elegante)
+\newtcolorbox{ejercicioTarea}{
+    enhanced,
+    breakable,
+    colback=white,
+    colframe=gray!60!black,
+    title=TRABAJO PRÁCTICO / TAREA,
+    fonttitle=\sffamily\small,
+    attach boxed title to top right={yshift=-2mm, xshift=-5mm},
+    boxed title style={colback=gray!60!black},
+    arc=2mm
+}
 
 \fancyhead{} % clear all header fields
 \fancyhead[R]{\textbf{RA\thesection}}
@@ -120,7 +150,6 @@
   morestring=[b]" % defines that strings are enclosed in double quotes
 }
 
-\pdfminorversion=7
 
 \begin{document}
   \include{sueltas/caratula}
