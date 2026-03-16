@@ -7,142 +7,128 @@ Sistemas de numeración y representación numérica.  Aritmética binaria.  Intr
 
 \subsection*{Sistemas de numeración y representación numérica. Aritmética binaria.}
 \setcounter{subsection}{2}
-\subsection{Ejercicios:}
 
-\subsubsection{Completar los espacios en blanco:}
-\begin{tabular}{ccc}
-  Decimal&Binario&Hexadecimal\\
-  0&00000000&$\mathrm{0x00}$ \\
-  158& &\underspace\\
-  145&\underspace &\underspace \\
-  \underspace&1010 1110&\underspace \\
-  \underspace&0011 1100&\underspace \\
-  \underspace&1111 0001&\underspace \\
-  255& &\underspace\\
-  187&\underspace &\underspace \\
-  \underspace&1101 1010&\underspace \\
-  \underspace&0110 1011&\underspace \\
-  \underspace&1001 1110&\underspace \\
-  1023& &\underspace\\
-  421&\underspace &\underspace \\
-  \underspace&1011 0010&\underspace \\
-  \underspace&1000 1111&\underspace \\
-  \underspace&0111 1011&\underspace \\
-\end{tabular}
+\begin{ejercicioClase}
+    \subsubsection{Completar los espacios en blanco:}
+    \begin{tabular}{ccc}
+      Decimal&Binario&Hexadecimal\\
+      0&00000000&$\mathrm{0x00}$ \\
+      158& &\underspace\\
+      145&\underspace &\underspace \\
+      \underspace&1010 1110&\underspace \\
+      \underspace&0011 1100&\underspace \\
+      \underspace&1111 0001&\underspace \\
+      255& &\underspace\\
+      187&\underspace &\underspace \\
+    \end{tabular}
 
-\subsubsection{Suma de números}
-Realizar las siguientes operaciones, considerando números signados de 8 bits. Expresar el resultado en decimal.
-\vspace{10mm}
+    \subsubsection{Conversiones}
+    Realizar las siguientes conversiones:
+    \begin{itemize}
+      \item Convierta el binario 110011010010 en octal y en hexadecimal.
+      \item Convierta el número $\mathrm{0xFACE}$ hexadecimal a binaria.
+      \item Convierte octal $\mathrm{3016}$ a binario.
+      \item Convierta 0xCAFE hexadecimales a octal.
+      \item Convertir binario $\mathrm{1001010}$ a decimal.
+      \item Convertir octal $\mathrm{513}$ a decimal.
+      \item Convierta hexadecimal $\mathrm{0xAFD4}$ a decimal.
+      \item Convierta el decimal $\mathrm{177}$ a binario, a octal y a hexadecimal.
+    \end{itemize}
+    
 
-\begin{tabular}{lc}
-  $\mathrm{0x3D} + \mathrm{0x40} $&=\underspace\\
-  $\mathrm{0x3D} - \mathrm{0x20} $&=\underspace\\
-  $\mathrm{0x4A} - \mathrm{0x03} $&=\underspace\\
-  $\mathrm{0x44} - \mathrm{0x10} $&=\underspace\\
-  $\mathrm{01110110} - \mathrm{00101101}$&=\underspace\\
-  $\mathrm{00011110} + \mathrm{01101101}$&=\underspace\\
-  $\mathrm{01011110} - \mathrm{01111111}$&=\underspace\\
-  $\mathrm{01111110} + \mathrm{01101000}$&=\underspace\\
-  $\mathrm{0x32} + \mathrm{0x50}$&=\underspace\\
-  $\mathrm{0x90} - \mathrm{0x20}$&=\underspace\\
-  $\mathrm{0x78} + \mathrm{0xA3}$&=\underspace\\
-  $\mathrm{0xA2} - \mathrm{0x5E}$&=\underspace\\
-  $\mathrm{11010010} + \mathrm{10100101}$&=\underspace\\
-  $\mathrm{11101100} - \mathrm{10100011}$&=\underspace\\
-  $\mathrm{01010110} + \mathrm{01110101}$&=\underspace\\
-  $\mathrm{01111001} - \mathrm{00110011}$&=\underspace\\
+    \subsubsection{Suma de números}
+    Realizar las siguientes operaciones, considerando números signados de 8 bits. Expresar el resultado en decimal.
+    \vspace{10mm}
+    
+    \begin{tabular}{lc}
+      $\mathrm{0x3D} + \mathrm{0x40} $&=\underspace\\
+      $\mathrm{0x3D} - \mathrm{0x20} $&=\underspace\\
+      $\mathrm{01110110} - \mathrm{00101101}$&=\underspace\\
+      $\mathrm{00011110} + \mathrm{01101101}$&=\underspace\\
+    \end{tabular}
 
-\end{tabular}
+    \subsubsection{Suma de números (2.6)}
+    Realizar las siguientes operaciones, considerando números signados de 16 bits. Expresar el resultado en decimal.
+
+    \vspace{10mm}
+    \begin{tabular}{lc}
+      $\mathrm{0x1234} + \mathrm{0x5678}$&=\underspace\\
+      $\mathrm{0x9ABC} - \mathrm{0x2000}$&=\underspace\\
+      $\mathrm{10101010 11010011} + \mathrm{11001101 11100000}$&=\underspace\\
+    \end{tabular}
+
+    \subsubsection{Suma de números}
+    Sin convertir a binario, sumar los siguientes números.
+
+    \begin{tabular}{lc}
+      $\mathrm{0x43} - \mathrm{0x12}$&=\underspace\\
+      $\mathrm{0xF2} + \mathrm{0x5A}$&=\underspace\\
+      $\mathrm{0xE1} - \mathrm{0x93}$&=\underspace\\
+      $\mathrm{10101011} + \mathrm{11010010}$&=\underspace\\
+    \end{tabular}
+    
+\end{ejercicioClase}
+
+\begin{ejercicioClase}
+
+    \subsubsection{Truncado}
+    En la siguiente tabla escribir las equivalencias de los números suponiendo que sólo se tienen en cuenta 3 bits\\
+
+    \begin{tabular}{cccccccc}
+      \multicolumn{2}{c}{Hex} & &\multicolumn{2}{c}{No signado}& &\multicolumn{2}{c}{Complemento a 2}\\
+      Original&Truncado&&Original&Truncado&&Original&Truncado\\
+      \cline{1-2}\cline{4-5}\cline{7-8}\\
+      $\mathrm{0x1}$&1          &&1  &\underspace&&1 & \underspace \\
+      $\mathrm{0x3}$&3          &&3  &\underspace&&3 & \underspace \\
+      $\mathrm{0x5}$&\underspace&&5  &\underspace&&5 & \underspace \\
+      $\mathrm{0xC}$&\underspace&&12 &\underspace&&12& -4\\
+      $\mathrm{0xE}$&6          &&14 &\underspace&&14& -2\\
+    \end{tabular}
+
+    \subsubsection{Conversión decimal binario}
+    Convertir a binario los siguientes números decimales. Utilizar 10 bits en total.
+    \begin{itemize}
+      \item $13.44$
+      \item $23.25$
+      \item $51.1$
+      \item $4.34$
+    \end{itemize}
+    
+    \subsubsection{Conversión binario decimal fraccionario}
+    Convertir a decimal los siguientes números binarios.
+    \begin{itemize}
+      \item $\mathrm{1110.10}$
+      \item $\mathrm{1010.1011}$
+    \end{itemize}
+
+    \subsubsection{Números fraccionarios}
+    Representar de forma binaria los siguientes números fraccionarios utilizando notación de punto fijo con 8 bits para la parte entera y 4 bits para la parte fraccionaria.
+    \begin{enumerate}[a)]
+      \item $0.25$
+      \item $0.01$
+      \item $0.625$
+    \end{enumerate}
+
+    \subsubsection{Convertir desde IEEE754 a decimal}
+    \begin{enumerate}[a)]
+      \item 01000001110000010000000000000000
+      \item 01000010000000010000000000000000
+      \item 11000001010001100000000000000000
+    \end{enumerate}
+
+    \subsubsection{Convertir de decimal a IEEE754}
+    Convertir los siguientes números en representación decimal a float IEEE754
+    \begin{enumerate}[a)]
+      \item $1.25$
+      \item $7.125$
+      \item $127.575$
+      \item $-1.25$
+      \item $-1.675$
+    \end{enumerate}
+
+\end{ejercicioClase}
 
 
-\subsubsection{Suma de números (2.6)}
-Realizar las siguientes operaciones, considerando números signados de 16 bits. Expresar el resultado en decimal.
-
-\vspace{10mm}
-\begin{tabular}{lc}
-  $\mathrm{0x1234} + \mathrm{0x5678}$&=\underspace\\
-  $\mathrm{0x9ABC} - \mathrm{0x2000}$&=\underspace\\
-  $\mathrm{0x7FED} + \mathrm{0xA3CF}$&=\underspace\\
-  $\mathrm{0xC2A1} - \mathrm{0x5F12}$&=\underspace\\
-  $\mathrm{10101010 11010011} + \mathrm{11001101 11100000}$&=\underspace\\
-  $\mathrm{01101011 00110011} - \mathrm{10110101 11011010}$&=\underspace\\
-\end{tabular}
-
-\subsubsection{Suma de números}
-Sin convertir a binario, sumar los siguientes números.
-
-\begin{tabular}{lc}
-  $\mathrm{0x605C} + \mathrm{0x5} $&=\underspace\\
-  $\mathrm{0x605C -} + \mathrm{0x20} $&=\underspace\\
-  $\mathrm{0x605C +} + \mathrm{32} $&=\underspace\\
-  $\mathrm{0x60fA -} + \mathrm{0x605C} $&=\underspace\\
-  $\mathrm{0x43} - \mathrm{0x12}$&=\underspace\\
-  $\mathrm{0xF2} + \mathrm{0x5A}$&=\underspace\\
-  $\mathrm{0xE1} - \mathrm{0x93}$&=\underspace\\
-  $\mathrm{10101011} + \mathrm{11010010}$&=\underspace\\
-  $\mathrm{00011101} - \mathrm{00101100}$&=\underspace\\
-\end{tabular}
-
-\subsubsection{Conversiones}
-Realizar las siguientes conversiones:
-\begin{itemize}
-  \item Convierta el binario 110011010010 en octal y en hexadecimal.
-  \item Convierta el número $\mathrm{0xFACE}$ hexadecimal a binaria.
-  \item Convierte octal $\mathrm{3016}$ a binario.
-  \item Convierta 0xCAFE hexadecimales a octal.
-  \item Convertir binario $\mathrm{1001010}$ a decimal.
-  \item Convertir octal $\mathrm{513}$ a decimal.
-  \item Convierta hexadecimal $\mathrm{0xAFD4}$ a decimal.
-  \item Convierta el decimal $\mathrm{177}$ a binario, a octal y a hexadecimal.
-  \item Calcule la representación binaria del decimal $\mathrm{417}$. Luego el complemento de $\mathrm{417}$ y el complemento de dos de $\mathrm{417}$.
-  \item ¿Cuál es el resultado cuando un número y su complemento de dos se suman?
-  \item Convierta el número $\mathrm{0x1234}$ hexadecimal a decimal.
-  \item Convertir binario $\mathrm{10101010}$ a octal.
-  \item Convierta el decimal $\mathrm{543}$ a hexadecimal y a binario.
-  \item Calcule la representación en base 16 del número $\mathrm{2000}_{10}$.
-  \item Convierta el número $\mathrm{0x12345678}$ hexadecimal a binario.
-  \item Convertir octal $\mathrm{7777}$ a decimal.
-  \item Calcule la representación en base 10 del número $\mathrm{100101011010}_{2}$.
-  \item Convierte el número $\mathrm{0xFFFE0000}$ hexadecimal a decimal.
-\end{itemize}
-
-\subsubsection{Conversión decimal binario}
-Convertir a binario los siguientes números decimales. Utilizar 10 bits en total.
-\begin{itemize}
-  \item $13.44$
-  \item $23.25$
-  \item $51.1$
-  \item $4.34$
-  \item $9.675$
-  \item $17.14$
-  \item $15.128$
-\end{itemize}
-
-\subsubsection{Conversión binario decimal fraccionario}
-Convertir a decimal los siguientes números binarios.
-\begin{itemize}
-  \item $\mathrm{1110.10}$
-  \item $\mathrm{1010.1011}$
-  \item $\mathrm{110010.111}$
-  \item $\mathrm{1000010.011}$
-  \item $\mathrm{101010.101}$
-  \item $\mathrm{101111.111}$
-  \item $\mathrm{101011.0001}$
-\end{itemize}
-
-\subsubsection{Truncado}
-En la siguiente tabla escribir las equivalencias de los números suponiendo que sólo se tienen en cuenta 3 bits\\
-
-\begin{tabular}{cccccccc}
-  \multicolumn{2}{c}{Hex} & &\multicolumn{2}{c}{No signado}& &\multicolumn{2}{c}{Complemento a 2}\\
-  Original&Truncado&&Original&Truncado&&Original&Truncado\\
-  \cline{1-2}\cline{4-5}\cline{7-8}\\
-  $\mathrm{0x1}$&1          &&1  &\underspace&&1 & \underspace \\
-  $\mathrm{0x3}$&3          &&3  &\underspace&&3 & \underspace \\
-  $\mathrm{0x5}$&\underspace&&5  &\underspace&&5 & \underspace \\
-  $\mathrm{0xC}$&\underspace&&12 &\underspace&&12& -4\\
-  $\mathrm{0xE}$&6          &&14 &\underspace&&14& -2\\
-\end{tabular}
 
 \subsubsection{Suma}
 Realizar las siguientes sumas utilizando números signados de 4 bits:
@@ -172,6 +158,108 @@ x&y&bin&x+y&x+y\\
 01101&00110&\underspace&\underspace&\underspace\\
 \end{tabular}
 
+
+\subsubsection{Completar los espacios en blanco:}
+\begin{tabular}{ccc}
+  Decimal&Binario&Hexadecimal\\
+  \underspace&1101 1010&\underspace \\
+  \underspace&0110 1011&\underspace \\
+  \underspace&1001 1110&\underspace \\
+  1023& &\underspace\\
+  421&\underspace &\underspace \\
+  \underspace&1011 0010&\underspace \\
+  \underspace&1000 1111&\underspace \\
+  \underspace&0111 1011&\underspace \\
+\end{tabular}
+
+\subsubsection{Suma de números}
+Realizar las siguientes operaciones, considerando números signados de 8 bits. Expresar el resultado en decimal.
+\vspace{10mm}
+
+\begin{tabular}{lc}
+  $\mathrm{0x32} + \mathrm{0x50}$&=\underspace\\
+  $\mathrm{0x90} - \mathrm{0x20}$&=\underspace\\
+  $\mathrm{0x78} + \mathrm{0xA3}$&=\underspace\\
+  $\mathrm{0xA2} - \mathrm{0x5E}$&=\underspace\\
+  $\mathrm{11010010} + \mathrm{10100101}$&=\underspace\\
+  $\mathrm{11101100} - \mathrm{10100011}$&=\underspace\\
+  $\mathrm{01010110} + \mathrm{01110101}$&=\underspace\\
+  $\mathrm{01111001} - \mathrm{00110011}$&=\underspace\\
+\end{tabular}
+
+\subsubsection{Suma de números (2.6)}
+Realizar las siguientes operaciones, considerando números signados de 16 bits. Expresar el resultado en decimal.
+
+\vspace{10mm}
+\begin{tabular}{lc}
+  $\mathrm{0x7FED} + \mathrm{0xA3CF}$&=\underspace\\
+  $\mathrm{0xC2A1} - \mathrm{0x5F12}$&=\underspace\\
+  $\mathrm{01101011 00110011} - \mathrm{10110101 11011010}$&=\underspace\\
+\end{tabular}
+
+\subsubsection{Suma de números}
+Sin convertir a binario, sumar los siguientes números.
+
+\begin{tabular}{lc}
+  $\mathrm{0x60fA -} + \mathrm{0x605C} $&=\underspace\\
+  $\mathrm{0xE1} - \mathrm{0x93}$&=\underspace\\
+  $\mathrm{00011101} - \mathrm{00101100}$&=\underspace\\
+\end{tabular}
+
+\subsubsection{Conversiones}
+Realizar las siguientes conversiones:
+\begin{itemize}
+  \item Calcule la representación binaria del decimal $\mathrm{417}$. Luego el complemento de $\mathrm{417}$ y el complemento de dos de $\mathrm{417}$.
+  \item ¿Cuál es el resultado cuando un número y su complemento de dos se suman?
+  \item Convierta el número $\mathrm{0x1234}$ hexadecimal a decimal.
+  \item Convertir binario $\mathrm{10101010}$ a octal.
+  \item Convierta el decimal $\mathrm{543}$ a hexadecimal y a binario.
+  \item Calcule la representación en base 16 del número $\mathrm{2000}_{10}$.
+  \item Convierta el número $\mathrm{0x12345678}$ hexadecimal a binario.
+  \item Convertir octal $\mathrm{7777}$ a decimal.
+  \item Calcule la representación en base 10 del número $\mathrm{100101011010}_{2}$.
+  \item Convierte el número $\mathrm{0xFFFE0000}$ hexadecimal a decimal.
+\end{itemize}
+
+\subsubsection{Conversión decimal binario}
+Convertir a binario los siguientes números decimales. Utilizar 10 bits en total.
+\begin{itemize}
+  \item $9.675$
+  \item $17.14$
+  \item $15.128$
+\end{itemize}
+
+\subsubsection{Conversión binario decimal fraccionario}
+Convertir a decimal los siguientes números binarios.
+\begin{itemize}
+    \item $\mathrm{101010.101}$
+    \item $\mathrm{101111.111}$
+    \item $\mathrm{101011.0001}$
+    \item $\mathrm{110010.111}$
+    \item $\mathrm{1000010.011}$
+\end{itemize}
+
+\subsubsection{Truncado}
+En la siguiente tabla escribir las equivalencias de los números suponiendo que sólo se tienen en cuenta 3 bits\\
+    
+\begin{tabular}{cccccccc}
+  \multicolumn{2}{c}{Hex} & &\multicolumn{2}{c}{No signado}& &\multicolumn{2}{c}{Complemento a 2}\\
+  Original&Truncado&&Original&Truncado&&Original&Truncado\\
+  \cline{1-2}\cline{4-5}\cline{7-8}\\
+  $\mathrm{0x2}$&\underspace&&2  &\underspace&&2 & \underspace \\
+  $\mathrm{0x4}$&\underspace&&4  &\underspace&&4 & \underspace \\
+  $\mathrm{0x7}$&7          &&7  &\underspace&&7 & -1\\
+  $\mathrm{0xA}$&\underspace&&10 &\underspace&&10& -6\\
+  $\mathrm{0xF}$&\underspace&&15 &\underspace&&15& -1\\
+\end{tabular}
+
+\subsubsection{Convertir desde IEEE754 a decimal}
+\begin{enumerate}[a)]
+  \item 11000010101110010000000000000000
+  \item 01000010100111000100000000000000
+  \item 01000010100111001100000000000000
+\end{enumerate}
+
 \subsubsection{Convertir de decimal a IEEE754}
 Convertir los siguientes números en representación decimal a float IEEE754
 \begin{enumerate}[a)]
@@ -180,18 +268,12 @@ Convertir los siguientes números en representación decimal a float IEEE754
   \item $127.575$
   \item $-1.25$
   \item $-1.675$
-  \item $-0.25$
-  \item $-0.01$
-  \item $63.125$
-  \item $-0.0123$
 \end{enumerate}
 
-\subsubsection{Convertir desde IEEE754 a decimal}
+\subsubsection{Números fraccionarios}
+Representar de forma binaria los siguientes números fraccionarios utilizando notación de punto fijo con 8 bits para la parte entera y 4 bits para la parte fraccionaria.
 \begin{enumerate}[a)]
-  \item 01000001110000010000000000000000
-  \item 01000010000000010000000000000000
-  \item 11000001010001100000000000000000
-  \item 11000010101110010000000000000000
-  \item 01000010100111000100000000000000
-  \item 01000010100111001100000000000000
+    \item $63.125$
+    \item $0.0123$
+    \item $0.125$
 \end{enumerate}
