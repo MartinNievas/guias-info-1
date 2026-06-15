@@ -1,7 +1,42 @@
 \Usection{Unidad 10}
+\setcounter{subsection}{10}
 \subsection*{Manejo de archivos en C}
 \subsection*{Contenido según programa}
 Concepto de flujo de datos (streams). Creación, apertura y cierre de archivos de texto. Archivos binarios. Funciones para lectura y escritura de bajo nivel.  Acceso secuencial vs. acceso aleatorio. Uso de las funciones de archivos para acceder a dispositivos de E/S. Concepto “todo es un archivo”. Ejemplos.
+
+\begin{ejercicioClase}
+    \subsubsection{Conceptos de manejo de archivos}
+    Responda justificando brevemente:
+    \begin{enumerate}[label=\alph*)]
+        \item ¿Qué diferencia existe en la forma en que se escriben y leen los datos entre un archivo de texto y un archivo binario?
+        \item Indique cuál es el propósito de los siguientes modos de apertura en \texttt{fopen}: \lstinline|"r"|, \lstinline|"w"|, \lstinline|"a"|, \lstinline|"rb"|, \lstinline|"wb+"|.
+        \item ¿Qué función cumple \texttt{feof(FILE *stream)} y por qué puede ser problemático usarla directamente como condición del bucle de lectura (ej. \texttt{while(!feof(f))})?
+    \end{enumerate}
+
+    \subsubsection{Seguimiento de código y detección de errores}
+    Identifique los problemas en el siguiente fragmento de código que intenta copiar el contenido de un archivo de texto llamado \texttt{origen.txt} a otro llamado \texttt{destino.txt}:
+    \begin{lstlisting}[style=customc, basicstyle=\ttfamily\small]
+#include <stdio.h>
+int main() {
+    FILE *o = fopen("origen.txt", "r");
+    FILE *d = fopen("destino.txt", "w");
+    char c;
+    while (c = fgetc(o) != EOF) {
+        fputc(d, c);
+    }
+    fclose(o);
+    // Falta algo aqui?
+    return 0;
+}
+    \end{lstlisting}
+
+    \subsubsection{Implementación práctica}
+    Escriba el código en C para resolver los siguientes ejercicios:
+    \begin{enumerate}[a)]
+        \item Diseñe un programa que abra un archivo de texto llamado \texttt{numeros.txt} que contiene un número entero por línea, lea todos los números, calcule su promedio e imprima el resultado en pantalla y lo guarde en un archivo llamado \texttt{promedio.txt}.
+        \item Implemente un programa que guarde un arreglo de 5 estructuras \texttt{struct Alumno \{ int legajo; float promedio; \}} en un archivo binario llamado \texttt{alumnos.dat} utilizando \texttt{fwrite}. Luego, lea únicamente el tercer elemento del archivo binario utilizando \texttt{fseek} y \texttt{fread}, y muéstrelo en pantalla.
+    \end{enumerate}
+\end{ejercicioClase}
 
 \subsection*{Preguntas:}
 \begin{itemize}[a)]

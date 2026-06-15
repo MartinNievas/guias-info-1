@@ -1,4 +1,5 @@
 \Usection{Unidad 8}
+\setcounter{subsection}{8}
 \subsection*{Punteros en lenguaje C.}
 \subsection*{Contenido según programa}
 Concepto de puntero. Concepto de dirección. Operadores unarios.  Aritmética de punteros. Relación entre punteros y arreglos. Inicialización de punteros.  Implementación de llamadas a función por referencia. Punteros a puntero. Arreglo de punteros. Ordenamiento de estructuras utilizando arreglo de punteros. Inicialización de punteros y reserva de espacio en memoria: malloc y free. Punteros vs. Arreglos multidimensionales. Argumentos por línea de comandos. Punteros a función.
@@ -9,6 +10,45 @@ Concepto de puntero. Concepto de dirección. Operadores unarios.  Aritmética de
 \subsection*{Punteros en lenguaje C.}
 
 \subsection*{Paso de parámetros por referencia}
+
+\begin{ejercicioClase}
+    \subsubsection{Conceptos de punteros y operadores}
+    Responda justificando brevemente:
+    \begin{enumerate}[label=\alph*)]
+        \item ¿Qué diferencia hay entre los operadores unarios \texttt{\&} y \texttt{*}? Proporcione un ejemplo corto en C donde se utilicen ambos.
+        \item ¿Cuál es el valor que representa un puntero nulo (NULL) y por qué es importante inicializar los punteros no utilizados con este valor?
+        \item Si tenemos \texttt{int vec[5]; int *p = vec;}, ¿cuál es la diferencia entre \texttt{*(p + 3)} y \texttt{*p + 3}?
+    \end{enumerate}
+
+    \subsubsection{Seguimiento de código (Ruteo)}
+    Determine la salida del siguiente programa y represente gráficamente (con cajas y flechas) el estado de las variables y punteros al final de la ejecución:
+    \begin{lstlisting}[style=customc, basicstyle=\ttfamily\small]
+#include <stdio.h>
+int main() {
+    int a = 10, b = 20, c = 30;
+    int *p1 = &a;
+    int *p2 = &b;
+    int **dp = &p1;
+
+    *p1 = 15;
+    p1 = p2;
+    *p1 = 25;
+    *dp = &c;
+    **dp = 35;
+
+    printf("a = %d, b = %d, c = %d\n", a, b, c);
+    printf("*p1 = %d, *p2 = %d\n", *p1, *p2);
+    return 0;
+}
+    \end{lstlisting}
+
+    \subsubsection{Implementación práctica}
+    Escriba el código en C para resolver los siguientes ejercicios:
+    \begin{enumerate}[a)]
+        \item Implemente una función \texttt{void invertirCadena(char *cad)} que reciba una cadena de caracteres y la invierta en el lugar utilizando aritmética de punteros en lugar de índices de arreglos (no use corchetes \texttt{[]}).
+        \item Escriba un programa que solicite un entero $N$. Reserve memoria dinámica utilizando \texttt{malloc} para almacenar $N$ números reales de tipo \texttt{double}. Luego, cargue los números, calcule su promedio y libere la memoria utilizando \texttt{free}.
+    \end{enumerate}
+\end{ejercicioClase}
 
 \subsubsection{Ejercicio}
 Realizar un programa que solicite al usuario ingresar un número entero positivo a través de la función declarada como \textbf{void ingresar\_positivo(int *)}. Esta función recibe como argumento un puntero a entero y debe validar que el número ingresado sea positivo. En caso de no serlo, solicitar nuevamente el ingreso del número. Finalmente, imprimir el número ingresado en la función principal. 

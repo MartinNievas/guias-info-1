@@ -1,9 +1,68 @@
 \Usection{Unidad 9}
+\setcounter{subsection}{9}
 \subsection*{Estructuras y uniones en C. Campos de bit.}
 \subsection*{Contenido según programa}
 Estructuras de datos. Bases de las estructuras. Sintaxis: Definición de estructura. Acceso a los miembros de una estructura. Punteros a estructuras. Arreglos de estructuras. Funciones y estructuras. Estructuras autoreferenciadas. Typedef.  Uniones. Definición. Acceso a los miembros de una unión. Campos de bit. Definición.  Acceso a los miembros de un campo de bits. Constantes de enumeración.  Aplicaciones relacionadas.
 
 \subsection*{Estructuras}
+
+\begin{ejercicioClase}
+    \subsubsection{Conceptos de estructuras y uniones}
+    Responda justificando brevemente:
+    \begin{enumerate}[label=\alph*)]
+        \item ¿Qué diferencia fundamental existe en la forma en que se almacena en memoria un \texttt{struct} y un \texttt{union}? 
+        \item Dado el siguiente fragmento, calcule el tamaño en bytes que ocupará en memoria la estructura \texttt{ejemplo1} y la unión \texttt{ejemplo2} en una arquitectura estándar de 32 bits (considere alineación básica):
+        \begin{lstlisting}[style=customc, basicstyle=\ttfamily\small]
+struct ejemplo1 {
+    char letra;      // 1 byte
+    int entero;      // 4 bytes
+    double real;     // 8 bytes
+};
+union ejemplo2 {
+    char letra;
+    int entero;
+    double real;
+};
+        \end{lstlisting}
+        \item Explique la diferencia de sintaxis para acceder a los miembros de una estructura en forma directa (usando la variable) y en forma indirecta (usando un puntero).
+    \end{enumerate}
+
+    \subsubsection{Seguimiento de código y lógica}
+    Determine la salida del siguiente programa:
+    \begin{lstlisting}[style=customc, basicstyle=\ttfamily\small]
+#include <stdio.h>
+#include <string.h>
+
+struct Producto {
+    int codigo;
+    char descripcion[20];
+    float precio;
+};
+
+void modificar_producto(struct Producto p, struct Producto *ptr) {
+    p.precio = 150.0;
+    strcpy(p.descripcion, "Modificado 1");
+
+    ptr->precio = 300.0;
+    strcpy(ptr->descripcion, "Modificado 2");
+}
+
+int main() {
+    struct Producto prod = {101, "Original", 100.0};
+    modificar_producto(prod, &prod);
+    printf("Codigo: %d, Descripcion: %s, Precio: %.2f\n",
+           prod.codigo, prod.descripcion, prod.precio);
+    return 0;
+}
+    \end{lstlisting}
+
+    \subsubsection{Implementación práctica}
+    Escriba el código en C para resolver los siguientes ejercicios:
+    \begin{enumerate}[a)]
+        \item Defina una estructura llamada \texttt{Punto} que contenga las coordenadas reales \texttt{x} e \texttt{y}. Escriba una función \texttt{float calcularDistancia(struct Punto p1, struct Punto p2)} que retorne la distancia euclídea entre ambos puntos.
+        \item Defina un campo de bits para emular un registro de estado de una CPU de 8 bits con los siguientes bits: Carry (bit 0), Zero (bit 1), Interrupt Disable (bit 2), Decimal Mode (bit 3), Break (bit 4), Overflow (bit 6), Negative (bit 7). Escriba un programa para configurar e imprimir el estado de este registro.
+    \end{enumerate}
+\end{ejercicioClase}
 \subsubsection{Ejercicio 1}
 Crear las estructuras según los siguientes requerimientos:
 \begin{itemize}

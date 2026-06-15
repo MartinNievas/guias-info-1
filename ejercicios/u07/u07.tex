@@ -1,4 +1,5 @@
 \Usection{Unidad 7}
+\setcounter{subsection}{7}
 \subsection*{Arreglos en lenguaje C.}
 \subsection*{Contenido según programa}
 Arreglos. Declaración de arreglos. Concepto de vector (arreglo de una dimensión) y de matriz (arreglo de dos dimensiones). Inicialización de los arreglos.  Algoritmos de ordenamiento. Ordenamiento por más de un criterio. Algoritmos de búsqueda en arreglos. Algoritmos de búsqueda e inserción en arreglos. Ejemplos de uso de arreglos: desarrollo de histogramas, cálculo de media y desvío. Pasaje de arreglos como argumentos a funciones.
@@ -9,6 +10,75 @@ Los ejercicios de ésta guía utilizan \texttt{arreglos}, algún tipo de estruct
 %--------------------------------------------------------------------------------
 \setcounter{subsection}{7}
 \subsection*{Arreglos unidimensionales}
+
+\begin{ejercicioClase}
+    \subsubsection{Declaración y conceptualización de arreglos}
+    Responda justificando su respuesta:
+    \begin{enumerate}[label=\alph*)]
+        \item ¿Cuál de las siguientes declaraciones es válida en C estándar?
+        \begin{itemize}
+            \item \texttt{int vec[5] = \{1, 2, 3, 4, 5\};}
+            \item \texttt{int vec[] = \{1, 2, 3\};}
+            \item \texttt{int n = 5; int vec[n];} (analice en el contexto de C99 y versiones anteriores)
+        \end{itemize}
+        \item Si se inicializa un arreglo como \texttt{int a[10] = \{1, 2\};}, ¿qué valores tienen los elementos desde \texttt{a[2]} hasta \texttt{a[9]}? ¿Están inicializados con basura o con un valor predefinido?
+        \item Explique brevemente cuál es la complejidad conceptual y la diferencia de funcionamiento entre la Búsqueda Lineal y la Búsqueda Binaria. ¿Qué requisito debe cumplir el arreglo para aplicar Búsqueda Binaria?
+    \end{enumerate}
+
+    \subsubsection{Seguimiento de código (Ruteo)}
+    Realice el ruteo paso a paso del siguiente fragmento de código e indique qué valores almacena el arreglo \texttt{datos} al finalizar la ejecución:
+    \begin{lstlisting}[style=customc, basicstyle=\ttfamily\small]
+#define TAM 6
+int main() {
+    int datos[TAM] = {4, 8, 15, 16, 23, 42};
+    int i, temp;
+    for(i = 0; i < TAM / 2; i++) {
+        temp = datos[i];
+        datos[i] = datos[TAM - 1 - i];
+        datos[TAM - 1 - i] = temp;
+    }
+    // Indique el estado final de datos
+    return 0;
+}
+    \end{lstlisting}
+
+    \subsubsection{Ejercicios de Arreglos y Funciones (Fáciles - sin punteros)}
+    Escriba el código en C para implementar las siguientes funciones:
+    \begin{enumerate}[a)]
+        \item \texttt{void inicializarEnCero(int vec[], int tam)}: Llena todos los elementos del arreglo con el valor 0.
+        \item \texttt{int sumarElementos(int vec[], int tam)}: Devuelve la suma de todos los elementos del arreglo.
+        \item \texttt{float calcularPromedio(int vec[], int tam)}: Retorna el promedio de los elementos del arreglo.
+        \item \texttt{int contarPares(int vec[], int tam)}: Cuenta y retorna la cantidad de números pares en el arreglo.
+        \item \texttt{int contarImpares(int vec[], int tam)}: Cuenta y retorna la cantidad de números impares en el arreglo.
+        \item \texttt{int buscarElemento(int vec[], int tam, int clave)}: Busca la \texttt{clave} en el arreglo. Si la encuentra, devuelve su índice, si no, devuelve -1.
+        \item \texttt{void copiarArreglo(int origen[], int destino[], int tam)}: Copia los elementos del arreglo \texttt{origen} al arreglo \texttt{destino}.
+        \item \texttt{int obtenerMinimo(int vec[], int tam)}: Recorre el arreglo y devuelve el menor valor encontrado.
+        \item \texttt{int contarMayoresQue(int vec[], int tam, int limite)}: Cuenta cuántos elementos en el arreglo son estrictamente mayores que \texttt{limite}.
+        \item \texttt{int compararArreglos(int vec1[], int vec2[], int tam)}: Devuelve 1 si ambos arreglos tienen exactamente los mismos elementos en el mismo orden, y 0 en caso contrario.
+    \end{enumerate}
+
+    \subsubsection{Desafíos de Arreglos y Funciones (sin punteros)}
+    Escriba el código en C para implementar las siguientes funciones:
+    \begin{enumerate}[a)]
+        \item \textbf{[Desafío]} \texttt{int esPalindromo(int vec[], int tam)}: Devuelve 1 si el arreglo es simétrico (se lee igual de izquierda a derecha que de derecha a izquierda), y 0 en caso contrario.
+        \item \textbf{[Desafío]} \texttt{void ordenarBurbuja(int vec[], int tam)}: Ordena el arreglo recibido de menor a mayor utilizando el método de ordenamiento Burbuja.
+        \item \textbf{[Desafío]} \texttt{int contarUnicos(int vec[], int tam)}: Cuenta y devuelve la cantidad de elementos únicos (no repetidos) que hay en el arreglo.
+        \item \textbf{[Desafío]} \texttt{void eliminarElemento(int vec[], int tam, int posicion)}: Elimina el elemento en la \texttt{posicion} indicada del arreglo, desplazando los elementos siguientes a la izquierda y rellenando el último casillero con 0.
+        \item \textbf{[Desafío]} \texttt{int encontrarMasFrecuente(int vec[], int tam)}: Devuelve el elemento que aparece con mayor frecuencia en el arreglo (la moda).
+        \item \textbf{[Desafío]} \texttt{void rotarDerecha(int vec[], int tam)}: Realiza una rotación circular de los elementos un casillero hacia la derecha.
+        \item \textbf{[Desafío]} \texttt{int interseccionArreglos(int vec1[], int tam1, int vec2[], int tam2, int resultado[])}: Llena el arreglo \texttt{resultado} con los elementos comunes entre \texttt{vec1} y \texttt{vec2} (sin duplicados) y devuelve la cantidad de elementos agregados.
+        \item \textbf{[Desafío]} \texttt{void mezclarOrdenados(int vec1[], int tam1, int vec2[], int tam2, int resultado[])}: Dados dos arreglos previamente ordenados ascendentemente, los combina en el arreglo \texttt{resultado} manteniendo el orden ascendente.
+        \item \textbf{[Desafío]} \texttt{void reversoArreglo(int vec[], int tam)}: Invierte el orden de los elementos del arreglo en su lugar (in-place) sin usar un arreglo auxiliar.
+        \item \textbf{[Desafío]} \texttt{int subSecuenciaMaxima(int vec[], int tam)}: Encuentra y devuelve la suma máxima posible de una subsecuencia contigua dentro del arreglo (ej: para \texttt{\{-2, 1, -3, 4, -1, 2, 1\}} devuelve 6 correspondiente a \texttt{\{4, -1, 2, 1\}}).
+    \end{enumerate}
+
+    \subsubsection{Implementación práctica general}
+    Escriba el código en C para resolver los siguientes ejercicios:
+    \begin{enumerate}[a)]
+        \item Implemente una función \texttt{float calcularMedia(int vec[], int tam)} y otra \texttt{float calcularDesvio(int vec[], int tam, float media)} que calculen la media y el desvío estándar de los elementos de un vector.
+        \item Escriba una función \texttt{void transponerMatriz(int origen[3][3], int destino[3][3])} que reciba una matriz de 3x3 y devuelva su transpuesta en otra matriz.
+    \end{enumerate}
+\end{ejercicioClase}
 
 Los ejercicios de ésta guía utilizan \texttt{arreglos}, algún tipo de estructura repetitiva ( \textbf{for}, \textbf{while} o \textbf{do\dots while})
 y estructuras de contról \textbf{if\dots else}

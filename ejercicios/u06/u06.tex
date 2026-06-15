@@ -1,4 +1,5 @@
 \Usection{Unidad 6}
+\setcounter{subsection}{6}
 \subsection*{Funciones en lenguaje C.}
 \subsection*{Contenido según programa}
 Programación modular. Definición de una función. Prototipo de una función. Argumentos. Archivos de cabecera. Variables locales y globales. Clases de almacenamiento: externas, estáticas, registros y automáticas. Reglas de alcance (scope). Proposición return. Llamada por valor y por referencia. Recursividad.  Condiciones para implementar funciones recursivas. Ejemplo: factorial de un número.  Recursividad vs. Iteración.
@@ -7,6 +8,74 @@ Programación modular. Definición de una función. Prototipo de una función. A
 %--------------------------------------------------------------------------------
 \setcounter{subsection}{6}
 \subsection*{Funciones $1^{era}$ Parte}
+
+\begin{ejercicioClase}
+    \subsubsection{Conceptos de modularidad y funciones}
+    Responda y justifique brevemente:
+    \begin{enumerate}[label=\alph*)]
+        \item ¿Qué diferencia existe entre la definición de una función y su prototipo (declaración)? ¿Por qué es buena práctica usar prototipos?
+        \item Explique la diferencia de alcance (scope) y tiempo de vida entre una variable local automática y una variable local estática (\texttt{static}).
+        \item ¿Cuándo se prefiere el pasaje de parámetros por referencia en lugar de por valor en lenguaje C? ¿Cómo se logra esto utilizando punteros?
+    \end{enumerate}
+
+    \subsubsection{Seguimiento de código (Ruteo)}
+    Determine cuál será la salida por pantalla del siguiente programa en C. Realice la tabla de seguimiento indicando el valor de las variables en cada paso:
+    \begin{lstlisting}[style=customc, basicstyle=\ttfamily\small]
+#include <stdio.h>
+
+int global = 10;
+
+void funcion_misteriosa(int *a, int b) {
+    static int local_estatica = 5;
+    local_estatica += 2;
+    *a += local_estatica;
+    b += 10;
+    global += b;
+    printf("En funcion: a=%d, b=%d, estatica=%d, global=%d\n", *a, b, local_estatica, global);
+}
+
+int main() {
+    int x = 3, y = 8;
+    funcion_misteriosa(&x, y);
+    printf("En main (1): x=%d, y=%d, global=%d\n", x, y, global);
+    funcion_misteriosa(&x, y);
+    printf("En main (2): x=%d, y=%d, global=%d\n", x, y, global);
+    return 0;
+}
+    \end{lstlisting}
+
+    \subsubsection{Ejercicios Prácticos (Fáciles - sin punteros)}
+    Escriba el código en C para implementar las siguientes funciones:
+    \begin{enumerate}[a)]
+        \item \texttt{float celsiusToFahrenheit(float celsius)}: Recibe una temperatura en grados Celsius y devuelve su equivalente en Fahrenheit ($F = C \cdot 1.8 + 32$).
+        \item \texttt{int esPar(int numero)}: Devuelve 1 si el número recibido es par, y 0 si es impar.
+        \item \texttt{int obtenerMayor(int a, int b)}: Recibe dos números enteros y retorna el mayor de ellos.
+        \item \texttt{float calcularPorcentaje(float total, float porcentaje)}: Calcula y retorna el porcentaje indicado de una cantidad dada (ej. el 21\% de 500).
+        \item \texttt{int esVocal(char c)}: Devuelve 1 si el carácter recibido es una vocal (considerar mayúsculas y minúsculas), y 0 en caso contrario.
+        \item \texttt{float calcularSuperficieTriangulo(float base, float altura)}: Calcula y retorna la superficie de un triángulo.
+        \item \texttt{int esPositivo(int n)}: Devuelve 1 si el número es positivo, -1 si es negativo y 0 si es cero.
+        \item \texttt{int sumarDigitosDosCifras(int n)}: Recibe un número entero de dos cifras y devuelve la suma de sus dígitos (ej. si recibe 47 devuelve 11).
+        \item \texttt{void saludar(int idioma)}: Imprime un saludo en pantalla. Si el idioma es 1 muestra "Hola", si es 2 muestra "Hello", si es 3 muestra "Bonjour".
+        \item \texttt{int calcularDistancia(int x1, int x2)}: Retorna la distancia absoluta entre dos puntos sobre una recta (el valor absoluto de la diferencia entre ambos).
+    \end{enumerate}
+
+    \subsubsection{Desafíos Prácticos (sin punteros)}
+    Escriba el código en C para implementar las siguientes funciones:
+    \begin{enumerate}[a)]
+        \item \textbf{[Desafío]} \texttt{int esPrimo(int n)}: Recibe un entero positivo y devuelve 1 si es un número primo, y 0 si no lo es.
+        \item \textbf{[Desafío]} \texttt{int fibonacciTermino(int n)}: Devuelve el $n$-ésimo término de la sucesión de Fibonacci de manera iterativa o recursiva.
+        \item \textbf{[Desafío]} \texttt{int maximoComunDivisor(int a, int b)}: Calcula y retorna el Máximo Común Divisor entre dos números utilizando el algoritmo de Euclides.
+        \item \textbf{[Desafío]} \texttt{int esNumeroPerfecto(int n)}: Determina si un número es perfecto (un número es perfecto si es igual a la suma de sus divisores propios, excluyéndose a sí mismo).
+        \item \textbf{[Desafío]} \texttt{int revertirNumero(int n)}: Recibe un entero positivo y retorna el número con sus cifras al revés (ej. si recibe 1234, devuelve 4321) sin utilizar cadenas de texto.
+    \end{enumerate}
+
+    \subsubsection{Implementación con punteros}
+    Escriba el código en C para resolver los siguientes ejercicios:
+    \begin{enumerate}[a)]
+        \item Diseñe una función \texttt{int calcularMinMax(int a, int b, int c, int* max, int* min)} que reciba tres enteros por valor y devuelva el mayor y el menor de ellos a través de parámetros por referencia utilizando punteros. La función debe retornar 1 si el mayor y el menor son diferentes, y 0 si los tres números son iguales.
+        \item Implemente una función recursiva \texttt{int potencia(int base, int exponente)} que calcule la potencia de un número entero positivo. Compare esta solución con una versión iterativa describiendo ventajas y desventajas de cada enfoque.
+    \end{enumerate}
+\end{ejercicioClase}
 
 \subsubsection{Ejercicio}
 Completar el siguiente programa:
