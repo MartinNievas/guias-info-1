@@ -1,0 +1,78 @@
+\section{Arreglos en lenguaje C.}
+
+\subsection*{Arreglos unidimensionales}
+\setcounter{subsection}{6}
+
+Los ejercicios de ésta guía utilizan \texttt{arreglos}, algún tipo de estructura repetitiva ( \textbf{for}, \textbf{while} o \textbf{do\dots while})
+y estructuras de contról \textbf{if\dots else}
+
+\subsubsection{Ejercicio 1} 
+Completar el siguiente programa, para que solicite al usuario ingresar 10 números enteros, los almacene en un arreglo. Luego, se debe recorrer el arreglo convirtiendo los números negativos en positivos. Por último mostrar en pantalla el arreglo.
+\lstset{inputencoding=utf8/latin1}
+\lstinputlisting[style=customc]{code/ejercicio1_completar.c}
+{\small
+  \lstset{inputencoding=utf8/latin1}
+  \lstinputlisting[backgroundcolor = \color{lightgray}]{code/ejercicio1_arreglo_uni_salida.mn}
+}
+
+\subsubsection{Ejercicio 2} 
+Escribir un programa que solicite al usuario ingresar $N$ elementos de un arreglos. Luego recorrer el arreglo, buscar el mayor elemento e imprimirlo.
+{\small
+  \lstset{inputencoding=utf8/latin1}
+  \lstinputlisting[backgroundcolor = \color{lightgray}]{code/ejercicio2_arreglo_uni_salida.mn}
+}
+
+\subsubsection{Ejercicio 3} 
+Escribir un programa que solicite ingresar $N$ elementos de un arreglo. Luego, en otro arreglo, almacenar el valor acumulado del primer arreglo. Por ejemplo: el elemento del segundo arreglo b[0] será a[0], el elemento b[1] contendrá la suma a[0]+a[1], el elemento b[3] contedrá la suma a[0]+a[1]+a[2]+a[3]
+{\small
+  \lstset{inputencoding=utf8/latin1}
+  \lstinputlisting[backgroundcolor = \color{lightgray}]{code/ejercicio3_arreglo_uni_salida.mn}
+}
+
+\subsubsection{Ejercicio 4} 
+Realizar un programa que solicite al usuario ingresar $N$ elementos de un arreglo. Los valores a ingresar tienen que estar en el rango de (1-100), en caso de ingresar un valor fuera del rango, se debe volver a pedir el valor.
+{\small
+  \lstset{inputencoding=utf8/latin1}
+  \lstinputlisting[backgroundcolor = \color{lightgray}]{code/ejercicio4_arreglo_uni_salida.mn}
+}
+\subsubsection{Ejercicio 5} 
+Realizar un programa que solicite ingresar $N$ componentes de dos vectores \textbf{a} y \textbf{b}. Luego calcular el producto punto entre los mismos.
+Recordar que el producto punto se puede expresar como:
+$$\overrightarrow{a}\cdot \overrightarrow{b} = a_1\cdot b_1 + a_2\cdot b_2 +\dots + a_N\cdot b_N$$
+{\small
+  \lstset{inputencoding=utf8/latin1}
+  \lstinputlisting[backgroundcolor = \color{lightgray}]{code/ejercicio5_arreglo_uni_salida.mn}
+}
+
+\subsubsection{Preguntas} 
+\begin{itemize}
+  \item El número por el cual se refiere a un elemento particular de un arreglo se llama:
+  \item El primer elemento de un arreglo es el número[(completar aquí)].
+\end{itemize}
+
+\subsubsection{Indicar verdadero o falso:}
+\begin{itemize}
+  \item Un arreglo puede tener elementos de diferentes tipos.
+  \item El índice de un arreglo puede ser de tipo \texttt{double}
+  \item En una inicialización de un arreglo, si hay una cantidad menor de elementos que el tamaño del arreglo, C automáticamente inicializa los elementos restantes con el último elemento de la lista de inicialización.
+  \item Es un error si en la inicialización de un arreglo hay mas elementos que el tamaño del arreglo.
+  \item Si hay menos elementos en la lista de inicialización de un arreglo que el tamaño del arreglo, los elementos restantes son inicializados con basura.
+\end{itemize}
+
+\subsection*{Arreglos Bidimensionales} 
+
+\subsubsection{Ejercicio 1} 
+Escribir un programa quje solicite al usuario ingresar un arreglo de dos dimensiones de \textit{NxM}. \textit{N} y \textit{M} son directivas de preprocesador. Al finalizar, el programa debe imprimir la matriz.
+
+\subsubsection{Ejercicio 2} 
+Escribir un programa que solicite ingresar al usuario los elementos de un arreglo bidimensional de \textbf{n} filas por  \textbf{m} columnas. Los valores de \textbf{n} y \textbf{m} son ingresados por el usuario, los mismos deben ser menores que N y M (directivas de preprocesador) y mayores que 0. Imprimir el arreglo al finalizar.
+
+\subsubsection{Ejercicio 3} 
+Escribir un programa quje solicite al usuario ingresar un arreglo de dos dimensiones de \textit{NxM}. \textit{N} y \textit{M} son directivas de preprocesador. Luego se deben copiar los elementos del arreglo se deben copiar a otro arreglo, de tal manera de obtener la matriz transpuesta.
+Al finalizar, el programa debe imprimir las dos matrices.
+
+\subsubsection{Ejercicio 4} 
+Modificar el programa anterior para obtener el producto de una matriz por su transpuesta. El producto entre las matrices $A*B$ es una mtriz C donde:
+
+$$C_{ij}=\sum_{k=1}^{m}{A_{ik}B_{kj}} $$
+

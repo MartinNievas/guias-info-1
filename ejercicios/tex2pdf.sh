@@ -1,1 +1,0 @@
-../docker/tex2pdf.sh
