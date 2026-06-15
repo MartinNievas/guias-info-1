@@ -115,6 +115,92 @@ Implementación de estructuras de selección: simple (if), doble (if-else) y mú
   \end{enumerate}
 \end{ejercicioClase}
 
+\begin{ejercicioClase}
+  \subsection*{Repetitivas parte 1 - while}
+  \begin{enumerate}
+    \item Escribir un algoritmo que permita ingresar números enteros y calcular su suma. El proceso debe finalizar cuando se ingrese el número cero.
+    \item Escribir un algoritmo que solicite números enteros y muestre el promedio de los mismos. La carga finaliza al ingresar un número negativo.
+    \item Escribir un algoritmo que lea una secuencia de números positivos ingresados por el usuario y determine el valor máximo y el valor mínimo. La secuencia termina al ingresar el número 0.
+    \item Escribir un algoritmo que simule una caja registradora. Se deben ingresar los precios de los productos de un cliente. El ingreso finaliza cuando se digita un precio igual a 0. Calcular y mostrar el monto total a pagar.
+    \item Escribir un algoritmo que solicite al usuario adivinar un número secreto entero (por ejemplo, el 42. Generarlo de forma aleatoria). El programa debe continuar pidiendo números hasta que el usuario acierte, informando en cada intento si el número ingresado es mayor o menor que el número secreto.
+    \item Escribir un algoritmo que permita realizar la división entera de dos números enteros positivos mediante restas sucesivas, mostrando el cociente y el resto resultantes.
+    \item Escribir un algoritmo que permita ingresar la nota de varios alumnos de un curso. El proceso de carga termina al ingresar una nota igual a -1. Calcular e informar:
+      \begin{itemize}
+        \item la cantidad total de alumnos evaluados,
+        \item la cantidad de alumnos aprobados (nota mayor o igual a 6),
+        \item y el porcentaje de alumnos desaprobados sobre el total.
+      \end{itemize}
+    \item Escribir un algoritmo que solicite un número entero positivo y determine cuántos dígitos tiene utilizando divisiones sucesivas por 10.
+    \item Escribir un algoritmo que solicite una cantidad de dinero como meta de ahorro y luego permita ingresar montos de ahorro diarios. El proceso debe detenerse cuando se alcance o supere la meta establecida. Mostrar el total ahorrado y la cantidad de días necesarios para lograrlo.
+    \item \textbf{[Desafío]} \textbf{Conjetura de Collatz:} Dado un número entero positivo $N$ ingresado por el usuario, si es par se lo divide por 2, y si es impar se lo multiplica por 3 y se le suma 1. Este proceso se repite hasta obtener el valor 1. Escribir un algoritmo que muestre toda la secuencia generada, la cantidad de términos (longitud de la secuencia) y el número máximo que se alcanzó en el transcurso.
+    \item \textbf{[Desafío]} \textbf{El caracol en el pozo:} Un caracol se encuentra en el fondo de un pozo de $H$ metros de profundidad. Durante el día sube $S$ metros, pero durante la noche resbala y baja $R$ metros. Escribir un algoritmo que solicite $H$, $S$ y $R$ (donde $S > R$), y determine en cuántos días el caracol logrará salir del pozo. Tenga en cuenta que si el caracol llega a la cima durante el día, ya no resbalará por la noche.
+    \item \textbf{[Desafío]} \textbf{Suma de dígitos recursiva (Raíz Digital):} Escribir un algoritmo que permita ingresar un número entero positivo y calcule la suma de sus dígitos. Si el resultado de dicha suma tiene más de un dígito, el proceso debe repetirse con el nuevo número obtenido, y así sucesivamente hasta llegar a un único dígito (entre 1 y 9). Mostrar todo el camino de reducciones paso a paso.
+    \item \textbf{[Desafío]} \textbf{Procesamiento de texto con clave (Cifrado César):} Escribir un algoritmo que lea un texto ingresado por teclado carácter por carácter hasta encontrar un punto `.`. El programa debe aplicar el cifrado César desplazando cada letra (tanto mayúsculas como minúsculas) un valor clave $K$ ingresado previamente. Si el desplazamiento supera la última letra del abecedario, debe dar la vuelta cíclicamente. Los caracteres que no sean letras (números, espacios, signos) deben imprimirse sin alteración.
+  \end{enumerate}
+\end{ejercicioClase}
+
+\begin{ejercicioClase}
+  \subsection*{Repetitivas parte 2 - do while}
+  \begin{enumerate}
+    \item Escribir un algoritmo que permita validar el ingreso de una nota de examen. El programa debe solicitar la nota repetidamente hasta que el valor ingresado esté en el rango de [1, 10].
+    \item Escribir un algoritmo que muestre un menú con opciones para realizar conversiones de temperatura:
+      \begin{itemize}
+        \item 1: Celsius a Fahrenheit,
+        \item 2: Fahrenheit a Celsius,
+        \item 3: Salir.
+      \end{itemize}
+      El menú debe repetirse y procesarse hasta que el usuario elija la opción de salir (3), validando que las opciones ingresadas sean correctas.
+    \item Escribir un algoritmo que solicite la clave de acceso a una cuenta (un valor numérico entero, por ejemplo: 1234). El usuario tiene un máximo de 3 intentos para ingresar la clave correcta. Si acierta, mostrar un mensaje de bienvenida; si agota los intentos, mostrar un mensaje indicando que el sistema se ha bloqueado.
+    \item Escribir un algoritmo que simule un cajero automático. El saldo inicial es de 50000 ARS. Se debe presentar el siguiente menú de opciones:
+      \begin{itemize}
+        \item 1: Consultar saldo,
+        \item 2: Depositar dinero,
+        \item 3: Retirar dinero,
+        \item 4: Salir.
+      \end{itemize}
+      El menú debe repetirse hasta que se seleccione la opción 4. Controlar que no sea posible retirar más dinero del saldo disponible en la cuenta.
+    \item Escribir un algoritmo que solicite números enteros al usuario y los vaya sumando. Después de ingresar cada número, se debe preguntar al usuario: "¿Desea ingresar otro número? (S/N)". El bucle debe continuar mientras el usuario responda 'S' o 's'.
+    \item Escribir un algoritmo que permita ingresar el peso de diferentes paquetes que se deben cargar en un camión. El límite máximo de carga del camión es de 1000 kg. El ingreso de paquetes debe detenerse cuando se supere dicho límite, informando el peso total cargado y la cantidad de paquetes aceptados (sin incluir el paquete que superó el límite).
+    \item Escribir un algoritmo que solicite un número entero positivo y valide que sea par y mayor que 100. Repetir la solicitud hasta que se cumpla la condición.
+    \item \textbf{[Desafío]} \textbf{Juego de NIM:} Se inicia el juego con una pila de $N$ fichas (ingresado por el usuario, mayor a 10). Dos jugadores (el usuario y la computadora) retiran alternadamente 1, 2 o 3 fichas. Pierde quien se vea obligado a retirar la última ficha. Escribir un algoritmo con \texttt{do-while} que implemente el bucle del juego, validando rigurosamente que las entradas de fichas a retirar estén en el rango $[1, 3]$ y no superen la cantidad disponible. Diseñar la lógica para que la computadora intente jugar de forma óptima.
+    \item \textbf{[Desafío]} \textbf{Juego de "Puntos y Famas":} La computadora genera un número secreto de 4 dígitos distintos. El usuario intenta adivinar el número ingresando propuestas en cada turno. Por cada intento, el programa debe indicar cuántas "Famas" (dígitos correctos en la posición correcta) y cuántos "Puntos" (dígitos correctos en la posición incorrecta) obtuvo. El juego finaliza cuando el usuario logra 4 Famas o ingresa el número 0 para rendirse.
+    \item \textbf{[Desafío]} \textbf{Conversión interactiva de base:} Escribir un algoritmo que solicite un número entero positivo en base 10. Luego, mediante un menú controlado por \texttt{do-while}, permita realizar las siguientes operaciones sobre dicho número: mostrar su representación en binario, en octal o en hexadecimal. Validar que la opción elegida sea correcta y permitir realizar múltiples conversiones sobre el mismo número hasta que se seleccione la opción de "Salir".
+  \end{enumerate}
+\end{ejercicioClase}
+
+\begin{ejercicioClase}
+  \subsection*{Repetitivas parte 3 - for}
+  \begin{enumerate}
+    \item Escribir un algoritmo que solicite un número entero del 1 al 10 y muestre su tabla de multiplicar del 1 al 12.
+    \item Escribir un algoritmo que calcule el factorial de un número entero positivo $n$ ingresado por teclado ($n! = 1 \cdot 2 \cdot 3 \dots n$).
+    \item Escribir un algoritmo que solicite ingresar la cantidad de temperaturas registradas en un día. Luego, permitir el ingreso de dichas temperaturas y calcular la temperatura promedio, la máxima y la mínima registrada.
+    \item Escribir un algoritmo que imprima los primeros $N$ términos de la sucesión de Fibonacci, donde $N$ es un número entero positivo ingresado por el usuario. La sucesión comienza con 0 y 1, y cada término siguiente es la suma de los dos anteriores.
+    \item Escribir un algoritmo que solicite un número entero positivo y determine si es un número primo (divisible únicamente por 1 y por sí mismo).
+    \item Escribir un algoritmo que permita ingresar las notas de 5 alumnos. Para cada alumno se deben ingresar 3 notas parciales. Calcular y mostrar el promedio de cada alumno y el promedio general del curso.
+    \item Escribir un algoritmo que calcule e imprima la suma de los números pares y el producto de los números impares comprendidos entre dos valores enteros $A$ y $B$ ingresados por el usuario (donde $A < B$).
+    \item Escribir un algoritmo que dibuje un triángulo rectángulo de altura $H$ (ingresada por teclado) utilizando asteriscos. Ejemplo para $H = 4$:
+      \begin{verbatim}
+      *
+      **
+      ***
+      ****
+      \end{verbatim}
+    \item Escribir un algoritmo que solicite un número entero positivo $N$ y calcule el valor de la siguiente serie:
+      \[ S = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \dots \pm \frac{1}{N} \]
+    \item \textbf{[Desafío]} \textbf{Descomposición en Factores Primos:} Escribir un algoritmo que solicite un número entero positivo $N$ y muestre su descomposición en factores primos en formato de potencia. Ejemplo: si se ingresa $120$, el programa debe imprimir $2^3 \cdot 3^1 \cdot 5^1$.
+    \item \textbf{[Desafío]} \textbf{Primos Gemelos en un Intervalo:} Dos números primos se denominan "gemelos" si la diferencia entre ellos es exactamente 2 (por ejemplo, 3 y 5, 11 y 13). Escribir un algoritmo que solicite dos límites enteros positivos $A$ y $B$ ($A < B$) y encuentre y muestre todas las parejas de primos gemelos contenidas en ese intervalo.
+    \item \textbf{[Desafío]} \textbf{Números Perfectos y Amigos:} Un número es perfecto si es igual a la suma de sus divisores propios positivos (excluyendo al propio número). Dos números $X$ e $Y$ son amigos si la suma de los divisores propios de $X$ es igual a $Y$, y viceversa. Escribir un algoritmo que reciba un número límite $L$ y muestre todos los números perfectos menores o iguales a $L$, y todas las parejas de números amigos en ese mismo rango.
+    \item \textbf{[Desafío]} \textbf{Dibujando un Marco Concéntrico:} Escribir un algoritmo que solicite un número entero impar $N$ y dibuje en pantalla un marco concéntrico alternado de asteriscos y espacios de tamaño $N \times N$, calculando la condición de cada celda matemáticamente mediante bucles \texttt{for} anidados sin almacenar el dibujo en memoria. Ejemplo para $N = 5$:
+      \begin{verbatim}
+      *****
+      *   *
+      * * *
+      *   *
+      *****
+      \end{verbatim}
+  \end{enumerate}
+\end{ejercicioClase}
+
 
 
 % \subsubsection*{Selección}
