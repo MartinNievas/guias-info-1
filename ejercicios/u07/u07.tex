@@ -189,3 +189,46 @@ Realizar un programa que solicite al usuario ingresar 10 números decimales y lo
 
 \subsubsection{Ejercicio}
 Realizar un programa que solicite al usuario ingresar 30 calificaciones en un arreglo \texttt{notas}. Luego, contabilizar las notas en un arreglo de 10 elementos llamado \texttt{notas\_acum}. Finalmente imprimir la cantidad de notas en forma de histograma utilizando ``\#''.
+
+%--------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+\subsection*{Funciones y arreglos}
+
+Para los siguientes ejercicios, implemente funciones que trabajen con arreglos unidimensionales utilizando la notación indicada. Recuerde realizar un programa principal (\texttt{main}) para probar el correcto funcionamiento de cada función.
+
+\subsubsection{Suma de elementos}
+Escribir una función que reciba un arreglo de enteros y su tamaño, y retorne la suma de todos sus elementos.
+\begin{lstlisting}[style=customc, basicstyle=\ttfamily]
+int sumatoria(int arreglo[], int tam);
+\end{lstlisting}
+
+\subsubsection{Cálculo del promedio}
+Escribir una función que reciba un arreglo de enteros y su tamaño, y retorne el promedio de los elementos como un valor de tipo \texttt{float}.
+\begin{lstlisting}[style=customc, basicstyle=\ttfamily]
+float calcularPromedio(int arreglo[], int tam);
+\end{lstlisting}
+
+\subsubsection{Búsqueda de un elemento}
+Escribir una función que reciba un arreglo de enteros, su tamaño y un valor buscado. Debe retornar la posición (índice) de la primera aparición de dicho valor en el arreglo, o -1 si no se encuentra.
+\begin{lstlisting}[style=customc, basicstyle=\ttfamily]
+int buscarElemento(int arreglo[], int tam, int valorBuscado);
+\end{lstlisting}
+
+\subsubsection{Elemento máximo}
+Escribir una función que reciba un arreglo de enteros y su tamaño, y retorne el valor máximo que contiene.
+\begin{lstlisting}[style=customc, basicstyle=\ttfamily]
+int encontrarMaximo(int arreglo[], int tam);
+\end{lstlisting}
+
+\subsubsection{Reemplazar negativos}
+Escribir una función que reciba un arreglo de enteros y su tamaño, y reemplace todos los números negativos dentro del arreglo por el valor 0.
+\begin{lstlisting}[style=customc, basicstyle=\ttfamily]
+void reemplazarNegativos(int arreglo[], int tam);
+\end{lstlisting}
+
+\subsubsection{Copia en orden inverso}
+Escribir una función que reciba dos arreglos de enteros de igual tamaño (origen y destino) y su tamaño, y copie los elementos de origen a destino colocándolos en orden inverso.
+\begin{lstlisting}[style=customc, basicstyle=\ttfamily]
+void copiarInverso(int origen[], int destino[], int tam);
+\end{lstlisting}
+
